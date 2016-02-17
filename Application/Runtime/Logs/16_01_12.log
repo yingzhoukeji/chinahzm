@@ -1,0 +1,100 @@
+[ 2016-01-12T23:17:39+08:00 ] 123.125.71.77 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002157s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001605s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'index' ) ORDER BY sort DESC  [ RunTime:0.000399s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000640s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000931s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001414s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000333s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000320s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000319s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000329s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000316s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000301s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000322s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000289s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000340s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000267s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000264s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000284s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2016-01-12T23:22:53+08:00 ] 220.181.108.153 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002289s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001469s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'index' ) ORDER BY sort DESC  [ RunTime:0.000359s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000635s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000918s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001446s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000343s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000326s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000319s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000318s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000297s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000305s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000291s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000323s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000273s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000269s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000276s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+

@@ -1,0 +1,97 @@
+.menu_button {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    height: 2.7em;
+    width: 2.7em;
+    background-color: #008643;
+    -webkit-border-radius: 1.35em;
+    opacity: .9;
+    color: #fff;
+    z-index: 120;
+    text-align: center;
+}
+.menu_button>span{
+    color: #fff;
+}
+.menu_button img {
+    position: relative;
+    margin-top: .3em;
+    height: .92em;
+}
+.menu_text {
+    position: relative;
+    margin-top: -.2em;
+    width: 100%;
+    height: .8em;
+    line-height: .8em;
+}
+.menu_text span {
+    font-size: .67em;
+    color: #fff;
+}
+.fixed {
+    position: fixed!important;
+}
+.display_none {
+    display: none;
+}
+.pathModel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .2;
+    -webkit-transform: translate3d(0,0,0);
+    z-index: 20;
+    display: none;
+}
+.menu_button .mui-icon{font-size: 16px;}
+.menu_text{font-size: 12px;}
+
+/*微信模板代码*/
+
+/*背景颜色微信模板代码*/
+html,
+body {
+	background-color: #008643;
+}
+body {
+	font-size: 14px;
+	background-color: #008643;
+}
+body
+{
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 21px;
+
+    color: #000;
+    background-color: #008643;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

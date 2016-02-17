@@ -1,0 +1,110 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>海之梦 APP 下载</title>
+<style>
+*{ margin:0px; padding:0px;}
+</style>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="app/css.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="app/respond.min.js"></script>
+<script src="app/jquery-1.7.1.min.js"></script>
+<script src="app/log.js"></script>
+</head>
+<body>
+
+<div class="tbus"><div class="download"><a href="javascript:;"><img src="app/cont_05_img03.png" /></a></div></div>
+<div class="dajusd">
+  <div class="zbian"><img src="app/slider-frame.png" /></div>
+  <div class="zttan">
+    <dl class="wsea">
+      <dt class="wziy">海之梦客户端</dt>
+      <dd class="wzie">www.chinahzm.cn</dd>
+      <dd class="wzis">
+      让您随时随地的了解我们的企业
+      </dd>
+
+    </dl>
+    
+    <dl class="xiazhe">
+      <dt>
+      <a href="/app/chinahzm.apk" target="_blank" class="Android">安卓客户端</a>
+      </dt>
+      <dd>安卓客户端下载</dd>
+    </dl> 
+    <dl class="xiazhe">
+      <dt>
+      <a href="https://itunes.apple.com/cn/app/da-sen-feng-ren-ji/id1031132870?mt=8" target="_blank"  class="ios">苹果客户端</a>
+      </dt>
+      <dd>苹果客户端下载</dd>
+    </dl>
+    <dl class="bidff">
+      <dt>
+      <a href="/app/chinahzm.apk" target="_blank" class="weixAndroid">安卓客户端</a>
+      </dt>
+      <dd></dd>
+    </dl> 
+    <dl class="bidff">
+      <dt>
+      <a href="https://itunes.apple.com/cn/app/da-sen-feng-ren-ji/id1031132870?mt=8" target="_blank" class="weixios">苹果客户端</a>
+      </dt>
+      <dd></dd>
+    </dl> 
+  </div>
+
+
+</div>
+
+
+<div class="tishi">
+    <div class="tishi_div">
+        <div class="tishi_div_title">微信APP下载方式</div>
+        <div class="tishi_div_main"></div>
+    </div>
+<div class="tishi_jt"></div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $('.anzhuo_about_date').html('更新：'+updatelog.updatetime+'<br />版本：'+updatelog.version);
+        var chackua=function(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        if(!chackua())
+        {
+            $('.download a').attr('href','http://www.chinahzm.cn/app/chinahzm.apk');
+        }
+
+        $('.download a').click(function() {
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/iPhone/i)=="iphone") {
+                $('.tishi_div_main').html('点击右上角的按钮，选择在“Safari”中打开，就可以下载啦');
+            } else {
+                $('.tishi_div_main').html('点击右上角的按钮，选择“在浏览器中打开”，就可以下载啦！');
+            }            
+            if(chackua())
+            {
+                $('.tishi').show();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

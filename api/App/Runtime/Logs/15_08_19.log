@@ -1,0 +1,158 @@
+[ 2015-08-19T21:50:45+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T21:50:52+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T21:57:31+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T21:58:38+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T21:59:31+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T21:59:33+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T21:59:34+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:01:38+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:01:39+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:01:40+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:02:11+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:02:15+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:02:16+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:03:01+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:03:01+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:05:52+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:05:54+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:05:55+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:05:56+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:13+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:14+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:14+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:46+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:47+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:47+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:47+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:48+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:56+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:56+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:57+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:06:57+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:07:48+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:07:49+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:07:50+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:07:50+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:08:45+08:00 ] ERR: (ThinkException) 无法加载模块:wxhd
+[ 2015-08-19T22:08:48+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001254s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001654s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001445s ]
+
+[ 2015-08-19T22:08:50+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001115s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001503s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001694s ]
+
+[ 2015-08-19T22:08:51+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001479s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001326s ]
+
+[ 2015-08-19T22:08:51+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001054s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001433s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+
+[ 2015-08-19T22:08:51+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001240s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001648s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002033s ]
+
+[ 2015-08-19T22:08:51+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001320s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001914s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001742s ]
+
+[ 2015-08-19T22:08:51+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001326s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001745s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001665s ]
+
+[ 2015-08-19T22:08:53+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001281s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001683s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002776s ]
+
+[ 2015-08-19T22:09:00+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:09:01+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:09:12+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:09:15+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist?p=0
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001202s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001611s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+
+[ 2015-08-19T22:09:21+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:09:34+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:09:53+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist?page=0&pagesize=10&callback=jsonp1&_=1439992681394
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001867s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002286s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001625s ]
+
+[ 2015-08-19T22:11:10+08:00 ] ERR: (ThinkException) 无法加载模块:10
+[ 2015-08-19T22:46:16+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist?page=10&pagesize=10&callback=jsonp2&_=1439995531322
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001471s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001868s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_member` [ RunTime:0.004068s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `srcoe`,`headimgurl`,`nickname` FROM `pa_member` ORDER BY srcoe desc LIMIT 0,10   [ RunTime:0.000517s ]
+
+[ 2015-08-19T22:46:50+08:00 ] 120.135.24.77 /dsapi/api.php/Wxhd/userlist?page=10&pagesize=10&callback=jsonp2&_=1439995531322
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001426s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001842s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001604s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_member` [ RunTime:0.003966s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\dosochina.com\dsapi\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `srcoe`,`headimgurl`,`nickname` FROM `pa_member` ORDER BY srcoe desc LIMIT 10,10   [ RunTime:0.000457s ]
+

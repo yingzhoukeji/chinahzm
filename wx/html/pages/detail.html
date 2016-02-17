@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>海之梦内容</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--标准mui.css-->
+<link rel="stylesheet" href="/wx/css/mui.min.css">
+<!--盈舟代码-->
+<link rel="stylesheet" href="/wx/css/app.css">
+
+	</head>
+	<body>
+<header class="mui-bar mui-bar-nav">
+  <a id="fanhusy" href="/wx/index.html" class="sdlogo"><img src="/wx/css/shangbiao.png"></a>
+  <a id="soush" href="/wx/html/product/search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+  <!-- h1 class="mui-title">当前栏目</h1 -->
+</header>
+  <!-- 内容 -->
+<div class="mui-content" style="background:#FFF;">
+    <div class="mui-content-padded">
+        
+    </div>
+</div>
+  <!-- 底部导航 -->     
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" id="ddlsy" href="/wx/index.html">
+        <span class="mui-icon iconfont">&#xe63b;</span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" id="regiser" href="/wx/html/product/categary.html">
+        <span class="mui-icon iconfont">&#xe6ad;</span>
+        <span class="mui-tab-label">烧烤商城</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxxm" href="/wx/html/news/categary.html">
+        <span class="mui-icon iconfont">&#xe6de;</span>
+        <span class="mui-tab-label">烧烤教室</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxjj" href="/wx/pxjj.html">
+        <span class="mui-icon iconfont">&#xe6e2;</span>
+        <span class="mui-tab-label">加盟我们</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="sdlxwm" href="/wx/lxwm.html">
+        <span class="mui-icon iconfont">&#xe613;</span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script>
+			$(function(){
+				var id=GetQueryString("id");
+				if(localStorage.getItem("pages")){
+					var page=getPageById(id);
+					var page_name=page.page_name;
+					var content=page.content;
+					$(".mui-title").text(page_name);
+					$("title").text(page_name);
+					$(".mui-content-padded").html(content);
+					$("img").each(function(){
+						var src=$(this).attr("src");
+						if(src.indexOf("http://")>-1){
+							
+						}else{
+							$(this).attr("src",picUrl+src);
+						}
+						
+						$(this).show();
+					});
+					$("a").each(function(){
+						$(this).removeAttr("href");
+					});
+				}
+		$("#regiser").on("click",function(){
+			window.location.href="/wx/html/product/categary.html";
+		})
+		$("#ddlsy").on("click",function(){
+			window.location.href="/wx/index.html";
+		})
+		$("#sdpxxm").on("click",function(){
+			window.location.href="/wx/html/news/categary.html";
+		})
+		$("#sdpxjj").on("click",function(){
+			window.location.href="/wx/pxjj.html";
+		})
+		$("#sdlxwm").on("click",function(){
+			window.location.href="/wx/lxwm.html";
+		})
+		$("#soush").on("click",function(){
+			window.location.href="/wx/html/product/search.html";
+		})
+		$("#fanhusy").on("click",function(){
+			window.location.href="/wx/index.html";
+		})
+			});
+			function getPageById(id){
+				var pages=JSON.parse(localStorage.getItem("pages"));
+				console.log(pages);
+				var page=null;
+				for(var i=0;i<pages.length;i++){
+					if(id==pages[i].id){
+						page=pages[i];
+					}
+				}
+				return page;
+			}
+		</script>
+        <div style=" display:none;"><script src="http://s11.cnzz.com/stat.php?id=1257365777&web_id=1257365777" language="JavaScript"></script></div>
+
+	</body>
+</html>

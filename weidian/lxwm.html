@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>联系我们</title>
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/mui.min.css"><style>
+.content{margin:0; padding:0; width:100%; clear:both; overflow:hidden; background:rgba(255,255,255,1.00)}
+.content img{ width:100%; clear:both; overflow:hidden;}
+
+.merchants{ margin:0 0 20px 0 ; padding:0; width:100%; clear:both; overflow:hidden; background:rgba(255,255,255,1.00);}
+.merchants .main_bt{margin:0; padding:10px; clear:both; width:100%;  overflow:hidden;}
+.merchants samp{float:right; font-size:10px; color:rgba(224,77,79,1.00)}
+.merchants .mcherist{margin:0; font-size:12px !important; padding:10px; clear:both; width:100%;  overflow:hidden;}
+</style>
+	</head>
+
+	<body>
+<div class="mui-content">
+<div class="content"><img src="images/FL18.jpg"></div>
+
+ <ul class="mui-table-view mui-grid-view mui-grid-9">
+    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="/weidian/pages/zjtcbb/list.php">
+            <span class="mui-icon iconfont">&#xe69d;</span>
+            <div class="mui-media-body">公司简介</div></a></li>
+    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="/weidian/pages/jmwm/list.php">
+            <span class="mui-icon iconfont">&#xe698;</span>
+            <div class="mui-media-body">加盟我们</div></a></li>
+    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="/weidian/pages/bzzx/list.php">
+            <span class="mui-icon iconfont">&#xe6a0;</span>
+            <div class="mui-media-body">帮助中心</div></a></li>
+</ul> 
+<div class="merchants">
+    <div class="main_bt">
+     <samp>NOTICE</samp> 公告
+    </div>
+    <div class="mcherist">
+    单笔订单满199元起，即可享受台州市区内免费送货;<br>
+    三区外可送至主城区，每日18：00前截单，加急订单可延长至晚上00：00 次日9：00前送达，购物时请尽量合并点单付款。
+ 
+    </div>	
+</div>
+<ul class="mui-table-view mui-table-view-chevron" style="margin:0 0 50px 0">
+    <li class="mui-table-view-cell">
+        <a class="mui-navigate-right"><span class="iconfont">&#xe627;</span>凌源</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a href="tel:13706572779" class="mui-navigate-right"><span class="iconfont">&#xe614;</span>13706572779 (24小时服务热线)</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a href="tel:0576-89166065" class="mui-navigate-right"><span class="iconfont">&#xe67a;</span> 0576-89166065</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a class="mui-navigate-right"><span class="iconfont">&#xe60f;</span> zybmwcn</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a class="mui-navigate-right"><span class="iconfont">&#xe60c;</span> 0576-89166065</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a class="mui-navigate-right"><span class="iconfont">&#xe678;</span> 浙江省台州市黄岩区江口工业食品开发园区内</a>
+    </li>
+    
+</ul>
+</div>
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" id="appindex"> <span class="mui-icon iconfont">&#xe6b1;</span> <span class="mui-tab-label">首页</span> </a>
+<a class="mui-tab-item" id="appscsc"> <span class="mui-icon iconfont">&#xe68b;</span> <span class="mui-tab-label">食材商城</span> </a>
+<a class="mui-tab-item" id="appskjs"> <span class="mui-icon iconfont">&#xe653;</span> <span class="mui-tab-label">积分商城</span> </a>
+<a class="mui-tab-item" id="applzwm"> <span class="mui-icon iconfont">&#xe63a;</span> <span class="mui-tab-label">加盟合作</span> </a>
+<a class="mui-tab-item mui-active" id="apphyzx"> <span class="mui-icon iconfont">&#xe6b5;</span> <span class="mui-tab-label">会员中心</span> </a> </nav>
+
+	</body>
+    <script src="js/mui.min.js"></script>
+	<script src="Public/script/zepto.min.js"></script>
+	<script src="Public/script/api.js"></script>
+	<script src="Public/script/common.js"></script>
+	<script>
+document.getElementById('appindex').addEventListener('tap', function() {
+	window.location.href="/weidian/index.php";
+});
+document.getElementById('appscsc').addEventListener('tap', function() {
+	window.location.href="/weidian/pages/shop/supplier.php";
+});
+document.getElementById('appskjs').addEventListener('tap', function() {
+	window.location.href="/wxhd/list.html";
+});
+document.getElementById('applzwm').addEventListener('tap', function() {
+	window.location.href="/weidian/pages/jmwm/list.php";
+});
+document.getElementById('apphyzx').addEventListener('tap', function() {
+	window.location.href="/weidian/usercenter.php";
+});
+	</script>
+</html>

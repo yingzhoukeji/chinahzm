@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>会员积分排行榜</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="/weidian/css/mui.min.css">
+		<link rel="stylesheet" href="/weidian/css/app.css" />
+		<script src="js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<style>
+		/*加载*/
+		.ui-notice{top: 0;z-index: -1;}
+		.ui-dialog{margin: 0!important;padding: 0!important;  background: rgba(0,0,0,.65);opacity: 0.8;display:none;}
+		.ui-dialog-notice{background:transparent}
+		.ui-dialog-notice .ui-dialog-cnt{width:130px;height:110px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-pack:center;-webkit-box-align:center;text-align:center;background:rgba(0,0,0,.65);border-radius:6px;color:#fff}
+		.ui-dialog.show{display:-webkit-box;display:box}
+		.ui-loading-bright{width:37px;height:37px;display:block;background-image:url(http://i.gtimg.cn/vipstyle/frozenui/1.2.0/img/loading_sprite_white.png?_bid=306);-webkit-background-size:auto 37px}
+		.ui-loading-bright{-webkit-animation:rotate2 1s steps(12) infinite}
+		.ui-icon-refresh.loading{-webkit-animation:rotate3 1s infinite linear}
+		@-webkit-keyframes rotate{
+		from{background-position:0 0}
+		to{background-position:-240px 0}
+		}
+		@-webkit-keyframes rotate2{
+		from{background-position:0 0}
+		to{background-position:-444px 0}
+		}
+		@-webkit-keyframes rotate3{
+		0%{-webkit-transform:rotate(0)}
+		100%{-webkit-transform:rotate(360deg)}
+		}
+
+/*刷新*/
+.loading{
+	display: none;
+	text-align: center;
+	padding: 5px;
+	background: #fff;
+}
+.mui-content{position: fixed;left: 0;right: 0;top:0;bottom: 55px;overflow-y: auto;}
+
+			
+			
+			
+
+		</style>
+	</head>
+	<body>	   
+		<!-- header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back();"></a>
+			<h1 class="mui-title">积分排行</h1>
+		</header -->
+		<div class="mui-content">
+       
+			<ul id="list" class="mui-table-view mui-table-view-chevron">
+
+			</ul>
+			<div class="loading"><img style="width: 30px;height: 30px;" src="images/loading.gif"></div>
+		</div>
+
+        
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" href="/weidian/index.php"> <span class="mui-icon iconfont">&#xe6b1;</span> <span class="mui-tab-label">首页</span> </a>
+<a class="mui-tab-item" href="/weidian/pages/shop/supplier.php"> <span class="mui-icon iconfont">&#xe68b;</span> <span class="mui-tab-label">食材商城</span> </a>
+<a class="mui-tab-item mui-active" href="/wxhd/list.html"> <span class="mui-icon iconfont">&#xe653;</span> <span class="mui-tab-label">积分商城</span> </a>
+<a class="mui-tab-item" href="/weidian/pages/jmwm/list.php"> <span class="mui-icon iconfont">&#xe63a;</span> <span class="mui-tab-label">加盟合作</span> </a>
+<a class="mui-tab-item" href="/weidian/usercenter.php"> <span class="mui-icon iconfont">&#xe6b5;</span> <span class="mui-tab-label">会员中心</span> </a> </nav>
+        
+	</body>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script>
+		var p=0;
+		var s=10;
+		var flag=true;
+		$(function(){
+			getDetail();
+			$(".mui-content").scroll(function() {
+				
+				if ($(".mui-content").scrollTop() >= $(".mui-content").height() - $(window).height()+100) {
+					//alert("滚动条已经到达底部为" + $(".mui-content").scrollTop());
+					if(flag){
+						$(".loading").show();
+						getDetail();
+						flag=false;						
+					}
+					
+					
+				}
+			});
+		});
+		function getDetail(){
+			var url=wxhdUrl+"/userlist?page="+p+"&pagesize="+s+"&callback=?";
+			$.getJSON(url,function(json){
+				$(".loading").hide();
+				if(json!=0){
+					
+					flag=true;
+					p=p+s;
+					var html='';
+					for(var i=0;i<json.length;i++){
+						html+='<li class="mui-table-view-cell mui-media">';
+						html+='<a class=""><img class="ui-avatar mui-media-object mui-pull-left" src="'+json[i].headimgurl+'"><div class="mui-media-body">'+json[i].nickname+'<p class="mui-ellipsis">积分:'+json[i].srcoe+'</p></div></a>';
+					}
+					$("#list").append(html);
+				}else{
+					
+				}
+				
+				
+			});
+		}
+		document.getElementById('appindex').addEventListener('tap', function() {
+	window.location.href="/weidian/index.php";
+});
+document.getElementById('appscsc').addEventListener('tap', function() {
+	window.location.href="/weidian/pages/shop/supplier.php";
+});
+document.getElementById('appskjs').addEventListener('tap', function() {
+	window.location.href="/weidian/pages/skjs/list.php";
+});
+document.getElementById('applzwm').addEventListener('tap', function() {
+	window.location.href="/weidian/lxwm.html";
+});
+document.getElementById('apphyzx').addEventListener('tap', function() {
+	window.location.href="/weidian/usercenter.php";
+});	
+	</script><div style="display:none"><script src="http://s11.cnzz.com/stat.php?id=1257365777&web_id=1257365777" language="JavaScript"></script></div>
+</html>

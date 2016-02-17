@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+.readOnly {border:none !important;}
+.majorInfo input.type1 {margin-right:5px;width:210px;}
+.majorInfo input.type2 {margin-right:5px;text-align:center;width:40px;}
+.majorInfo label.type1 {margin-right:10px;}
+
+/* 라이브리 textarea에서 한글 안쳐지는 문제..    .socalReply 클래스 밑에 추가해주세요 */
+.socalReply textarea{ime-mode:active;}
+
+#support_area textarea {ime-mode:active !important;color:#5e5e5e !important;}
+
+/* 2014-01-07 추가 안돼 있어서 다시추가 File upload list  start */ 262 line
+.fileList {overflow:hidden;margin:5px 0 -2px;}
+.fileList li {float:left;margin-right:20px;color:#444444;margin-top:7px !important;}
+.fileList li * {vertical-align:middle;}
+.fileList li a {margin:-2px 0 0 5px;padding:4px 3px 2px;border:1px solid #aaaaaa;background-position:3px -97px;font-size:0;text-indent:-999;width:8px;height:7px;}
+.icoBtn.close {background-position:-235px -95px;width:12px;height:11px;}
+/* File upload list  end */
+
+#header .headerIn {z-index:400;} /* 지엔비 인덱스값 */
+
+.noLine {border:none !important;}
+
+/* 계시판 공유하기 버튼 pc에선 안보이고 mobile에서는 보이기 */
+.socialToolbar .share em {display:none;}
+/* mobile -----------------------------------------------*/
+@media only screen and (max-width:767px){
+	.socialToolbar .share em {display:inline-block;}
+}
+
+/* 이벤트 뷰 컨텐츠영역 스타일 리셋 */
+#eventViewCont dt {padding:0;color:#5e5e5e;font-size:14px;font-weight:normal;}
+#eventViewCont p {margin:0;text-align:left;font-size:inherit;}
+
+/* 자유게시판 답변글아이콘 추가 */
+span.reply {padding:0 0 0 25px;background:url('bg_ico.gif') -100px -39px no-repeat;}
+
+/* cug 레이아웃 h3 마진 조절*/
+h3.cug_h3 {margin:0;position:static;}
+
+/* 모바일 공유하기 버튼 안보여서 넓이추가 */
+/* mobile -----------------------------------------------*/
+@media only screen and (max-width:767px){
+	.socialToolbar .countArea {width: 80%;}	
+}
+
+/* 모바일 전체보기메뉴 */
+#mobile_AllMenu {overflow-y:auto;display:block;position:fixed;right:0;top:0;width:100%;height:100%;z-index:1000;}
+#mobile_AllMenu .mBox {background:#ffffff;height:100%;}
+#mobile_AllMenu a {display:block;padding:6px 20px 10px;color:#4a5374;font-size:16px;font-weight:bold;}
+#mobile_AllMenu .mGnb li {border-bottom:1px solid #bbbbbb;background:#dcdcdc;}
+#mobile_AllMenu .mGnb li:last-child {border-bottom:0;}
+#mobile_AllMenu .mGnb li p {overflow:hidden;width:100%;position:relative;}
+#mobile_AllMenu .mGnb li p a {float:left;display:inline-block;}
+#mobile_AllMenu .mGnb li p > span {float:right;cursor:pointer;padding:15px 20px;}
+#mobile_AllMenu .mGnb li p > span em {text-indent:-9999px;display:block;background:url('bu_open.gif') 0 0 no-repeat;background-size:100% 100%;width:14px;height:8px;}
+#mobile_AllMenu .mGnb li ul {display:none;}
+#mobile_AllMenu .mGnb li ul li {border-bottom-color:#dcdcdc;background:#ffffff;}
+#mobile_AllMenu .mGnb li ul li a {padding:6px 20px 7px;font-size:14px;font-weight:normal;}
+#mobile_AllMenu .mGnb li ul li a:after {background:none;width:0;height:0;}
+#mobile_AllMenu .mGnb li.on {background:#dcdcdc;}
+#mobile_AllMenu .mGnb li.on p > span em {background-image:url('bu_close.gif');}
+#mobile_AllMenu .mGnb li.on ul {border-top:1px solid #bbbbbb;}
+#mobile_AllMenu .mGnb li.on ul li:last-child {border-bottom:0;}
+#mobile_AllMenu .mUtil {border-top:3px solid #333333;}
+#mobile_AllMenu .mUtil li {border-bottom:1px solid #cfcfcf;background:#efefef;}
+
+/* 지식플러스 상단 소팅 */
+.listInfo .infoL.type1 {margin-right:15px;}
+
+
+/* Pinterest CUG **********/
+.pinGrid {position:relative;margin-left:-2%;padding:0 0 20px;border:solid #333333;border-width:1px 0;}
+.pinGrid:after {content:'';display:block;clear:both;height:0;visibility:hidden;}
+.pinCug {float:left;margin:20px 0 0 2%;width:30%;background:#ffffff;}
+.pinCug > div {padding:7px 0;border:1px solid #dadada;}
+.pinCug img {width:100%;}
+.pinCug dl {padding:0 7px 27px;border-bottom:1px solid #dadada;}
+.pinCug dl dt {overflow:hidden;margin:24px 13px 0;max-height:50px;}
+.pinCug dl dt.thumb {margin:0;font-size:0;max-height:100%;}
+.pinCug dl dt a {color:#333;font-size:16px;font-weight:bold;}
+.pinCug dl dd {overflow:hidden;margin:14px 13px 0;max-height:60px;}
+.pinCug .info {margin:16px 20px 10px;}
+
+
+
+
+/* 로고 모바일 화면일때 높이 늘어나나는 부분 수정 */
+#header .headerIn h1 a img {height:auto;}
+@media only screen and (max-width:767px){
+	#header .headerIn h1 a {margin:5px 0;padding:5px 0 0 0;height:auto;}	
+}
+
+/* GNB 왼쪽 배너 */
+#leftBanner {height:160px;overflow:hidden;}
+#leftBanner a {display:block;}
+
+/* GNB 메뉴 높이값 */
+#header .headerIn .gnb .depth2 {height:auto;overflow:hidden;}
+
+/* GNB 모바일서 아래메뉴 여백 생기는부분 수정 */
+@media only screen and (max-width:767px){
+	#header .headerIn .gnb li.on a:after {bottom:0px !important;}
+	#header .headerIn .gnb .depth2 {top:39px !important;}
+}
+
+/* 모바일화면에서 회원수정 보이기 */
+@media only screen and (max-width:767px){
+	#memModify {display:block !important;}
+}

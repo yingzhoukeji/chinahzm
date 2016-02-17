@@ -1,0 +1,213 @@
+<include file="Base:header" />
+<div class="body">
+  <article class="destination">
+    <header class="destination__header content-fill"> <img data-src="/documents/our-story-banner.png" data-image="/documents/our-story-banner.png" data-image-dimensions="1500x999" data-image-focal-point="0.48138297872340424,0.30677290836653387" alt="our-story-banner.png" >
+      <div class="destination__meta">
+		<p></p>
+        <p><strong>在线留言</strong><em>Delicious first, health based</em></p>
+      </div>
+      <button class="back-button">返回</button>
+      <a href="#" class="destination-button"></a> </header>
+    <div class="subnav">
+      <ul>
+		<li class="subnav__item "> <a href="/index.php/page/index/name/lxfs"> <span class="iconfont nav37"></span> <span>联系方式</span> </a> </li> 
+		<li class="subnav__item "> <a href="/dtdh.html"> <span class="iconfont nav38"></span> <span>地图导航</span> </a> </li> 
+		<li class="subnav__item subnav__item--active"> <a href="/index.php/message/index"> <span class="iconfont nav39"></span> <span>在线留言</span> </a> </li>       
+      </ul>
+    </div>
+    <main id="content" class="content destination__content" role="main" data-content-field="main-content">
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1451952029330" id="page-547e4d72e4b0c3afcaceeb55">
+        <div class="row sqs-row">
+          <div class="col sqs-col-9 span-9">
+            <div class="row sqs-row">
+              <div class="col sqs-col-9 span-9">
+                <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-9ae54d6e03de1eb5d6a9">
+                  <div class="sqs-block-content">                    
+										
+					<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+					<div id="dituContent" style="width:100%;height:360px;overflow:hidden;" ></div>
+					<script type="text/javascript">
+						//创建和初始化地图函数：
+						function initMap(){
+						createMap();//创建地图
+						setMapEvent();//设置地图事件
+						addMapControl();//向地图添加控件
+						addMarker();//向地图中添加marker
+						}
+
+						//创建地图函数：
+						function createMap(){
+						var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+						var point = new BMap.Point(121.32722,28.670798);//定义一个中心点坐标
+						map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+						window.map = map;//将map变量存储在全局
+						}
+
+						//地图事件设置函数：
+						function setMapEvent(){
+						map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+						map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+						map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+						map.enableKeyboard();//启用键盘上下左右键移动地图
+						}
+
+						//地图控件添加函数：
+						function addMapControl(){
+						//向地图中添加缩放控件
+						var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+						map.addControl(ctrl_nav);
+						//向地图中添加缩略图控件
+						var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+						map.addControl(ctrl_ove);
+						//向地图中添加比例尺控件
+						var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+						map.addControl(ctrl_sca);
+						}
+
+						//标注点数组
+						var markerArr = [{title:"海之梦集团",content:"地址：浙江省台州市黄岩江口工业食品开发园区内<br/>电话：0576-89166065<br/>手机：13706572779 <br/>Q Q：1939862",point:"121.32722|28.670798",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+						 ];
+						//创建marker
+						function addMarker(){
+						for(var i=0;i<markerArr.length;i++){
+							var json = markerArr[i];
+							var p0 = json.point.split("|")[0];
+							var p1 = json.point.split("|")[1];
+							var point = new BMap.Point(p0,p1);
+							var iconImg = createIcon(json.icon);
+							var marker = new BMap.Marker(point,{icon:iconImg});
+							var iw = createInfoWindow(i);
+							var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+							marker.setLabel(label);
+							map.addOverlay(marker);
+							label.setStyle({
+										borderColor:"#808080",
+										color:"#333",
+										cursor:"pointer"
+							});
+							
+							(function(){
+								var index = i;
+								var _iw = createInfoWindow(i);
+								var _marker = marker;
+								_marker.addEventListener("click",function(){
+									this.openInfoWindow(_iw);
+								});
+								_iw.addEventListener("open",function(){
+									_marker.getLabel().hide();
+								})
+								_iw.addEventListener("close",function(){
+									_marker.getLabel().show();
+								})
+								label.addEventListener("click",function(){
+									_marker.openInfoWindow(_iw);
+								})
+								if(!!json.isOpen){
+									label.hide();
+									_marker.openInfoWindow(_iw);
+								}
+							})()
+						}
+						}
+						//创建InfoWindow
+						function createInfoWindow(i){
+						var json = markerArr[i];
+						var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+						return iw;
+						}
+						//创建一个Icon
+						function createIcon(json){
+						var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+						return icon;
+						}
+
+						initMap();//创建和初始化地图
+					</script>  
+					
+					<div>
+						<form action="{:U('message/add')}" id="contact_form" method="post" class="mxfform"/>
+						<dl><dt><span class="required">* </span>{$Think.lang.T_NAME}：</dt><dd><input type="text" name="username" id="name" value="" class="requiredField" required/></dd></dl>
+					
+						<dl><dt><span class="required">* </span>{$Think.lang.T_EMAIL}：</dt><dd><input type="email" name="email" id="email" value="" class="requiredField email" required/></dd></dl>
+						
+						<dl><dt><span class="required">* </span>{$Think.lang.T_MOBILE}：</dt><dd><input type="number" name="moblie" id="moblie" value="" required/></dd></dl>
+					
+						<dl><dt><span class="required">* </span>{$Think.lang.T_MESSAGE_CONTENT}：</dt><dd><textarea name="content" id="message" style="width: 280px; height: 80px;"  class="requiredField" required></textarea></dd></dl>
+						
+						<dl><dt><span class="required">* </span>{$Think.lang.T_CODE}：</dt><dd>
+							<input class="yzm" name="verify_code" id="verify_code" type="text" value="" required/>
+							<img src="{:U('Base/verify_code')}"  title="看不清？单击此处刷新" onclick="this.src+='?rand='+Math.random();"  style="cursor: pointer; vertical-align: middle;"/></dd>
+						</dl>
+						<p><input name="submitted" id="submitted" value="提交" class="tjan" type="submit" /></p>
+						</form>
+					</div>
+													
+				  </div>
+                </div>
+              </div>
+              <div class="col sqs-col-2 span-2">
+                <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_1_1413500627376_72166">
+                  <div class="sqs-block-content">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col sqs-col-3 span-3">
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb">
+				    <a href="/index.php/product/read/id/585"><img src="/documents/hxlh.jpg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_59211">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb">
+					<p><span>商城帮助</span><span><a href="/index.php/page/index/name/lpqsm">礼品券说明</a></span></p>
+				    <a href="/index.php/page/index/name/lpqsm"><img src="/documents/lpqsm.jpg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb mxftjcp">
+					<dl><dt class="tjcpz">推荐产品</dt><dd class="change"><img src="/documents/change.jpg"><span>换一换</span></dd></dl>
+					<div class="tjcplb" id="recommend">
+					<volist name="productlist" id="vo" offset="1" length='6'>
+					<a href="{:U('product/read',array('id'=>$vo['id']))}">
+						<div class="tjcp"> 		  
+						   <img src="{:get_default_img($vo['image_id'])}">
+						   <span class="cpbt">{$vo.title}</span>      
+						</div>
+					</a>
+					</volist>  
+					</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_63193">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb contact">
+					<p><img class="lxfs" src="/documents/contact.jpg"></p>
+                    <p>电话：0576-89166065</p>
+					<p>手机：13706572779</p>
+					<p>Q Q：1939862</p>
+					<p>邮箱：1939862@qq.com</p>
+					<p>地址：浙江省台州市黄岩江口工业食品开发园区内</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </main>
+  </article>
+<include file="Base:footer" />

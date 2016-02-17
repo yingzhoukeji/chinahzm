@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>产品分类</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="/wx/css/mui.min.css">
+        <!--盈舟代码-->
+        <link rel="stylesheet" href="/wx/css/app.css">
+		<script src="../../js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<style>
+				.ui-notice{top: 0;z-index: -1;}
+				.ui-dialog{margin: 0!important;padding: 0!important;  background: rgba(0,0,0,.65);opacity: 0.8;}
+		</style>
+	</head>
+	<body>
+<header class="mui-bar mui-bar-nav">
+  <a id="fanhusy" href="/wx/index.html" class="sdlogo"><img src="/wx/css/shangbiao.png"></a>
+  <a id="soush" href="/wx/html/product/search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+  <!-- h1 class="mui-title">当前栏目</h1 -->
+</header>
+
+<div class="mui-content">
+<ul class="mui-table-view mui-grid-view mui-grid-9" style="background: #FFF; margin:0 0 60px 0" id="list">
+
+<a href="list.html?id='+json1[i].cid+'&title='+json1[i].name+'">
+<li class="mui-table-view-cell mui-media  mui-col-xs-4" data-id="'+json1[i].cid+'">
+<img class="mui-media-object mui-pull-left" data-lazyload="../../images/'+json1[i].cid+'.jpg">
+<div class="mui-media-body">测试</div>
+</li>
+</a>
+<a href="list.html?id='+json1[i].cid+'&title='+json1[i].name+'">
+<li class="mui-table-view-cell mui-media  mui-col-xs-4" data-id="'+json1[i].cid+'">
+<img class="mui-media-object mui-pull-left" data-lazyload="../../images/'+json1[i].cid+'.jpg">
+<div class="mui-media-body">测试</div>
+</li>
+</a>
+<a href="list.html?id='+json1[i].cid+'&title='+json1[i].name+'">
+<li class="mui-table-view-cell mui-media  mui-col-xs-4" data-id="'+json1[i].cid+'">
+<img class="mui-media-object mui-pull-left" data-lazyload="../../images/'+json1[i].cid+'.jpg">
+<div class="mui-media-body">测试</div>
+</li>
+</a>
+
+</ul>
+</div>
+		<!--path菜单-->
+	    <div id="pathmenu" class="menu_button fixed display_none" style="z-index: 0; line-height: 2.5em; display: block;"><span>菜单</span></div>
+	    <div class="menu_button fixed display_none" id="home"><i class="mui-icon mui-icon-home"></i>
+	
+	        <div class="menu_text"><span>主页</span></div>
+	    </div>
+	    <div id="tel" class="menu_button fixed display_none"><i class="mui-icon mui-icon-phone"></i>
+	        <div class="menu_text"><span>联系</span></div>
+	    </div>
+	    <div class="menu_button fixed display_none" id="map"><i class="mui-icon mui-icon-location"></i>
+	
+	        <div class="menu_text"><span>导航</span></div>
+	    </div>
+        
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" id="ddlsy" href="/wx/index.html">
+        <span class="mui-icon iconfont">&#xe63b;</span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="regiser" href="/wx/html/product/categary.html">
+        <span class="mui-icon iconfont">&#xe6ad;</span>
+        <span class="mui-tab-label">烧烤商城</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxxm" href="/wx/html/news/categary.html">
+        <span class="mui-icon iconfont">&#xe6de;</span>
+        <span class="mui-tab-label">烧烤教室</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxjj" href="/wx/pxjj.html">
+        <span class="mui-icon iconfont">&#xe6e2;</span>
+        <span class="mui-tab-label">加盟我们</span>
+    </a>
+    <a class="mui-tab-item" id="sdlxwm" href="/wx/lxwm.html">
+        <span class="mui-icon iconfont">&#xe613;</span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+	    <div class="pathModel"></div>
+		<div id="mcover" onclick="document.getElementById('mcover').style.display='';">
+            <img src="../../images/guide.png">
+        </div>
+        <div class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>
+	</body>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/zepto.min.js"></script>
+	<script src="../../js/mui.lazyload.js"></script>
+	<script src="../../js/mui.lazyload.img.js"></script>
+	<script src="../../js/path.js"></script>
+	<script>
+		
+		mui.init({
+			swipeBack:false
+		});
+		
+		$(function(){
+			initWeixin();
+			$("#home").on("tap",function(){
+				window.location.href=indexUrl;
+			});	
+			$("#tel").on("tap",function(){
+				window.location.href="tel:13906588899";
+			});	
+			$("#map").on("tap",function(){
+				openMap();
+			});
+				$("#regiser").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#ddlsy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+				$("#sdpxxm").on("tap",function(){
+					window.location.href="/wx/pxxm.html";
+				})
+				$("#sdpxjj").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#sdlxwm").on("tap",function(){
+					window.location.href="/wx/lxwm.html";
+				})
+				$("#soush").on("tap",function(){
+					window.location.href="/wx/html/product/search.html";
+				})
+				$("#fanhusy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+		});
+		getCategary();
+		function getCategary(){
+			
+			var url=serverUrl+"/categary?lang="+lang+"&type=p&callback=?";
+			$.getJSON(url,function(json1){
+				$(".ui-dialog.show").hide();
+				console.log(json1);
+				var html='';
+				for(var i=0;i<json1.length;i++){
+					html+='<a href="list.html?id='+json1[i].cid+'&title='+json1[i].name+'"><li class="mui-table-view-cell mui-media  mui-col-xs-4" data-id="'+json1[i].cid+'">';
+					html+='<img class="mui-media-object mui-pull-left" data-lazyload="../../images/'+json1[i].cid+'.jpg"><div class="mui-media-body">'+json1[i].name+'</div></li></a>';
+					
+				}
+				$("#list").html(html);
+				mui(document).imageLazyload({
+					placeholder: '../../images/60x60.gif'
+				});
+			});
+		}
+	</script>
+</html>

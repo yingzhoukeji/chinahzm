@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>积分商城</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="/weidian/css/app.css">
+<link rel="stylesheet" href="/weidian/css/mui.min.css"><style>
+		<script src="js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		
+<style>
+.content{margin:0; padding:0; width:100%; clear:both; overflow:hidden; background:rgba(255,255,255,1.00)}
+.content img{ width:100%; clear:both; overflow:hidden;}
+
+.merchants{ margin:0 0 20px 0 ; padding:0; width:100%; clear:both; overflow:hidden; background:rgba(255,255,255,1.00);}
+.merchants .main_bt{margin:0; padding:10px; clear:both; width:100%;  overflow:hidden;}
+.merchants samp{float:right; font-size:10px; color:rgba(224,77,79,1.00)}
+.merchants .mcherist{margin:0; font-size:12px !important; padding:10px; clear:both; width:100%;  overflow:hidden;}
+.baisd{background:rgba(255,255,255,1.00) !important;}
+.aibsd{background:rgba(255,255,255,1.00) !important; margin-bottom:50px !important;}
+.tubislj{ width:100%; height:auto;}
+.wuzis{ line-height:20px;font-size:12px; text-align:center;
+display:block;                     /*内联对象需加*/
+word-break:keep-all;           /* 不换行 */
+white-space:nowrap;          /* 不换行 */
+overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+text-overflow:ellipsis;         /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+</style>
+
+	</head>
+	<body class="baisd">	        
+<div class="mui-content baisd">
+   <div class="content"><img src="/weidian/images/FL17.jpg"></div>
+   <div class="merchants">
+    <div class="main_bt">
+     <samp>NOTICE</samp> 积分购买说明
+    </div>
+    <div class="mcherist">
+    1、本频道只可使用积分购买。<br>
+    2、积分的价值，1:1<br>
+    3、积分怎么获得？ 您分享下面任何一个产品分享到朋友圈或群、好友即可得到 1积分。
+    </div>	
+</div>  
+   <ul id="list" class="mui-table-view mui-grid-view mui-grid-9 aibsd"></ul>
+</div>
+    
+        
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" href="/weidian/index.php"> <span class="mui-icon iconfont">&#xe6b1;</span> <span class="mui-tab-label">首页</span> </a>
+<a class="mui-tab-item" href="/weidian/pages/shop/supplier.php"> <span class="mui-icon iconfont">&#xe68b;</span> <span class="mui-tab-label">食材商城</span> </a>
+<a class="mui-tab-item mui-active" href="/wxhd/list.html"> <span class="mui-icon iconfont">&#xe653;</span> <span class="mui-tab-label">积分商城</span> </a>
+<a class="mui-tab-item" href="/weidian/pages/jmwm/list.php"> <span class="mui-icon iconfont">&#xe63a;</span> <span class="mui-tab-label">加盟合作</span> </a>
+<a class="mui-tab-item" href="/weidian/usercenter.php"> <span class="mui-icon iconfont">&#xe6b5;</span> <span class="mui-tab-label">会员中心</span> </a> </nav>
+        
+	</body>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script>
+		$(function(){
+			getDetail();
+		});
+		function getDetail(){
+			var url=wxhdUrl+"/hdlist?callback=?";
+			$.getJSON(url,function(json){
+			
+				var html='';
+				for(var i=0;i<json.length;i++){
+					html+='<li class="mui-table-view-cell mui-media mui-col-xs-6" data-id="'+json[i].id+'">';
+					html+='<img class="tubislj" src="'+picUrl+json[i].image+'"><div class="wuzis">'+json[i].title+'</div>';
+				}
+				$("#list").html(html);
+				$("#list").find("li").each(function(index,el){
+					$(this).click(function(){
+						var id=$(this).data("id");
+						window.location.href="detail.html?id="+id+"0";
+					});
+				});
+			});
+		}
+
+	</script>
+    
+  <div style="display:none"><script src="http://s11.cnzz.com/stat.php?id=1257365777&web_id=1257365777" language="JavaScript"></script></div>
+</html>

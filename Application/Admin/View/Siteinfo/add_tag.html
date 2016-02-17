@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>添加编辑标签-网站设置-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='网站设置 > 添加编辑标签';
+    </php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">添加编辑标签</div>
+                </div>
+                <form action="{:U('Siteinfo/add_tag')}" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <php>if($site['SITE_INFO']['LANG_SWITCH_ON']=='1'){</php>
+                        <tr>
+                            <th>语言选择：</th>
+                            <td><select name="lang" style="width: 80px;">
+<option value="zh-cn" <if condition="$info['lang'] eq 'zh-cn'">selected</if> >简体中文</option>
+                                        <option value="en-us" <if condition="$info['lang'] eq 'en-us'">selected</if> >English</option>
+										<option value="ru" <if condition="$info['lang'] eq 'ru'">selected</if> >RU</option>
+										<option value="spain" <if condition="$info['lang'] eq 'spain'">selected</if> >SPAIN</option>
+                            </select></td>
+                        </tr>
+                        <php>}</php>
+                        <tr>
+                            <th width="120">标签名称：</th>
+                            <td><input name="name" type="text" class="input" size="40" value="{$info.name}" /> </td>
+                        </tr>
+                        <tr>
+                            <th>标签标识：</th>
+                            <td><input name="unique_id" type="text" class="input" size="30" value="{$info.unique_id}" />(英文字母)模版调用方法：
+                                <input type="text" value="<weblock name='标识' />" disabled style="border: none"></td>
+                        </tr>
+                        <tr id="hidetr">
+                            <th width="120">标签内容：</th>
+                            <td><textarea id="content" class="" style="height: 300px; width: 80%;" name="content">{$info['content']}</textarea></td>
+                        </tr>
+
+                    </table>
+                    <input type="hidden" name="id" value="{$info.id}"/>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<js href="--PUBLIC--/kindeditor/kindeditor.js,--PUBLIC--/kindeditor/lang/zh_CN.js"/>
+<script type="text/javascript">
+    $(function(){
+        var  content ;
+        KindEditor.ready(function(K) {
+            content = K.create('#content',{
+                allowFileManager : true,
+                uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=tag'
+            });
+        });
+        $(".submit").click(function(){
+            content.sync();
+            commonAjaxSubmit();
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

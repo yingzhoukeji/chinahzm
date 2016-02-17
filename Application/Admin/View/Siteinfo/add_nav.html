@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加编辑菜单-网站设置-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='网站设置 > 添加编辑菜单';
+    </php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">添加编辑菜单</div>
+                </div>
+                <form action="{:U('Siteinfo/add_nav')}" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <php>if($site['SITE_INFO']['LANG_SWITCH_ON']=='1'){</php>
+                        <tr>
+                            <th>语言选择：</th>
+                            <td><select name="lang" style="width: 80px;">
+<option value="zh-cn" <if condition="$info['lang'] eq 'zh-cn'">selected</if> >简体中文</option>
+                                        <option value="en-us" <if condition="$info['lang'] eq 'en-us'">selected</if> >English</option>
+										<option value="ru" <if condition="$info['lang'] eq 'ru'">selected</if> >RU</option>
+										<option value="spain" <if condition="$info['lang'] eq 'spain'">selected</if> >SPAIN</option>
+                            </select></td>
+                        </tr>
+                        <php>}</php>
+                        <tr>
+                            <th width="120">菜单名称：</th>
+                            <td><input name="nav_name" type="text" class="input" size="40" value="{$info.nav_name}" /> </td>
+                        </tr>
+                        <tr>
+                            <th>父分类：</th>
+                            <td><select name="parent_id" style="width: 140px;">
+                                <option value="0">顶级分类</option>
+                                <volist name="list" id="vo">
+                                    <option value="{$vo.id}"  <if condition="$vo['id'] eq $info['parent_id']">selected</if>>{$vo.fullname}</option>
+                                </volist>
+                            </select></td>
+                        </tr>
+                        <tr id="hidetr">
+                            <th width="120">选择菜单：</th>
+                            <td>
+                                <select name="moduleguide" id="guide"  style="width: 140px;">
+                                    <option value="">--请选择--</option>
+                                    <option value="link-0" <php>if($info['module']=='link' && 0==$info['guide']){</php>selected<php>}</php>>外部链接</option>
+                                    <option value="message-0" <php>if($info['module']=='message' && 0==$info['guide']){</php>selected<php>}</php>>留言板</option>
+                                    <option disabled>文章分类</option>
+                                    <option value="news-0" <php>if($info['module']=='news' && 0==$info['guide']){</php>selected<php>}</php>>文章列表页</option>
+                                    <volist name="artlist" id="vo">
+                                        <option value="news-{$vo.cid}"  <php>if($info['module']=='news' && $vo['cid']==$info['guide']){</php>selected<php>}</php>>-{$vo.fullname}</option>
+                                    </volist>
+                                    <option disabled>产品分类</option>
+                                    <option value="product-0" <php>if($info['module']=='product' && 0==$info['guide']){</php>selected<php>}</php>>产品列表页</option>
+                                    <volist name="prolist" id="vo">
+                                        <option value="product-{$vo.cid}" <php>if($info['module']=='product' && $vo['cid']==$info['guide']){</php>selected<php>}</php>>-{$vo.fullname}</option>
+                                    </volist>
+                                    <option disabled>单页</option>
+                                    <volist name="pagelist" id="vo">
+                                        <option value="page-{$vo.id}" <php>if($info['module']=='page' && $vo['id']==$info['guide']){</php>selected<php>}</php>>-{$vo.fullname}</option>
+                                    </volist>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>导航位置：</th>
+                            <td><select name="type" style="min-width: 80px;">
+                                <option value="top" <if condition="$info['type'] eq 'top'">selected</if>>顶部</option>
+                                <option value="middle" <if condition="$info['type'] eq 'middle'">selected</if>>中间</option>
+                                <option value="bottom" <if condition="$info['type'] eq 'bottom'">selected</if>>底部</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>打开方式：</th>
+                            <td><select name="target" style="min-width: 80px;">
+                                <option value="0" <if condition="$info['target'] eq 0">selected</if>>当前窗口</option>
+                                <option value="1" <if condition="$info['target'] eq 1">selected</if>>新窗口</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>显示排序：</th>
+                            <td><input class="input" name="sort" type="text" size="20" value="{$info.sort}" /> </td>
+                        </tr>
+                        <tr>
+                            <th>外部链接：</th>
+                            <td><input class="input" name="link" type="text" size="40" value="{$info.link}" /> 若使用内部链接此处留空！请加上http://</td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="id" value="{$info.id}"/>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(function(){
+        $(".submit").click(function(){
+            commonAjaxSubmit();
+        });
+    });
+</script>
+</body>
+</html>

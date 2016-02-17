@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浙江海之梦股份有限公司</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/cate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" href="css/frozen.css" />
+		<link rel="stylesheet" type="text/css" href="css/path_menu.css"/>
+		<script src="js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<style>
+				.ui-notice{top: 0;z-index: -1;}
+				.ui-dialog{margin: 0!important;padding: 0!important;  background: rgba(0,0,0,.65);opacity: 0.8;}
+		</style>
+		<style>
+
+		
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			
+			.mui-off-canvas-right{
+				color: #fff;
+			}
+			
+			.title{
+			  	margin: 35px 15px 10px;
+			  }
+			  .title+.content{
+			  	margin: 10px 15px 35px;
+			  	color: #bbb;
+			  	text-indent: 1em;
+			  	font-size: 14px;
+			  	line-height: 24px;
+			  }
+			   input{
+			  	color: #000;
+			  }
+			  .user-info {
+				  text-align: left;
+				  padding: 20px 10px 10px;
+				  text-indent: 6px;
+				}
+				.user-info img {
+				  width: 45px;
+				  height: 45px;
+				  border-radius: 50%;
+				  overflow: hidden;
+				}
+				#mcover {
+				  position: fixed;
+				  top: 0;
+				  left: 0;
+				  width: 100%;
+				  height: 100%;
+				  background: rgba(0, 0, 0, 0.7);
+				  display: none;
+				  z-index: 200000;
+				}
+				#mcover img {
+				  position: fixed;
+				  right: 18px;
+				  top: 5px;
+				  width: 260px!important;
+				  height: 180px!important;
+				  z-index: 200001;
+				}
+				.mui-group-list-group{background:#666666; color:#fff}
+		</style>
+	</head>
+
+	<body>
+		<!--侧滑菜单容器-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-right">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						<div class="user-info">
+							<a href="javascript:;">
+								<img id="headimgurl" class="mui-media-object mui-pull-left" src="images/tx.jpg">
+								<div class="mui-media-body">
+									<span id="nickname">doso</span>
+									<p class="mui-ellipsis">大森欢迎您!</p>
+								</div>
+							</a>
+							
+						</div>
+						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted" id="pageslist">
+							<li class="mui-table-view-divider mui-group-list-group">走进大森</li>
+							<div id="zjmax"></div>
+							<li class="mui-table-view-divider mui-group-list-group">服务中心</li>
+							<div id="ppwh"></div>
+							<li class="mui-table-view-divider mui-group-list-group">人力资源</li>
+							<div id="jmhz"></div>
+							<li class="mui-table-view-divider mui-group-list-group">联系我们</li>
+							<div id="fuwzq"></div>
+							
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<div class="mui-inner-wrap">
+				<!--
+				<header class="mui-bar mui-bar-nav">
+					
+					<a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
+					<h1 class="mui-title">左滑导航</h1>
+				</header>-->
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="swiper-container">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide"><img src="images/slider/01.jpg"></div>
+								<div class="swiper-slide"><img src="images/slider/02.jpg"></div>
+								<div class="swiper-slide"><img src="images/slider/03.jpg"></div>
+								<div class="swiper-slide"><img src="images/slider/04.jpg"></div>
+								<div class="swiper-slide"><img src="images/slider/05.jpg"></div>
+								<div class="swiper-slide"><img src="images/slider/9861-1.jpg"></div>
+					           
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination"></div>
+					    </div>
+						<ul class="mainmenu" id="dd">
+							<li><a href="html/product/categary.html"><img src="images/1-1.jpg"><p>产品中心</p></a></li>
+						    <li><a href="html/pages/detail.html?id=20" style="height: 87.3333333333333px;"><img src="images/20.png"><p>走进大森</p></a></li>
+						    <li><a href="html/pages/detail.html?id=22" style="height: 87.3333333333333px;"><img src="images/14.png"><p>SEO致辞</p></a></li>
+						    <li><a href="html/pages/detail.html?id=25" style="height: 87.3333333333333px;"><img src="images/13.png"><p>荣誉证书</p></a></li>
+						    <li><a href="html/news/categary.html"><img src="images/4.png"><p>大森新闻</p></a></li>
+						    <li><a href="html/pages/detail.html?id=39"><img src="images/14.png"><p>销售网络</p></a></li>
+						    <li><a href="html/pages/detail.html?id=41"><img src="images/20.png"><p>售后服务</p></a></li>
+						    <li><a href="html/pages/detail.html?id=33"><img src="images/18.png"><p>人才招聘</p></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<!--path菜单-->
+	    <div id="pathmenu" class="menu_button fixed display_none" style="z-index: 21; line-height: 2.5em; display: block;"><span>联系</span></div>
+        
+	    <div class="menu_button fixed display_none" id="more"><i class="mui-icon mui-icon-bars"></i>
+	        <div class="menu_text"><span>菜单</span></div>
+	    </div>
+        
+	    <div class="menu_button fixed display_none" id="tel"><i class="mui-icon mui-icon-phone"></i>
+	        <div class="menu_text"><span>电话</span></div>
+	    </div>
+        
+	    <div class="menu_button fixed display_none" id="map"><i class="mui-icon mui-icon-location"></i>
+	
+	        <div class="menu_text"><span>地图</span></div>
+		</div>
+        
+<footer id="footer"> 
+  <ul>
+    <li style="border-right:#006C36 1px solid;"><a href="html/product/categary.html">产品中心</a></li>
+    <li style="border-right:#006C36 1px solid;"><a href="html/news/categary.html">大森新闻</a></li>
+    <li style="border-right:#006C36 1px solid;"><a href="html/pages/detail.html?id=39">售后服务</a></li>
+    <li><a href="html/pages/detail.html?id=44">联系我们</a></li>
+  </ul>
+</footer> 
+        
+        
+	    <div class="pathModel"></div>
+	    <div class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>
+		<div id="mcover" onclick="document.getElementById('mcover').style.display='';">
+            <img src="images/guide.png">
+        </div>
+	    <script src="js/common.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/zepto.min.js"></script>
+		
+		<script src="js/path.js"></script>
+		<script>
+			mui.init({
+				swipeBack: false,
+			});
+			//侧滑容器父节点
+			var offCanvasWrapper = mui('#offCanvasWrapper');
+			//主界面容器
+			var offCanvasInner = offCanvasWrapper[0].querySelector('.mui-inner-wrap');
+			//菜单容器
+			var offCanvasSide = document.getElementById("offCanvasSide");
+
+			//Android暂不支持整体移动动画
+			
+			//移动效果是否为整体移动
+			var moveTogether = false;
+			//侧滑容器的class列表，增加.mui-slide-in即可实现菜单移动、主界面不动的效果；
+			var classList = offCanvasWrapper[0].classList;
+			//变换侧滑动画移动效果；
+			mui('.mui-input-group').on('change','input',function () {
+				if(this.checked){
+					switch (this.value){
+						case 'main-move':
+							classList.remove('mui-slide-in');
+							if(moveTogether){
+								//仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
+								offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+								moveTogether = false;
+							}
+							break;
+						case 'menu-move':
+							classList.add('mui-slide-in');
+							break;
+						case 'all-move':
+							if(classList.contains('mui-slide-in')){
+								classList.remove('mui-slide-in');
+							}
+							moveTogether = true;
+							//整体滑动时，侧滑菜单在inner-wrap内
+							offCanvasInner.insertBefore(offCanvasSide, offCanvasInner.firstElementChild);
+							break;
+					}
+					offCanvasWrapper.offCanvas().refresh();
+					offCanvasSide.classList.remove('mui-transitioning');
+					offCanvasSide.setAttribute('style', '');
+				}
+			});
+
+
+			
+			document.getElementById('more').addEventListener('tap', function() {
+				offCanvasWrapper.offCanvas('show');
+				$(".pathModel").hide();
+			});
+			document.getElementById('map').addEventListener('tap', function() {
+				openMap();
+			});
+			document.getElementById('tel').addEventListener('tap', function() {
+				window.location.href="tel:4009260070";
+			});
+			
+			//主界面和侧滑菜单界面均支持区域滚动；
+			mui('#offCanvasSideScroll').scroll();
+			mui('#offCanvasContentScroll').scroll();
+
+			 //实现ios平台的侧滑关闭页面；
+			var mySwiper = new Swiper('.swiper-container',{
+			    loop: true,
+				autoplay: 3000,
+				pagination: '.swiper-pagination',
+        		paginationClickable: true
+			 });
+			 $(function(){
+			 	mui.toast("向左滑动查看更多");
+			 	$("#dd").find("a").each(function(){
+			 		$(this).on("tap",function(){
+			 			window.location.href=$(this).attr("href");
+			 		});
+			 	});
+				if(localStorage.getItem("wx_user")){
+					var user=JSON.parse(localStorage.getItem("wx_user"));
+					var nickname=user.nickname;
+					var headimgurl=user.headimgurl;
+					$("#nickname").text(nickname);
+					if(headimgurl!=""){
+						$("#headimgurl").attr("src",headimgurl);
+					}
+				}else{
+					
+						window.location.href="login.php";
+					
+					return;
+				}
+				initWeixin();
+			 	var pagesUrl=serverUrl+"/pages?lang="+lang+"&callback=?";
+			 	$.getJSON(pagesUrl,function(json){
+			 		console.log(json);
+			 		localStorage.setItem("pages",JSON.stringify(json));
+			 		$(".ui-dialog").removeClass("show");
+			 		for(var i=0;i<json.length;i++){
+						if(json[i].parent_id=="20"){
+							var html='<li class="mui-table-view-cell" data-id="'+json[i].id+'"><a class="mui-navigate-right mui-ellipsis">'+json[i].page_name+'</a></li>';
+							$("#zjmax").append(html);
+						}else if(json[i].parent_id=="37"){
+							var html='<li class="mui-table-view-cell" data-id="'+json[i].id+'"><a class="mui-navigate-right mui-ellipsis">'+json[i].page_name+'</a></li>';
+							$("#ppwh").append(html);
+						}
+						else if(json[i].parent_id=="32"){
+							var html='<li class="mui-table-view-cell" data-id="'+json[i].id+'"><a class="mui-navigate-right mui-ellipsis">'+json[i].page_name+'</a></li>';
+							$("#jmhz").append(html);
+						}
+						else if(json[i].parent_id=="44"){
+							var html='<li class="mui-table-view-cell" data-id="'+json[i].id+'"><a class="mui-navigate-right mui-ellipsis">'+json[i].page_name+'</a></li>';
+							$("#fuwzq").append(html);
+						}
+						
+			 			
+			 		}
+			 		$("#pageslist").find("li").each(function(){
+			 			$(this).on("tap",function(){
+							if($(this).hasClass("mui-table-view-cell")){
+								var id=$(this).data("id");
+								window.location.href="html/pages/detail.html?id="+id;
+							}
+			 				
+			 			});
+			 		});
+			 	});
+			 });
+			 window.onload=function(){
+				var cc=document.getElementById("dd").getElementsByTagName("a")[0].offsetHeight;
+				document.getElementById("dd").getElementsByTagName("a")[1].style.height=[(cc-6)/3]+"px";
+				document.getElementById("dd").getElementsByTagName("a")[2].style.height=[(cc-6)/3]+"px";
+				document.getElementById("dd").getElementsByTagName("a")[3].style.height=[(cc-6)/3]+"px";
+			}
+		</script>
+	</body>
+
+</html>

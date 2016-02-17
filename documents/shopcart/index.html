@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>演示：jQuery实现加入购物车飞入动画效果</title>
+<meta name="keywords" content="jquery,购物车" />
+<meta name="description" content="Helloweba文章结合实例演示HTML5、CSS3、jquery、PHP等WEB技术应用。" />
+
+<style type="text/css">
+.cRed {color:#F00;}
+.bnt_blue_1 {width:100px; height:30px; background:#F90; border:#FFF 1px solid; color:#FFF; font-size:14px; font-weight:bold; text-align:center; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; cursor:pointer;}
+.bnt_blue_2 {width:100px; height:30px; background:#F60; border:#CCC 1px solid; color:#FFF; font-size:14px; font-weight:bold; text-align:center; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; cursor:pointer;}
+
+.btn_login_1 {
+width:170px; height:35px; cursor:pointer;
+color:#FFF; font-size:14px; font-weight:bold;
+border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+border:solid 1px #da7c0c;
+background:#f78d1d;
+background:-webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+background:-moz-linear-gradient(top, #faa51a, #f47a20);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.btn_login_2 {
+width:170px; height:35px; cursor:pointer;
+color:#fef4e9; font-size:14px; font-weight:bold;
+border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+border:solid 1px #da7c0c;
+background:#f47c20;
+background:-webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+background:-moz-linear-gradient(top, #f88e11, #f06015);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+
+.btn_no_login_1 {
+width:200px; height:35px; cursor:pointer;
+color:#FFF; font-size:14px; font-weight:bold;
+border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+border:solid 1px #da7c0c;
+background:#f78d1d;
+background:-webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+background:-moz-linear-gradient(top, #faa51a, #f47a20);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.btn_no_login_2 {
+width:200px; height:35px; cursor:pointer;
+color:#fef4e9; font-size:14px; font-weight:bold;
+border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+border:solid 1px #da7c0c;
+background:#f47c20;
+background:-webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+background:-moz-linear-gradient(top, #f88e11, #f06015);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+
+.btn_reg_1 {
+width:170px; height:35px; cursor:pointer;
+color:#FFF; font-size:14px; font-weight:bold;
+border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+border: solid 1px #538312;
+background: #64991e;
+background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+background: -moz-linear-gradient(top, #7db72f, #4e7d0e);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+.btn_reg_2 {
+width:170px; height:35px; cursor:pointer;
+color:#fef4e9; font-size:14px; font-weight:bold;
+border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+border: solid 1px #538312;
+background: #538018;
+background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+background: -moz-linear-gradient(top, #6b9d28, #436b0c);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+
+.Price_color {font-size:13px; color:#DD0000;}
+.Money_color {font-size:12px; color:#666;}
+.Title_color {font-size:12px; color:#666;}
+.Goods_a_href a {color:#666;}
+.Goods_a_href a:link {color:#666; text-decoration:none;}
+.Goods_a_href a:visited {color:#666; text-decoration:none;}
+.Goods_a_href a:hover {color:#CC0000; text-decoration:none;}
+.Goods_a_href a:active {color:#666; text-decoration:none;}
+.Img_middle {vertical-align:middle;}
+.num_btn {vertical-align:middle}
+.num_input {width:35px; height:18px; border:#CCC 1px solid; text-align:center; background:transparent; font-size:13px;}
+
+.inputBg_1_1 {width:160px; height:25px; padding:0px 5px 0px 5px; border:#999 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.inputBg_1_2 {width:160px; height:25px; padding:0px 5px 0px 5px; border:#f47a20 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+
+.inputBg_2_1 {width:160px; height:25px; padding:0px 5px 0px 5px; border:#CCC 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.inputBg_2_2 {width:160px; height:25px; padding:0px 5px 0px 5px; border:#538312 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+
+.color_blue {color:#03F;}
+
+</style>
+
+</head>
+
+<body>
+	
+<div class="f_goods_cart_div">
+
+
+
+                 
+
+
+
+
+
+
+
+    
+        <form id="formCart" name="formCart" method="post" action="flow.php">
+           <label></label><table width="100%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#d7d7d7" style="border:#eeeeee 2px solid">
+            <tbody><tr>
+              <th height="20" width="50" bgcolor="#EEE" class="Title_color"><input type="checkbox" checked="checked" onclick="checkAll()" id="alll">全选</th>
+           
+              <th height="20" bgcolor="#EEE" class="Title_color">商品名称</th>
+                    <th bgcolor="#EEE" class="Title_color">属性</th>
+                                          <th bgcolor="#EEE" class="Title_color">市场价</th>
+                            <th bgcolor="#EEE" class="Title_color">本店价</th>
+              <th bgcolor="#EEE" class="Title_color">购买数量</th>
+              <th bgcolor="#EEE" class="Title_color">小计</th>
+              <th bgcolor="#EEE" class="Title_color">操作</th>
+            </tr>
+<script src="../js/jquery.js"></script>
+<script language="javascript">
+            
+function checkAll()
+{
+	var str="";
+	var v=document.getElementsByName("box");
+	for(var i=0;i<v.length;i++)
+    {
+	    v[i].checked=document.getElementById("alll").checked;
+		if(v[i].checked==true)
+		{
+			str+=(v[i].value+",");
+		}else
+		{
+			str="";	
+		}
+	}
+	Ajax.call('flow.php', 'step=update_group_cart1&rec_str=' + str , changePriceResponse1, 'GET', 'JSON');
+	
+ }	
+function show()
+{
+	var v=document.getElementsByName("box");
+	var f=true;
+	for(var i=0;i<v.length;i++)
+    {
+		if(v[i].checked==false)
+        {
+	
+			f=false;
+			break;
+		}
+	}
+	document.getElementById("alll").checked=f;  
+}
+
+function red_goods()
+{
+
+			show();
+			var str="";
+			var str_no=""
+            $("input[name='box']:checkbox").each(function(){ 
+                if($(this).attr("checked")){
+                    str += $(this).val()+",";
+					
+                }else
+				{
+					str_no+=$(this).val()+","	
+					
+				}
+            })
+			
+			
+			
+	Ajax.call('flow.php', 'step=update_group_cart1&rec_str=' + str+'&rec_str_no='+str_no , changePriceResponse1, 'GET', 'JSON');
+	
+	 //Ajax.call( 'flow.php?step=update_group_cart1', 'rec_str_no=' + str_no,aaa , 'GET', 'TEXT', true, true );
+	
+}
+function aaa(res)
+{
+	alert(res)
+	}
+
+function changePriceResponse1(result)
+{
+
+	//商品总价，数量变化时，小计的颜色、字体样式
+		document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物车商品总价说明
+		document.getElementById('market_amount_desc').innerHTML = result.market_amount_desc;//购物车商品总市价说明
+		
+	
+}
+
+</script>
+    
+                        
+            <tr>
+            <td height="100" bgcolor="#ffffff" class="Goods_a_href">
+         		
+                           <input type="checkbox" name="box" checked="checked" value="381614" onclick="red_goods()">
+          
+            	            </td>
+              <td height="100" align="left" valign="middle" bgcolor="#ffffff" class="Goods_a_href" style="font-size:13px"> 
+
+            
+
+                                                    
+                  <a href="goods.php?id=8975" target="_blank"><img src="images/201504/thumb_img/8975_thumb_G_1428861509355.jpg" border="0" title="酸奶伊利清真大果粒风味酸奶蓝莓+山药180g" width="100" class="Img_middle"></a>
+                  <a href="goods.php?id=8975" target="_blank">酸奶伊利清真大果粒风味酸奶蓝莓+山药180g</a>
+                  
+
+                
+                  
+                  
+                  
+
+                                                      
+                                
+                      <div class="blank_0px"></div>
+              </td>
+                            <td align="center" valign="middle" bgcolor="#ffffff">
+              	                              </td>
+                                          <td align="center" valign="middle" bgcolor="#ffffff" class="Money_color"><s>6.60</s></td>
+                            <td align="center" valign="middle" bgcolor="#ffffff" class="Money_color">
+              5.50                            </td>
+              <td align="center" valign="middle" bgcolor="#ffffff">
+
+                                <a href="javascript:;" onclick="red_num(381614,8975);"><img src="themes/woyoubuy/images/goods_jian.gif" alt="减少数量" class="num_btn"></a>&nbsp;&nbsp;<input type="text" name="goods_number[381614]" id="goods_number_381614" value="1" size="2" class="num_input" onblur="change_price(381614,8975)">&nbsp;&nbsp;<a href="javascript:;" onclick="add_num(381614,8975)"><img src="themes/woyoubuy/images/goods_jia.gif" alt="增加数量" class="num_btn"></a>
+                                                                 
+              </td>
+<script type="text/javascript">
+//二次开发无刷新更新购物车
+
+
+
+
+function add_num(rec_id,goods_id)
+{
+	document.getElementById("goods_number_"+rec_id+"").value++;
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+
+	Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function changePriceResponse(result)
+{
+	if(result.error == 1)
+	{
+		alert(result.content);
+		document.getElementById("goods_number_"+result.rec_id+"").value =result.number;
+	}
+	else
+	{
+		document.getElementById('subtotal_'+result.rec_id).innerHTML = '<span class="Price_color">'+result.subtotal+'</span>';//商品总价，数量变化时，小计的颜色、字体样式
+		if (result.subtotal_exchange_integral != 0)
+		{
+			document.getElementById('subtotal_'+result.rec_id).innerHTML += '<br /><span class="cRed">' + result.subtotal_exchange_integral + "积分</span>";
+		}
+		document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物车商品总价说明
+		document.getElementById('market_amount_desc').innerHTML = result.market_amount_desc;//购物车商品总市价说明
+		document.getElementById('subtotal_exchange_integral_of_cart').innerHTML = '<span class="cRed">共计' + result.subtotal_exchange_integral_of_cart + "积分</span>";
+	}
+}
+
+
+function red_num(rec_id,goods_id)
+{
+	if (document.getElementById("goods_number_"+rec_id+"").value>1)
+	{
+		document.getElementById("goods_number_"+rec_id+"").value--;
+	}
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+
+	Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function change_price(rec_id,goods_id){
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+	Ajax.call('flow.php','step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+
+</script>   
+              <td align="center" valign="middle" bgcolor="#ffffff" id="subtotal_381614">
+              	<span class="Price_color">5.5</span>
+                               </td>
+              <td align="center" valign="middle" bgcolor="#ffffff" class="Goods_a_href">
+                <a href="javascript:if (confirm('您确实要把该商品移出购物车吗？')) location.href='flow.php?step=drop_goods&amp;id=381614';">删除</a>
+              </td>
+            </tr>
+            
+                        
+            <tr>
+            <td height="100" bgcolor="#ffffff" class="Goods_a_href">
+         		
+                           <input type="checkbox" name="box" checked="checked" value="381615" onclick="red_goods()">
+          
+            	            </td>
+              <td height="100" align="left" valign="middle" bgcolor="#ffffff" class="Goods_a_href" style="font-size:13px"> 
+
+            
+
+                                                    
+                  <a href="goods.php?id=8976" target="_blank"><img src="images/201504/thumb_img/8976_thumb_G_1428861804215.jpg" border="0" title="酸奶伊利清真大果粒风味酸奶芦荟+猕猴桃180g" width="100" class="Img_middle"></a>
+                  <a href="goods.php?id=8976" target="_blank">酸奶伊利清真大果粒风味酸奶芦荟+猕猴桃180g</a>
+                  
+
+                
+                  
+                  
+                  
+
+                                                      
+                                
+                      <div class="blank_0px"></div>
+              </td>
+                            <td align="center" valign="middle" bgcolor="#ffffff">
+              	                              </td>
+                                          <td align="center" valign="middle" bgcolor="#ffffff" class="Money_color"><s>6.60</s></td>
+                            <td align="center" valign="middle" bgcolor="#ffffff" class="Money_color">
+              5.50                            </td>
+              <td align="center" valign="middle" bgcolor="#ffffff">
+
+                                <a href="javascript:;" onclick="red_num(381615,8976);"><img src="themes/woyoubuy/images/goods_jian.gif" alt="减少数量" class="num_btn"></a>&nbsp;&nbsp;<input type="text" name="goods_number[381615]" id="goods_number_381615" value="1" size="2" class="num_input" onblur="change_price(381615,8976)">&nbsp;&nbsp;<a href="javascript:;" onclick="add_num(381615,8976)"><img src="themes/woyoubuy/images/goods_jia.gif" alt="增加数量" class="num_btn"></a>
+                                                                 
+              </td>
+<script type="text/javascript">
+//二次开发无刷新更新购物车
+
+
+
+
+function add_num(rec_id,goods_id)
+{
+	document.getElementById("goods_number_"+rec_id+"").value++;
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+
+	Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function changePriceResponse(result)
+{
+	if(result.error == 1)
+	{
+		alert(result.content);
+		document.getElementById("goods_number_"+result.rec_id+"").value =result.number;
+	}
+	else
+	{
+		document.getElementById('subtotal_'+result.rec_id).innerHTML = '<span class="Price_color">'+result.subtotal+'</span>';//商品总价，数量变化时，小计的颜色、字体样式
+		if (result.subtotal_exchange_integral != 0)
+		{
+			document.getElementById('subtotal_'+result.rec_id).innerHTML += '<br /><span class="cRed">' + result.subtotal_exchange_integral + "积分</span>";
+		}
+		document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物车商品总价说明
+		document.getElementById('market_amount_desc').innerHTML = result.market_amount_desc;//购物车商品总市价说明
+		document.getElementById('subtotal_exchange_integral_of_cart').innerHTML = '<span class="cRed">共计' + result.subtotal_exchange_integral_of_cart + "积分</span>";
+	}
+}
+
+
+function red_num(rec_id,goods_id)
+{
+	if (document.getElementById("goods_number_"+rec_id+"").value>1)
+	{
+		document.getElementById("goods_number_"+rec_id+"").value--;
+	}
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+
+	Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function change_price(rec_id,goods_id){
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+	Ajax.call('flow.php','step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+
+</script>   
+              <td align="center" valign="middle" bgcolor="#ffffff" id="subtotal_381615">
+              	<span class="Price_color">5.5</span>
+                               </td>
+              <td align="center" valign="middle" bgcolor="#ffffff" class="Goods_a_href">
+                <a href="javascript:if (confirm('您确实要把该商品移出购物车吗？')) location.href='flow.php?step=drop_goods&amp;id=381615';">删除</a>
+              </td>
+            </tr>
+            
+                      </tbody></table>
+          
+          <div class="blank_0px"></div>
+          
+		  <style type="text/css">
+          .pr_b_l {width:45%; height:40px; line-height:40px; float:left; text-align:left; padding-left:5px;}
+          .pr_b_r {width:45%; height:40px; line-height:40px; float:right; text-align:right; padding-right:5px;}
+          </style>
+                  
+          <table width="100%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#d7d7d7" style="border:#eeeeee 2px solid">
+            <tbody><tr>
+              <td align="left" bgcolor="#ffffff">
+              
+              	  <div class="pr_b_l">
+
+                      <input name="submit" type="submit" class="bnt_blue_1" onmouseover="this.className='bnt_blue_2'" onmouseout="this.className='bnt_blue_1'" value="更新购物车">
+                      &nbsp;
+                      <input type="button" value="清空购物车" class="bnt_blue_1" onmouseover="this.className='bnt_blue_2'" onmouseout="this.className='bnt_blue_1'" onclick="location.href='flow.php?step=clear'">
+                  
+                  </div>
+    
+    			  <div class="pr_b_r">
+                  
+    				  <span class="Money_color">
+                      
+                                                    
+                                                    
+                                                    <span id="market_amount_desc">比市场价 <s>￥13.2元</s> 节省了 <s>￥元</s> (0%)</span>
+                                                
+                      </span>
+                      
+                      &nbsp;&nbsp;
+                      
+
+
+
+
+                           
+
+                      <span id="cart_amount_desc" class="Price_color">购物金额小计 ￥11.00元</span>
+                  
+
+
+
+
+                  </div>
+                 
+              </td>
+            </tr>
+          </tbody></table>
+          
+     
+          
+       
+        
+        <div class="blank_0px"></div>
+ 
+        <table width="100%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#d7d7d7" style="border:#eeeeee 2px solid">
+          <tbody><tr>
+            <td align="left" bgcolor="#ffffff">
+            
+            	<div class="pr_b_l" style="padding-top:10px; padding-bottom:5px;">
+                	<a href="./"><img src="themes/woyoubuy/images/continue.gif" alt="continue"></a>
+                </div>
+                
+                <div class="pr_b_r" style="padding-top:10px; padding-bottom:5px;">
+                	<input name="step" type="hidden" value="checkout">
+                    <input type="image" name="imageField" id="imageField" src="themes/woyoubuy/images/checkout.gif">
+                </div>
+                 
+            </td>
+          </tr>
+        </tbody></table>
+   </form>             
+  </div>
+
+</body>
+</html>

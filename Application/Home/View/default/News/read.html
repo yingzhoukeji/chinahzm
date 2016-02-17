@@ -1,0 +1,115 @@
+<include file="Base:header" />
+<div class="body">
+<article class="destination">
+<header class="destination__header content-fill"> <img data-src="/documents/news-banner.jpg" data-image="/documents/news-banner.jpg" data-image-dimensions="1000x400" data-image-focal-point="0.5,0.5" alt="news-banner.jpg" >
+  <div class="destination__meta">
+		<p></p>
+        <p><strong>{$info['cname']}</strong><em>Delicious first, health based</em></p>
+  </div>
+  <button class="back-button">返回</button>
+  <a href="#" class="destination-button"></a> </header>
+<main id="content" class="content destination__content" role="main" data-content-field="main-content">
+<h1 class="destination__title">{$info['cname']}</h1>
+<div class="blog-article">
+  <div class="sqs-layout sqs-grid-12 columns-12">
+    <div class="row sqs-row">
+      <div class="col sqs-col-12 span-12"> 
+        
+        <!--WRAPPER-->
+        
+        <article id="post-566ef2f64bf1180dabba9db3" class="hentry author-alan-abonyi post-type-text" data-item-id="566ef2f64bf1180dabba9db3"> 
+          
+          <!--POST TILE-->
+          
+		  <div class="mxfxw">
+			  <h2 class="blog-article__title" data-content-field="title">{$info['title']}</h2>
+			  <p>
+				<span>发布时间：{:date('Y-m-d',$info['published'])}</span>
+				<span>浏览量：{$info['click']}</span>
+			  </p>
+		  </div>
+          
+          <!--MAIN CONTENT-->
+          
+          <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1450130042357" id="item-566ef2f64bf1180dabba9db3">
+            <div class="row sqs-row">
+              <div class="col sqs-col-9 span-9">
+                <div class="mxfxwnr">{$info['content']}
+				<p class="return"><a href="/index.php/news/index/cid/{$info['cid']}">返回列表</a></p>
+				</div>
+              </div>
+			  
+			  <div class="col sqs-col-3 span-3">
+				<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+				  <div class="sqs-block-content">
+					<div class="image-block-outer-wrapper layout-caption-below ">
+					  <div class="mxfdyyb">
+						<a href="/index.php/product/read/id/585"><img src="/documents/hxlh.jpg"></a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_59211">
+				  <div class="sqs-block-content">
+					<div class="image-block-outer-wrapper layout-caption-below ">
+					  <div class="mxfdyyb">
+						<p><span>商城帮助</span><span><a href="/index.php/page/index/name/lpqsm">礼品券说明</a></span></p>
+						<a href="/index.php/page/index/name/lpqsm"><img src="/documents/lpqsm.jpg"></a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+				  <div class="sqs-block-content">
+					<div class="image-block-outer-wrapper layout-caption-below ">
+					  <div class="mxfdyyb mxftjcp">
+						<dl><dt class="tjcpz">推荐产品</dt><dd class="change"><img src="/documents/change.jpg"><span>换一换</span></dd></dl>
+						<div class="tjcplb" id="recommend">
+						<volist name="productlist" id="vo" offset="1" length='6'>
+						<a href="{:U('product/read',array('id'=>$vo['id']))}">
+							<div class="tjcp"> 		  
+							   <img src="{:get_default_img($vo['image_id'])}">
+							   <span class="cpbt">{$vo.title}</span>      
+							</div>
+						</a>
+						</volist>  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_63193">
+				  <div class="sqs-block-content">
+					<div class="image-block-outer-wrapper layout-caption-below ">
+					  <div class="mxfdyyb contact">
+						<p><img class="lxfs" src="/documents/contact.jpg"></p>
+						<p>电话：0576-89166065</p>
+						<p>手机：13706572779</p>
+						<p>Q Q：1939862</p>
+						<p>邮箱：1939862@qq.com</p>
+						<p>地址：浙江省台州市黄岩江口工业食品开发园区内</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+		
+            </div>
+          </div>
+          
+          <!--BLOG INJECTION--> 
+          
+        </article>
+      </div>
+    </div>
+  </div>
+  
+  <!--PAGINATION-->
+
+  <div class="pagination-large">
+    <div class="sqs-gallery-controls show-hover-effect"> {$page} </div>
+  </div>
+  
+  </main>
+  </article>
+<include file="Base:footer" />

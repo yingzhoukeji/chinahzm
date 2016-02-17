@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html style="background:#fff !important">
+
+	<head>
+		<meta charset="utf-8">
+		<title>搜索安防产品</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="/wx/css/mui.min.css">
+        <!--盈舟代码-->
+        <link rel="stylesheet" href="/wx/css/app.css">
+		<style>
+				.ui-notice{top: 0;z-index: -1;}
+				.ui-dialog{margin: 0 !important;padding: 0 !important;  background: rgba(0,0,0,.65);opacity: 0.8;}
+				.mui-title {
+				  color: #000 !important;
+				  background-color: #fff !important;
+				}
+		</style>
+	</head>
+	<body style="background:#fff !important">
+
+    
+<header class="mui-bar mui-bar-nav" style="background:#0F2F3F;">
+    <a id="back" class="mui-icon mui-icon-left-nav mui-pull-left" href="categary.html"></a>
+    <input id="searchInput" type="search" placeholder="输入产品关键词" class="mui-title"/>
+    <a class="mui-icon mui-icon-search mui-pull-right"></a>
+</header>
+
+<div class="mui-content">
+    <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: #FFF; margin:0 0 60px 0" id="list"></ul>
+</div>
+
+		<!--path菜单-->
+	    <div id="pathmenu" class="menu_button fixed display_none" style="z-index: 0; line-height: 2.5em; display: block;"><span>菜单</span></div>
+	    <div class="menu_button fixed display_none" id="home"><i class="mui-icon mui-icon-home"></i>
+	
+	        <div class="menu_text"><span>主页</span></div>
+	    </div>
+	    <div id="tel" class="menu_button fixed display_none"><i class="mui-icon mui-icon-phone"></i>
+	        <div class="menu_text"><span>联系</span></div>
+	    </div>
+	    <div id="location" class="menu_button fixed display_none"><i class="mui-icon mui-icon-location"></i>
+	
+	        <div class="menu_text"><span>导航</span></div>
+	    </div>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" id="ddlsy" href="/wx/index.html">
+        <span class="mui-icon iconfont">&#xe684;</span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" id="regiser" href="/regiser/index.php">
+        <span class="mui-icon iconfont">&#xe64c;</span>
+        <span class="mui-tab-label">保安报名</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxxm" href="/wx/pxxm.html">
+        <span class="mui-icon iconfont">&#xe636;</span>
+        <span class="mui-tab-label">培训项目</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="sdpxjj" href="/wx/html/product/categary.html">
+        <span class="mui-icon iconfont">&#xe619;</span>
+        <span class="mui-tab-label">安防商城</span>
+    </a>
+    <a class="mui-tab-item" id="sdlxwm" href="/wx/lxwm.html">
+        <span class="mui-icon iconfont">&#xe660;</span>
+        <span class="mui-tab-label">联系神盾</span>
+    </a>
+</nav>
+	    <div class="pathModel"></div>
+		
+        <div style="display: none;" class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>
+	</body>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/zepto.min.js"></script>
+	<script src="../../js/mui.lazyload.js"></script>
+	<script src="../../js/mui.lazyload.img.js"></script>
+	<script src="../../js/path.js"></script>
+	<script>
+		
+		
+		
+		$(function(){
+			$("#back").on("tap",function(){
+				window.location.href=$("#back").attr("href");
+			});
+			$("#home").on("tap",function(){
+				window.location.href=indexUrl;
+			});	
+			$("#tel").on("tap",function(){
+				window.location.href="tel:13906588899";
+			});	
+				$("#regiser").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#ddlsy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+				$("#sdpxxm").on("tap",function(){
+					window.location.href="/wx/pxxm.html";
+				})
+				$("#sdpxjj").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#sdlxwm").on("tap",function(){
+					window.location.href="/wx/lxwm.html";
+				})
+				$("#soush").on("tap",function(){
+					window.location.href="/wx/html/product/search.html";
+				})
+				$("#fanhusy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+
+			$(".mui-icon-search").on("tap",function(){
+				var name=$("#searchInput").val();
+				if(name==""){
+					mui.toast("请输入关键词");
+				}else{
+					search(name);
+				}
+			});
+			document.onkeydown=function(event){
+				var code=event.keyCode;
+				if(code==13){
+					var name=$("#searchInput").val();
+					if(name==""){
+						mui.toast("请输入关键词");
+					}else{
+						search(name);
+					}
+				}
+			}
+		});
+		function search(name){
+			$(".ui-dialog").show();
+			var url=serverUrl+"/search?lang="+lang+"&name="+name+"&callback=?";
+			$.getJSON(url,function(json){
+				$(".ui-dialog").hide();
+				console.log(json);
+				var html='';
+
+				for(var i=0;i<json.length;i++){
+					html+='<li class="mui-table-view-cell mui-media  mui-col-xs-6" data-id="'+json[i].id+'">';
+					html+='<img class="mui-media-object" src="'+picUrl+json[i].savepath+'"><div class="mui-media-body">'+json[i].title+'</div></li>';
+				}
+				$("#list").html(html);
+				
+				mui(document).imageLazyload({
+					placeholder: '../../images/60x60.gif'
+				});
+				$("#list").find("li").each(function(){
+					$(this).on("tap",function(){
+						window.location.href="detail.html?id="+$(this).data("id")+"&from=1";
+					});
+				});
+			});
+		}
+		
+	</script>
+</html>

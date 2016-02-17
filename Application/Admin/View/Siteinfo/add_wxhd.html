@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>添加、编辑微信活动-后台管理-{$site.SITE_INFO.name}</title>
+        <php>
+            $addCss="";
+            $addJs="";
+            $currentNav ='微信活动管理 > 添加编辑活动';
+        </php>
+        <include file="Common:intoHead" />
+    </head>
+    <body>
+        <div class="wrap">
+            <include file="Common:head" />
+            <div class="mainBody">
+                <include file="Common:left" />
+                <div id="Right">
+                    <div class="Item hr">
+                        <div class="current">添加编辑活动</div>
+                    </div>
+                    <form>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                            <tr>
+                                <th width="100">活动标题：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="title" value="{$info.title}"/></td>
+                            </tr>
+							<tr>
+                                <th>结束日期：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="endtime" value="{$info.title}" onClick="WdatePicker()"/></td>
+                            </tr>
+							<tr>
+                                <th>活动积分：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="srcoe" value="{$info.title}"/></td>
+                            </tr>
+							<tr>
+                                <th>兑换礼品最低积分：</th>
+                                <td><input id="limit" type="text" class="input" size="60" name="limit" value="{$info.limit}"/></td>
+                            </tr>
+							<tr>
+                                <th>电话联系：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="phone" value="{$info.phone}"/></td>
+                            </tr>
+                            <tr>
+                                <th>活动图片：</th>
+                                <td><input type="text" id="url1" class="input" size="40" name="image" value="{$img_info.savepath}"/>
+                                    <notempty name="img_info"><input type="hidden" name="image_id" value="{$img_info.id}" /></notempty>
+                                    <input type="button" class="btn " id="image1" value="选择图片" /></td>
+                            </tr>
+							 <tr>
+                                <th width="100">发布状态：</th>
+                                <td><label><input type="radio" name="status" value="0" <if condition="$info.status eq 0"> checked="checked"</if> /> 启用</label> &nbsp; <label><input type="radio" name="status" value="1" <if condition="$info.status eq 1"> checked="checked"</if> /> 禁用</label> </td>
+                            </tr>
+                            
+                            <tr>
+                                <th>活动简介：</th>
+                                <td><textarea class="input" style="height: 60px; width: 600px;" name="summary">{$info.summary}</textarea> 如果不填写则系统自动截取文章前200个字符</td>
+                            </tr>
+                            <tr>
+                                <th>活动内容：</th>
+                                <td><textarea id="content" class="input" style="height: 300px; width: 100%;" name="content">{$info.content}</textarea></td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="id" value="{$info.id}" />
+                    </form>
+                    <div class="commonBtnArea" >
+                        <button class="btn submit">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <include file="Common:foot" />
+        <js href="--PUBLIC--/kindeditor/kindeditor.js,--PUBLIC--/kindeditor/lang/zh_CN.js,--PUBLIC--/My97DatePicker/WdatePicker.js"/>
+		
+        <script type="text/javascript">
+            $(function(){
+				var  content ;
+                KindEditor.ready(function(K) {
+                    content = K.create('#content',{
+                        allowFileManager : true,
+                        uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=wxhd'
+                    });
+                });
+               KindEditor.ready(function(K) {
+                    content = K.create('#content',{
+                        allowFileManager : true,
+                        uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=wxhd'
+                    });
+                });
+                $(".submit").click(function(){
+                    content.sync();
+                    commonAjaxSubmit();
+                    return false;
+                });
+            });
+        </script>
+        <script>
+            KindEditor.ready(function(K) {
+                var editor = K.editor({
+                    allowFileManager : true,
+                    uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=wxhd'
+                });
+                K('#image1').click(function() {
+                    editor.loadPlugin('image', function() {
+                        editor.plugin.imageDialog({
+                            imageUrl : K('#url1').val(),
+                            clickFn : function(url, title, width, height, border, align) {
+                                K('#url1').val(url);
+                                editor.hideDialog();
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

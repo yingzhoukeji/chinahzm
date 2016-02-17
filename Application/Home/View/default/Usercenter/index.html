@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/UserCenter/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/UserCenter/css/main.css"/>
+    <style>
+    	.topbar-wrap{position: fixed;top: 0;left: 0;right: 0;}
+    	.sidebar-content{position: fixed;top: 50px;left: 0;width: 189px;}
+    </style>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a href="{:U('Index/index')}" class="on">首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="#">{$Think.session.telephone}</a></li>
+                <li><a href="{:U('Index/user_edit')}">修改密码</a></li>
+                <li><a href="{:U('Login/loginout')}">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Usercenter/orderlist')}"><i class="icon-font">&#xe008;</i>我的订单</a></li>
+                        <li><a href="{:U('Usercenter/myaddr')}"><i class="icon-font">&#xe006;</i>收货地址</a></li>
+                        
+                    </ul>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+    	
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>欢迎使用『川田砍价』系统，为营销助力。</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-title">
+                <h1>系统首页</h1>
+            </div>
+            <div class="result-content">
+                <div class="short-wrap">
+                    <span>欢迎来到海之梦网上商城</span>
+                </div>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-title">
+                <h1>订单情况</h1>
+            </div>
+            <div class="result-content">
+               	你还<span style="color:red;">{$count}</span>笔订单还未支付
+            </div>
+            
+        </div>
+        
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

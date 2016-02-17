@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="fr" class="touch nojs">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{$site.description},{$info['description']}" />
+<meta name="keywords" content="{$site.keyword},{$info['keywords']}" />
+<link rel="stylesheet" href="/theme/css/main.css">
+<link rel="stylesheet" href="/theme/css/tablet.css">
+<link rel="stylesheet" href="/theme/css/mobile.css">
+<link rel="stylesheet" href="/theme/css/jquery.custom-scrollbar.css">
+<script src="/theme/js/modernizr.custom.66593.js"></script>
+<script src="/theme/js/jquery-1.11.1.min.js"></script>
+<script src="/theme/js/jquery.custom-scrollbar.js"></script>
+<script src="/theme/js/hammer.min.js"></script>
+<script src="/theme/js/fastclick.js"></script>
+<script src="/theme/js/script.js"></script>
+<title>{$webtitle}-{$site.name}</title>
+</head><body>
+
+<!-- Begin Inspectlet Embed Code --> 
+<script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 1561238184]);
+    (function() {
+    function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.chinahzm.cn/theme/js/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+    if (window.attachEvent) window.attachEvent('onload', __ldinsp);
+    else window.addEventListener('load', __ldinsp, false);
+    })();
+    </script> 
+
+<header>
+  <div id="side"> <a href="/index.php/Index/sIndex?l=spain" class="logo"> <img src="/theme/img/logo.png"> </a> <a href="#" class="menu-button"><span>menu</span></a>
+    <div class="side-content scrollable">
+      <div class="scroll-hack">
+        <div class="top">
+          <a href="/index.php/Index/sIndex?l=spain">
+          <img src="/img/2.png" class="logoxin">
+          
+          <p><b>中国驰名商标</b><br>Well-Known Trademark</p>
+          </a>
+        </div>
+
+        
+
+	<div class="leftsidebar_box">
+<dl>
+  <dt><a href="/index.php/Index/sIndex?l=spain">La</a></dt>
+</dl>
+	    <nav posstion="middle" order="sort DESC">
+<dl>
+<dt onClick="changeImage()">{$nav_name}</dt>
+<notempty name="child">
+  <volist name="child" id="nc">
+    <dd> <a href="{$nc.link}">{$nc.nav_name}</a> </dd>
+  </volist>
+</notempty>
+</dl>
+</nav>
+	
+
+          <div class="lianxhsd">
+          <ul>
+<li>FREE PHONE</li>
+    <li><b>400-926-0070</b></li>
+    <li style="margin:10px 0"><a href="skype:CHINADOSO?call" target="_blank"><img style="border: none;" alt="My status"  src="/img/SKYPE.png" border="0" /></a></li>
+    <li>Tel：0576-88027625</li>
+    <li>skype：<a href="skype:CHINADOSO?call" target="_blank">CHINADOSO</a></li>
+    <li>Fax：0576-88027656</li>
+    <li>Correo：info@chinadoso.com</li>
+    <li>Añadir：No.2229 Haifeng Rd.B.Dist.Binhai Industrial Zone Taizhou Zhejiang China </li>
+
+
+
+          </ul>
+          </div>
+          <div class="guojias">
+          <ul>
+<li><a href="/index.php/Home/Index?l=zh-cn"><img src="/img/1-9.png"></a></li>
+<li><a href="/index.php/Index/eindex?l=en-us"><img src="/img/1-10.png"></a></li>
+<li><a href="/index.php/Index/rIndex?l=ru"><img src="/img/1-11.png"></a></li>
+<li><a href="/index.php/Index/sIndex?l=spain"><img src="/img/1-12.png"></a></li>
+          </ul>
+          </div>
+          <!-- ul class="social">
+            <li></li>
+          </ul>
+          <div class="club"> <a href="/" class="button btn-2"></a> </div -->
+        </div>
+        <div class="bottom">
+
+        <p>Copyright &copy; 2012 Zhejiang Omori sewing machine limited company All Rights Reserv, ICP </p>
+          <!-- ul class="bottom-btn">
+            <li><a href="/" class="button btn-2 panier"></a></li>
+            <li class="button btn-2 btn-opt"> <a href="/" class="active"></a> | <a href="/"></a> </li>
+            <li class="button btn-2 btn-opt lang"></li>
+            <div class="clear"></div>
+          </ul -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<div class="lyushgkjdhjf">
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<div style="height:360px; overflow:hidden; border-bottom:#CBCBCB solid 1px;">
+<div class="sticle" id="dituContent" style="height:360px; overflow:hidden; border-bottom:#CBCBCB solid 1px;"></div>
+
+</div>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.5289,28.607682);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"Doso sewing machine",content:"ADD：No.2229 Haifeng Rd.B.Dist.Binhai Industrial Zone Taizhou Zhejiang China<br/>TEL：0576-88027625<br/>FAX：0576-88027656<br/>FREE PHONE：400-926-0070<br/>E-mail：info@chinadoso.com",point:"121.5289|28.607682",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+<div style="lynrjgs">
+
+<div class="grid_9">
+            <div>
+            <dl>
+            <dt style="width:100%; clear:both; padding:0px; overflow:hidden; margin:0px;">
+                <form action="{:U('message/add')}" id="contact_form" method="post" />
+                <input type="text" name="username" id="name" value="" class="requiredField" placeholder="{$Think.lang.T_NAME}"/>
+                <input type="text" name="email" id="email" value="" class="requiredField email" placeholder="{$Think.lang.T_EMAIL}"/>
+                <input type="text" name="moblie" id="moblie" value=""  class="requiredField" placeholder="{$Think.lang.T_MOBILE}"/>
+                </dt>
+                <dd style="width:100%; clear:both; padding:0px;overflow:hidden;  margin:10px 0 0 0 !important;"><textarea name="content" id="message" style="height: 200px;"  class="reqFieuiredld" placeholder="{$Think.lang.T_MESSAGE_CONTENT}"></textarea></dd>
+                <dd style="width:100%; clear:both; padding:0px;  margin:10px 0 0 0 !important;"><input placeholder="Código de verificación" name="verify_code" id="verify_code" type="text" value="" class="requird" />
+                    <img src="{:U('Base/verify_code')}"  title="看不清？单击此处刷新" onclick="this.src+='?rand='+Math.random();"  style="cursor: pointer; vertical-align: middle;"/>
+                </dd>
+                <dd style="width:100%; clear:both; padding:0px; margin:10px 0 0 0px !important;"><input name="submitted" id="submitted" value=" La presentación de " class="submit" type="submit" /></dd>
+
+                </form>
+                </dl>
+            </div>
+        </div>
+</div>
+
+
+<div class="footer">
+    <footer style="background-image:url(/img/banner-bg.jpg);background-repeat: no-repeat; background-size: cover; background-position: center center; height:150px">
+      <div class="clear"></div>
+    </footer>
+  </div>
+</div>
+
+</div>
+
+<script src="/theme/js/app.js"></script>
+<div style="display:none"><script src="http://s4.cnzz.com/stat.php?id=1255818854&web_id=1255818854" language="JavaScript"></script></div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/UserCenter/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/UserCenter/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/img/shopcart/cart.css" />
+    <style>
+    	.topbar-wrap{position: fixed;top: 0;left: 0;right: 0;}
+    	.sidebar-content{position: fixed;top: 50px;left: 0;width: 189px;}
+    	 table{border-collapse: separate;border-spacing: 1px;}
+    </style>
+</head>
+<body>
+	<div class="f_goods_cart_div">
+	<form id="formCart" name="formCart" method="post">
+			<label></label>
+			<table width="100%" align="center" border="0" cellpadding="5"
+				cellspacing="1" bgcolor="#d7d7d7"
+				style="border: #eeeeee 2px solid">
+				<tbody>
+					<tr>
+						
+						<th height="20" bgcolor="#EEE" class="Title_color">商品名称</th>
+						<th bgcolor="#EEE" class="Title_color">价格</th>
+						<th bgcolor="#EEE" class="Title_color">购买数量</th>
+						<th bgcolor="#EEE" class="Title_color">小计</th>
+						
+					</tr>
+
+					
+					<volist name="list" id="vo">
+						<tr class="goods_item" tid="{$vo.id}">
+							<td height="100" align="left" valign="middle" bgcolor="#ffffff" class="Goods_a_href" style="font-size: 13px">
+								<a href="{:U('Product/read')}/id/{$vo.id}" target="_blank">
+									<img src="{$vo.imgurl}" border="0" title="{$vo.time}" width="100"class="Img_middle">
+								</a> 
+								<a href=""target="_blank">{$vo.title}</a>
+								<div class="blank_0px"></div>
+							</td>
+							<td  align="center" valign="middle" bgcolor="#ffffff" class="Money_color">￥{$vo.price}/{$vo.myunit}</td>
+							<td align="center" valign="middle" bgcolor="#ffffff">
+								<input  type="text" style="width:30px;" value="{$vo.num}" size="2" class="num_input" disabled="disabled"/>
+							</td>
+							<td align="center" valign="middle" bgcolor="#ffffff" id="subtotal_{$vo.id}">
+								<span class="Price_color">
+									￥{$vo.totalprice}
+								</span>
+							</td>
+							
+						</tr>
+					 </volist>
+					
+
+				</tbody>
+			</table>
+
+			<div class="blank_0px"></div>
+
+			<style type="text/css">
+			.pr_b_l {
+				width: 45%;
+				height: 40px;
+				line-height: 40px;
+				float: left;
+				text-align: left;
+				padding-left: 5px;
+			}
+			
+			.pr_b_r {
+				width: 45%;
+				height: 40px;
+				line-height: 40px;
+				float: right;
+				text-align: right;
+				padding-right: 5px;
+			}
+			</style>
+
+			<table width="100%" align="center" border="0" cellpadding="5"
+				cellspacing="1" bgcolor="#d7d7d7"
+				style="border: #eeeeee 2px solid">
+				<tbody>
+					<tr>
+						<td align="left" bgcolor="#ffffff">
+							<div class="pr_b_r">
+								<span id="cart_amount_desc" class="Price_color">购物金额小计 ￥{$heji}元</span>
+							</div>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="blank_0px"></div>
+		</form>
+	</div>
+</body>
+</html>

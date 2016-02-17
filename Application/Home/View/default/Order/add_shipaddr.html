@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  
+  <head>
+    <title>
+      {$webtitle}-{$site.name}
+    </title>
+    <meta name="description" content="{$site.description},{$info['description']}"
+    />
+   
+    <meta name="keywords" content="{$site.keyword},{$info['keywords']}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <script src="/img/jquery-1.11.0.min.js"></script>
+     <script type="text/javascript" src="/img/layer/layer.js" charset="utf-8">
+    </script>
+    <script type="text/javascript" src="/img/shopcart/jquery.form.js" charset="utf-8">
+    </script>
+    <style type="text/css">
+    	#addForm{
+    		padding-top:20px;
+    		padding-left:20px;
+    	}
+    	 .address_list_div {width:100%; height:auto;  border:#b8e2fb 1px solid; background:#eef6ff;}
+		.address_list_div .address_l_title {color:#666; font-size:12px;}
+        .address_list_div .btn_address_1 {
+        width:auto; padding:0px 25px 0px 25px; height:35px; cursor:pointer;
+        color:#333; font-size:14px;
+        border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+        border: solid 1px #b7b7b7;
+        background: #fff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+        background: -moz-linear-gradient(top, #fff, #ededed);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+        }
+        .address_list_div .btn_address_2 {
+        width:auto; padding:0px 25px 0px 25px; height:35px; cursor:pointer;
+        color:#000; font-size:14px;
+        border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+        border: solid 1px #b7b7b7;
+        background: #ededed;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+        background: -moz-linear-gradient(top, #fff, #dcdcdc);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+        }        
+        .address_list_div .address_input_1 {height:22px; padding:0px 5px 0px 5px; border:#CCC 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; font-size:13px; color:#333;}        
+        .address_list_div .address_input_2 {height:22px; padding:0px 5px 0px 5px; border:#F60 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; font-size:13px; color:#000;}        
+        .address_list_div .address_select {width:auto; height:auto; padding:2px 3px 2px 10px; font-size:14px; border:#CCC 1px solid; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; vertical-align:middle;}  
+    </style>
+  </head>
+  
+  <body>
+  <form action="{:U('Order/add_shipaddr')}" id="addForm" method="post">
+  	<div class="address_list_div">
+   
+  
+  <table width="100%" align="center" border="0" cellpadding="4" cellspacing="1" bgcolor="#D9D9D9">
+    
+      <tbody><tr>
+        <td height="30" colspan="4" align="center" valign="middle" bgcolor="#f5f5f5"><img src="/img/shopcart/usricon_03.gif" border="0" style="vertical-align:middle"></td>
+    </tr>
+      <tr>
+        <td height="35" align="right" valign="middle" bgcolor="#F5F5F5" class="Title_color">配送区域:</td>
+        <td colspan="3" align="left" valign="middle" bgcolor="#ffffff">
+         
+          <select name="provinceid" id="city_parent" class="address_select">
+            
+           </select>
+          &nbsp;&nbsp;
+          <select name="cityid" id="city_childs" onchange="region.changed(this, 3, 'selDistricts_0')" class="address_select">
+          
+         </select>
+          &nbsp;&nbsp;
+          <select name="areaid" id="areaid" class="address_select">
+            
+           </select>
+          &nbsp;&nbsp;
+          <img src="/img/shopcart/usricon_02.gif" border="0" style="vertical-align:middle"></td>
+    </tr>
+      <tr>
+        <td width="10%" height="35" align="right" valign="middle" bgcolor="#F5F5F5" class="Title_color">收货人姓名:</td>
+        <td width="40%" align="left" valign="middle" bgcolor="#ffffff"><input name="receiver" type="text" id="receiver" value="" class="address_input_1" onmouseover="this.className='address_input_2'" onmouseout="this.className='address_input_1'" style="width:100px;">
+        &nbsp;
+        <img src="/img/shopcart/usricon_02.gif" border="0" style="vertical-align:middle"></td>
+       
+    </tr>
+    	<tr>
+    		 <td width="10%" align="right" valign="middle" bgcolor="#F5F5F5" class="Title_color">手机号码:</td>
+		        <td width="40%" align="left" valign="middle" bgcolor="#ffffff"><input name="telephone" type="text" id="telephone" value="" class="address_input_1" onmouseover="this.className='address_input_2'" onmouseout="this.className='address_input_1'" style="width:200px">
+		        &nbsp;
+		        <img src="/img/shopcart/usricon_02.gif" border="0" style="vertical-align:middle"></td>
+    	</tr>
+    	<tr>
+    		 <td width="10%" align="right" valign="middle" bgcolor="#F5F5F5" class="Title_color">详细地址:</td>
+		        <td width="40%" align="left" valign="middle" bgcolor="#ffffff"><input name="addr" type="text" id="addr" value="" class="address_input_1" onmouseover="this.className='address_input_2'" onmouseout="this.className='address_input_1'" style="width:200px">
+		        &nbsp;
+		        <img src="/img/shopcart/usricon_02.gif" border="0" style="vertical-align:middle"></td>
+    	</tr>
+      
+      <tr>
+        <td height="60" colspan="4" align="center" valign="middle" bgcolor="#FFFFFF">
+        <input type="button" onclick="mysubmit();" name="Submit" class="btn_address_1" onmouseover="this.className='btn_address_2'" onmouseout="this.className='btn_address_1'" value="配送至这个地址"> 
+        </td>
+      </tr>
+  </tbody></table>
+  <div class="blank_10px"></div>
+  
+</div>
+</form>
+   </body>
+    
+   <script type="text/javascript">
+   	   $(function(){
+   			getprovince();
+   	   });
+	   function getsort_childs(pid){
+			var url="ajax_api.php?action=getsort&pid="+pid;
+			$.getJSON(url,function(json){
+				if(json.r==0){
+					var data=json.data;
+					var html='';
+					for(var i=0;i<data.length;i++){
+						html+='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+					}
+					$("#sort_childs").html(html);
+				}else{
+					$("#sort_childs").html('<option value="-1">无数据</option>');
+				}
+			});
+		}
+		function getprovince(){
+			var url="{:U('Public/getprovince')}";
+			$.getJSON(url,function(json){
+				if(json.r==0){
+					var data=json.data;
+					for(var i=0;i<data.length;i++){
+						$("#city_parent").append('<option value="'+data[i].provinceID+'">'+data[i].province+'</option>');	
+						if(i==0){
+							getcity_childs(data[i].provinceID);
+						}
+					}
+					$("#city_parent").change(function(){
+						var pid=$(this).val();
+						getcity_childs(pid);
+					});
+				}
+			});
+		}
+		function getcity_childs(pid){
+			var url="{:U('Public/getcity')}?pid="+pid;
+			$.getJSON(url,function(json){
+				if(json.r==0){
+					var data=json.data;
+					var html='';
+					for(var i=0;i<data.length;i++){
+						html+='<option value="'+data[i].cityID+'">'+data[i].city+'</option>';
+						if(i==0){
+							getarea(data[i].cityID);
+						}
+					}
+					$("#city_childs").html(html);
+					$("#city_childs").change(function(){
+						var pid=$(this).val();
+						getarea(pid);
+					});
+				}else{
+					$("#city_childs").html('<option value="-1">无数据</option>');
+				}
+			});
+		}
+		function getarea(pid){
+			var url="{:U('Public/getarea')}?pid="+pid;
+			$.getJSON(url,function(json){
+				if(json.r==0){
+					var data=json.data;
+					var html='';
+					for(var i=0;i<data.length;i++){
+						html+='<option value="'+data[i].id+'">'+data[i].area+'</option>';
+					}
+					$("#areaid").html(html);
+				}else{
+					$("#areaid").html('<option value="-1">无数据</option>');
+				}
+			});
+		}
+		
+		function mysubmit(){
+			if($("#receiver").val()==''){
+				
+				layer.alert('请输入收货人！', {
+			        skin: 'layui-layer-lan'
+			        ,closeBtn: 0
+			        ,shift: 4 //动画类型
+			    });
+			    return;
+			}
+			var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+			if(!myreg.test($("#telephone").val())){ 
+				//layer.alert('请输入有效的手机号码！'); 
+				layer.alert('请输入有效的手机号码！', {
+			        skin: 'layui-layer-lan'
+			        ,closeBtn: 0
+			        ,shift: 4 //动画类型
+			    });
+			    return;
+			}
+			if($("#addr").val()==''){
+				//layer.alert('请输入详细地址！'); 
+				layer.alert('请输入详细地址！', {
+			        skin: 'layui-layer-lan'
+			        ,closeBtn: 0
+			        ,shift: 4 //动画类型
+			    });
+			    return;
+			}
+			var index=null;
+			var parentindex = parent.layer.getFrameIndex(window.name); //获取窗口索引
+			$("#addForm").ajaxSubmit({
+		         resetForm: false,  
+		         dataType: 'json',
+		         beforeSubmit:function(){index = layer.load(0, {shade: false});},  //提交前处理 
+			     success:function(json){
+			    	 setTimeout(function(){
+			    		 layer.close(index);
+			    		
+			    		 if(json.status==0){
+			    			 layer.alert(json.msg); 
+			    		 }else{
+			    			 layer.alert(json.msg, function(index){
+			    				 parent.pagereload();
+			    			  }); 
+			    		 }
+			    	},1000);
+			    	 
+			     }
+			 }); 
+		}
+   </script>
+
+</html>

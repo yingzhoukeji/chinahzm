@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>微信配置-系统设置-{$site.SITE_INFO.name}</title>
+    <php>$addCss="";</php>
+    <php>$addJs="";</php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">微信配置</div>
+                </div>
+                <form action="" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <tr>
+                            <th width="120">微信APIKEY：</th>
+                            <td><input name="token" type="text" class="input" size="40" value="{$site.WEIXIN.token}" />   如果没有请到<a target="_blank" href="https://mp.weixin.qq.com/">这里</a>申请</td>
+                        </tr>
+                        <tr>
+                            <th>回调内容：</th>
+                            <td><textarea name="callback" cols="100" rows="3">{$site.WEIXIN.callback}</textarea><br />
+                                使用|线隔开关键字和回调内容，使用*隔开每条回调，如：网站名称|我的网站名称*网站名称2|我的网站名称2
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>本站回调地址：</th>
+                            <td>
+                                {$site.SITE_INFO.url}/index.php/WeiXin
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(".submit").click(function(){
+        commonAjaxSubmit();
+    });
+</script>
+</body>
+</html>

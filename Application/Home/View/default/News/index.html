@@ -1,0 +1,141 @@
+<include file="Base:header" />
+<div class="body">
+  <article class="destination">
+    <header class="destination__header content-fill"> <img data-src="/documents/news-banner.jpg" data-image="/documents/news-banner.jpg" data-image-dimensions="1000x400" data-image-focal-point="0.5,0.5" alt="news-banner.jpg" >
+      <div class="destination__meta">
+		<p></p>
+        <p><strong>{$name}</strong><em>Delicious first, health based</em></p>
+      </div>
+      <button class="back-button">返回</button>
+      <a href="#" class="destination-button"></a> </header>
+	  
+	  <div class="subnav">
+      <ul>
+		<foreach name='list1' item='vo'>
+			<if condition="$vo['cid'] eq $where['cid']"> <li class="subnav__item  subnav__item--active"> <a href="/index.php/news/index/cid/{$vo.cid}"> <span class="iconfont cid{$vo.cid}"></span> <span>{$vo.name}</span> </a> </li> 
+			<else /> <li class="subnav__item "> <a href="/index.php/news/index/cid/{$vo.cid}"> <span class="iconfont cid{$vo.cid}"></span> <span>{$vo.name}</span> </a> </li> 
+			</if>		
+		</foreach>       
+      </ul>
+    </div>
+	
+    <main id="content" class="content destination__content" role="main" data-content-field="main-content">
+      <h1 class="destination__title">{$name}</h1>
+      <div class="blog">        
+        <!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
+        
+        <div class="sqs-layout sqs-grid-12 columns-12 blog-index">
+          <div class="row sqs-row">
+            <div class="col sqs-col-9 span-9"> 
+              
+              <!--ITEM LOOP-->
+			  <volist name="list" id="vo">
+              <div class="row sqs-row">
+                <div class="col sqs-col-3 span-3">
+                  <div class="sqs-block image-block sqs-block-image">
+                    <div class="sqs-block-content">
+                      <div class="image-block-outer-wrapper layout-caption-below ">
+                        <div class="intrinsic" style="max-width:960.0px;">
+                          <div style="padding-bottom:62.5%;" class="image-block-wrapper has-aspect-ratio"> 
+                            
+                            <!--MAIN IMAGE--> 
+                            
+                            <a href="{:U('news/read',array('id'=>$vo['id']))}" class="main-image"> <img src="{:get_default_img($vo['image_id'])}"/> </a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col sqs-col-6 span-6">
+                  <div class="sqs-block html-block sqs-block-html">
+                    <div class="sqs-block-content"> 
+                      
+                      <!--POST TILE-->
+                      
+                      <h2 class="blog-index__title mxftitle" data-content-field="title"> <a href="{:U('news/read',array('id'=>$vo['id']))}">{$vo.title}</a> </h2>
+                      <h3 class="blog-index__meta">
+                        {:date('Y-m-d',$vo['published'])}
+                      </h3>
+                      
+                      <!--EXCERPT OR BODY-->
+                      
+                      <p>{:cutStr($vo['summary'],130,0)}</p>
+                      <p class="mxfmore"> <a href="{:U('news/read',array('id'=>$vo['id']))}">更多</a> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sqs-block horizontalrule-block sqs-block-horizontalrule">
+                <div class="sqs-block-content">
+                  <hr>
+                </div>
+              </div>
+			  </volist>
+			  
+			  <div class="mxfpage"> {$page} </div>
+            </div>
+			
+			<div class="col sqs-col-3 span-3">
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb">
+				    <a href="/index.php/product/read/id/585"><img src="/documents/hxlh.jpg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_59211">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb">
+					<p><span>商城帮助</span><span><a href="/index.php/page/index/name/lpqsm">礼品券说明</a></span></p>
+				    <a href="/index.php/page/index/name/lpqsm"><img src="/documents/lpqsm.jpg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb mxftjcp">
+					<dl><dt class="tjcpz">推荐产品</dt><dd class="change"><img src="/documents/change.jpg"><span>换一换</span></dd></dl>
+					<div class="tjcplb" id="recommend">
+					<volist name="productlist" id="vo" offset="1" length='6'>
+					<a href="{:U('product/read',array('id'=>$vo['id']))}">
+						<div class="tjcp"> 		  
+						   <img src="{:get_default_img($vo['image_id'])}">
+						   <span class="cpbt">{$vo.title}</span>      
+						</div>
+					</a>
+					</volist>  
+					</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_63193">
+              <div class="sqs-block-content">
+                <div class="image-block-outer-wrapper layout-caption-below ">
+                  <div class="mxfdyyb contact">
+					<p><img class="lxfs" src="/documents/contact.jpg"></p>
+                    <p>电话：0576-89166065</p>
+					<p>手机：13706572779</p>
+					<p>Q Q：1939862</p>
+					<p>邮箱：1939862@qq.com</p>
+					<p>地址：浙江省台州市黄岩江口工业食品开发园区内</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+		</div>
+		
+        </div>
+        
+        <!--PAGINATION-->
+               
+      </div>
+      <p class="back-to-top"> <a href="#"><img src="/documents/top.png" title="返回顶部"></a> </p>
+    </main>
+  </article>
+<include file="Base:footer" />

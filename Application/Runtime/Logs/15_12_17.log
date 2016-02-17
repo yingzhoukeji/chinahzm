@@ -1,0 +1,695 @@
+[ 2015-12-17T22:38:18+08:00 ] 66.249.66.2 /index.php/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002428s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_news` [ RunTime:0.001654s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.001226s ]
+SQL: SHOW COLUMNS FROM `pa_news` [ RunTime:0.001464s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pa_news n INNER JOIN pa_category c on c.cid=n.cid  WHERE ( n.status = 1 ) AND ( n.lang = 'zh-cn' ) LIMIT 1   [ RunTime:0.000483s ]
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_news` [ RunTime:0.001418s ]
+SQL: SELECT n.id,n.cid,n.title,n.summary,n.update_time,n.click,n.image_id,c.name as cname,n.published FROM pa_news n INNER JOIN pa_category c on c.cid=n.cid  WHERE ( n.status = 1 ) AND ( n.lang = 'zh-cn' ) ORDER BY id desc LIMIT 0, 120   [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001331s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( (`position` = 'news') OR (`position` = 'all') ) ORDER BY sort DESC  [ RunTime:0.000320s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 63 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000552s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000852s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\b382c5913c8c3a964a30800cdc0a0419.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\b382c5913c8c3a964a30800cdc0a0419.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001585s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000829s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000310s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000352s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000344s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000310s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000328s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000300s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\b382c5913c8c3a964a30800cdc0a0419.php 第 162 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\b382c5913c8c3a964a30800cdc0a0419.php 第 163 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_news` [ RunTime:0.001861s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary` FROM `pa_news` WHERE ( cid=2 AND status=1 AND lang='zh-cn' ) ORDER BY id DESC LIMIT 5   [ RunTime:0.000560s ]
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary` FROM `pa_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY id DESC LIMIT 5   [ RunTime:0.000393s ]
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\wamp\www\tcbb88.com\Application\Common\Common\function.php 第 247 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.001664s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`status`,`published`,`image_id`,`psize`,`summary` FROM `pa_product` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY id DESC LIMIT 5   [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000349s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000283s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000298s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000438s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.169902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.170220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2015-12-17T22:53:07+08:00 ] 66.249.66.6 /index.php/page/index/name/rczl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002355s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_page` [ RunTime:0.001890s ]
+SQL: SELECT * FROM `pa_page` WHERE ( `lang` = 'zh-cn' ) AND ( `unique_id` = 'rczl' ) AND ( `display` = 1 ) LIMIT 1   [ RunTime:0.000478s ]
+SQL: SELECT `unique_id`,`page_name` FROM `pa_page` WHERE ( `lang` = 'zh-cn' ) AND ( `unique_id` <> 'rczl' ) AND ( `display` = 1 ) AND ( `parent_id` = 0 ) ORDER BY id DESC  [ RunTime:0.000370s ]
+SQL: SELECT `unique_id`,`page_name` FROM `pa_page` WHERE ( `display` = 1 ) AND ( `parent_id` = 16 ) ORDER BY id DESC  [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001550s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( (`position` = 'rczl') OR (`position` = 'all') ) ORDER BY sort DESC  [ RunTime:0.000352s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000830s ]
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001942s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000307s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000349s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000333s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000314s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000303s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000300s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000555s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000293s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000291s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000272s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2015-12-17T23:04:02+08:00 ] 46.4.120.3 /index.php/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002426s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000537s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000861s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\1e9d3611f961a753e6131beb83291bfe.php 第 4 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\1e9d3611f961a753e6131beb83291bfe.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\1e9d3611f961a753e6131beb83291bfe.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001741s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='en'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000418s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\1e9d3611f961a753e6131beb83291bfe.php 第 61 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='en'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000336s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\1e9d3611f961a753e6131beb83291bfe.php 第 144 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='en'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000318s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\1e9d3611f961a753e6131beb83291bfe.php 第 215 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083645s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2015-12-17T23:04:04+08:00 ] 46.4.120.3 /index.php/product/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002520s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002113s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.001543s ]
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.001526s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pa_product p INNER JOIN pa_category c on c.cid=p.cid  WHERE ( p.status = 1 ) AND ( p.lang = 'en' ) LIMIT 1   [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.001488s ]
+SQL: SELECT p.id,p.cid,p.image_id,p.price,p.psize,p.title,p.summary,p.update_time,p.click,c.name as cname FROM pa_product p INNER JOIN pa_category c on c.cid=p.cid  WHERE ( p.status = 1 ) AND ( p.lang = 'en' ) ORDER BY id ASC LIMIT 0, 120   [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001479s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'en' ) AND ( (`position` = 'product') OR (`position` = 'all') ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000561s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000865s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\874234af2d0037f6a82874b968469ef5.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\874234af2d0037f6a82874b968469ef5.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001656s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='en'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000362s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\874234af2d0037f6a82874b968469ef5.php 第 63 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='en'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000550s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\874234af2d0037f6a82874b968469ef5.php 第 146 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\874234af2d0037f6a82874b968469ef5.php 第 169 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='en'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000330s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\874234af2d0037f6a82874b968469ef5.php 第 241 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2015-12-17T23:14:38+08:00 ] 66.249.66.6 /index.php/page/index/name/spzx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002471s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_page` [ RunTime:0.001891s ]
+SQL: SELECT * FROM `pa_page` WHERE ( `lang` = 'zh-cn' ) AND ( `unique_id` = 'spzx' ) AND ( `display` = 1 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: SELECT `unique_id`,`page_name` FROM `pa_page` WHERE ( `lang` = 'zh-cn' ) AND ( `unique_id` <> 'spzx' ) AND ( `display` = 1 ) AND ( `parent_id` = 0 ) ORDER BY id DESC  [ RunTime:0.000535s ]
+SQL: SELECT `unique_id`,`page_name` FROM `pa_page` WHERE ( `display` = 1 ) AND ( `parent_id` = null ) ORDER BY id DESC  [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.002143s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( (`position` = 'spzx') OR (`position` = 'all') ) ORDER BY sort DESC  [ RunTime:0.000328s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000526s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000817s ]
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002179s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000420s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000370s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000345s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000317s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000346s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000317s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000331s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000300s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000465s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000293s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000497s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000299s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000282s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2015-12-17T23:14:50+08:00 ] 123.125.71.32 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002331s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001532s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'index' ) ORDER BY sort DESC  [ RunTime:0.000366s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000662s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001003s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001826s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000628s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000380s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000356s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000347s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000401s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000334s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000350s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000365s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000335s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000306s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000304s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000320s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2015-12-17T23:22:42+08:00 ] 220.181.108.179 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002715s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_ad` [ RunTime:0.001660s ]
+SQL: SELECT * FROM `pa_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'index' ) ORDER BY sort DESC  [ RunTime:0.000652s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\wamp\www\tcbb88.com\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000665s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000971s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 5 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\tcbb88.com\Application\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 6 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\wamp\www\tcbb88.com\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.001766s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000450s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=33 ) ORDER BY sort DESC  [ RunTime:0.000380s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000390s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000368s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=7 ) ORDER BY sort DESC  [ RunTime:0.000332s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=16 ) ORDER BY sort DESC  [ RunTime:0.000333s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=22 ) ORDER BY sort DESC  [ RunTime:0.000436s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=29 ) ORDER BY sort DESC  [ RunTime:0.000335s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000337s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=39 ) ORDER BY sort DESC  [ RunTime:0.000297s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=40 ) ORDER BY sort DESC  [ RunTime:0.000359s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=41 ) ORDER BY sort DESC  [ RunTime:0.000334s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=42 ) ORDER BY sort DESC  [ RunTime:0.000349s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=43 ) ORDER BY sort DESC  [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2015-12-17T23:43:18+08:00 ] 68.180.228.47 /index.php/Home/Page?l=en-us
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002772s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\tcbb88.com\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000510s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000757s ]
+

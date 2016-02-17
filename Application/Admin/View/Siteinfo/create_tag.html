@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>生成模版标签-网站设置-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='网站设置 > 生成模版标签';
+    </php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">生成模版标签</div>
+                </div>
+                <form>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <tr>
+                            <th>列表内容：</th>
+                            <td><select name="list_type" onchange="selectCat(this.value)" style="width: 80px;">
+                                <option value="n">文章列表</option>
+                                <option value="p">产品列表</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>内容类目：</th>
+                            <td><select id="content_type" name="content_type" style="width: 80px;">
+                                <option value="">全部</option>
+                                <volist name="newcat" id="vo">
+                                    <option value="{$vo.cid}">{$vo.fullname}</option>
+                                </volist>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th width="120">显示条数：</th>
+                            <td><input name="limit" type="text" class="input" size="20" value="5" /> </td>
+                        </tr>
+                        <tr>
+                            <th>类型：</th>
+                            <td><select name="type" style="width: 140px;">
+                                <option value="id">最新</option>
+                                <option value="click">最热</option>
+                                <option value="is_recommend">推荐</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>排序：</th>
+                            <td><select name="order" style="width: 140px;">
+                                <option value="DESC">倒序</option>
+                                <option value="ASC">顺序</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>代码：</th>
+                            <td><textarea style="width: 400px;height: 100px;" readonly id="returntext"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>变量解析：</th>
+                            <td><literal>
+                                <p>可在对应的标签内使用：</p>
+                                <p>文章：文章ID{$new.id},文章标题{$new.title},文章分类ID{$new.cid},添加时间{$new.published},更新时间{$new.update_time},摘要{$new.summary}</p>
+                                <p>产品：产品ID{$pro.id},产品标题{$pro.title},产品分类ID{$pro.cid},添加时间{$pro.published},更新时间{$pro.update_time},摘要{$pro.summary},图片{$pro.image}</p>
+                            </literal></td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">生成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(function(){
+        $(".submit").click(function(){
+            var formObj="form";
+            var url=document.URL;
+            $(formObj).ajaxSubmit({
+                url:url,
+                type:"POST",
+                success:function(data, st) {
+                    if(data.status==1){
+                        $('#returntext').val(data.info);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+    function selectCat(v){
+        $.get('{:U("Siteinfo/selectCat")}?t='+v,function(data){
+            $('#content_type').html(data.info);
+        });
+    }
+</script>
+</body>
+</html>

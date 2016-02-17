@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文件管理-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='文件管理 > 文件列表';
+    </php>
+    <include file="Common:intoHead" />
+    <!-- jQuery and jQuery UI (REQUIRED) -->
+    <link rel="stylesheet" type="text/css" media="screen" href="__STATIC__/Css/jquery-ui.css">
+    <script type="text/javascript" src="__STATIC__/Js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/Js/jquery-ui.min.js"></script>
+    <!-- elFinder CSS (REQUIRED) -->
+    <link rel="stylesheet" type="text/css" media="screen" href="__STATIC__/elfinder/css/elfinder.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="__STATIC__/elfinder/css/theme.css">
+    <!-- elFinder JS (REQUIRED) -->
+    <script type="text/javascript" src="__STATIC__/elfinder/js/elfinder.min.js"></script>
+    <!-- elFinder translation (OPTIONAL) -->
+    <script type="text/javascript" src="__STATIC__/elfinder/js/i18n/elfinder.zh_CN.js"></script>
+    <!-- elFinder initialization (REQUIRED) -->
+</head>
+<body>
+<div class="wrap">
+    <include file="Common:head" />
+    <div class="mainBody">
+        <include file="Common:left" />
+        <div id="Right">
+            <div class="Item hr">
+                <div class="current" style="max-width: 100px; float: left;">文件管理</div>
+            </div>
+            <div id="elfinder"></div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript" charset="utf-8">
+    $().ready(function() {
+        var elf = $('#elfinder').elfinder({
+            url : '__STATIC__/elfinder/php/connector.php',  // connector URL (REQUIRED)
+            lang: 'zh_CN'           // language (OPTIONAL)
+        }).elfinder('instance');
+    });
+</script>
+</body>
+</html>

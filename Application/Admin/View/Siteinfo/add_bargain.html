@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>添加、编辑产品-后台管理-{$site.SITE_INFO.name}</title>
+        <php>
+            $addCss="";
+            $addJs="";
+            $currentNav ='产品管理 > 添加编辑产品';
+        </php>
+        <include file="Common:intoHead" />
+        <style>
+            div.spot {
+                float: left;
+                margin: 0 20px 0 0;
+                width: 220px;
+                min-height: 160px;
+                border: 2px dashed #ddd;
+            }
+            .droparea {
+                position: relative;
+                text-align: center;
+            }
+            .droparea .instructions {
+                opacity: 0.8;
+                background-color: #cccccc;
+                height: 25px;
+                z-index: 10;
+                zoom: 1;
+                background-position: initial initial;
+                background-repeat: initial initial;
+                cursor: pointer;
+            }
+            .droparea div, .droparea input {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .droparea input {
+                cursor: pointer;
+                opacity: 0;
+            }
+            .droparea div, .droparea input {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            #uparea1,#uparea2,#uparea3{
+                height: 170px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <include file="Common:head" />
+            <div class="mainBody">
+                <include file="Common:left" />
+                <div id="Right">
+                    <div class="Item hr">
+                        <div class="current">添加编辑砍价活动</div>
+                    </div>
+                    <form>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                            <tr>
+                                <th width="100">活动标题：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="title" value="{$info.title}"/></td>
+                            </tr>
+
+                            <tr>
+                                <th width="100">开始时间：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="starttime" value="{$info.starttime}" onClick="WdatePicker()"/></td>
+                            </tr>
+							<tr>
+                                <th width="100">结束时间：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="endtime" value="{$info.endtime}" onClick="WdatePicker()"/></td>
+                            </tr>
+                            <tr>
+                                <th width="100">产品总价：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="price" value="{$info.price}"/> </td>
+                            </tr>
+							<tr>
+                                <th width="100">砍掉价格上限：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="price1" value="{$info.price1}"/> </td>
+                            </tr>
+							 <tr>
+                                <th width="100">购买需支付定金：</th>
+                                <td><input id="deposit" type="text" class="input" size="60" name="deposit" value="{$info.deposit}"/> </td>
+                            </tr>
+							<tr>
+                                <th width="100">50%人能砍：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="scale1" value="{$info.scale1}"/> </td>
+                            </tr>
+							<tr>
+                                <th width="100">20%人能砍：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="scale2" value="{$info.scale2}"/> </td>
+                            </tr>
+							<tr>
+                                <th width="100">19.5%人能砍：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="scale3" value="{$info.scale3}"/> </td>
+                            </tr>
+							<tr>
+                                <th width="100">10%人能砍：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="scale4" value="{$info.scale4}"/> </td>
+                            </tr>
+							<tr>
+                                <th width="100">0.5%人能砍：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="scale5" value="{$info.scale5}"/> </td>
+                            </tr>
+                            <tr>
+                                <th>报名提示信息：</th>
+                                <td><input type="text" class="input" size="60" name="notice" value="{$info.notice}"/></td>
+                            </tr>
+                            <tr>
+                                <th>说明：</th>
+                                <td><input type="text" class="input" size="60" name="explain" value="{$info.explain}"/></td>
+                            </tr>
+
+                            <tr>
+                                <th>活动图片：</th>
+                                <td>
+                                    <div class="droparea spot" id="image1" style="background-image: url('{$img_info[0]['savepath']}');background-size: 220px 160px;" ><div class="instructions" onclick="del_image('1')">删除</div><div id="uparea1"></div><input type="hidden" name="img" id="image_1" value="{$img_info[0]['savepath']}" /></div>
+                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>分享标题：</th>
+                                <td><input type="text" class="input" size="60" name="sharetitle" value="{$info.sharetitle}"/></td>
+                            </tr>
+                            <tr>
+                                <th>分享图片：</th>
+                                <td><div class="droparea spot" id="image2" style="background-image: url('{$img_info[1]['savepath']}');background-size: 220px 160px;" ><div class="instructions" onclick="del_image('2')">删除</div><div id="uparea2"></div><input type="hidden" name="shareimg" id="image_2" value="{$img_info[1]['savepath']}" /></div></td>
+                            </tr>
+                            <tr>
+                                <th>分享描述：</th>
+                                <td><textarea class="input" style="height: 60px; width: 600px;" name="sharedec">{$info.sharedec}</textarea> 如果不填写则系统自动截取文章前200个字符</td>
+                            </tr>
+							
+                            <tr>
+                                <th>商品详情：</th>
+                                <td><textarea id="content" class="" style="height: 300px; width: 80%;" name="content">{$info['content']}</textarea></td>
+                            </tr>
+							<tr>
+                                <th>活动详情：</th>
+                                <td><textarea id="bargain_info" class="" style="height: 300px; width: 80%;" name="bargain_info">{$info['bargain_info']}</textarea></td>
+                            </tr>
+							<tr>
+                                <th>活动规则：</th>
+                                <td><textarea id="bargain_rule" class="" style="height: 300px; width: 80%;" name="bargain_rule">{$info['bargain_rule']}</textarea></td>
+                            </tr>
+                        </table>
+                        <php>if(empty(!$_GET['do'])){</php>
+                        <input type="hidden" name="id" value="{$info.id}" />
+                        <php>}else{
+                            $action_url='__URL__/add_bargain';
+                            }</php>
+                    </form>
+                    <div class="commonBtnArea" >
+                        <button class="btn submit">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <include file="Common:foot" />
+        <js href="--PUBLIC--/kindeditor/kindeditor.js,--PUBLIC--/kindeditor/lang/zh_CN.js,--PUBLIC--/My97DatePicker/WdatePicker.js"/>
+        <script type="text/javascript">
+            function del_image(num){
+                $('#image'+num).css('background-image','');
+                $('#image_'+num).val('');
+            }
+            $(function(){
+
+                var  content, bargain_info,bargain_rule;
+                KindEditor.ready(function(K) {
+                    content = K.create('#content',{
+                        allowFileManager : true,
+                        uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=bargain'
+                    });
+					bargain_info=K.create('#bargain_info',{
+                        allowFileManager : true,
+                        uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=bargain'
+                    });
+					bargain_rule=K.create('#bargain_rule',{
+                        allowFileManager : true,
+                        uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=bargain'
+                    });
+                });
+				
+                KindEditor.ready(function(K) {
+                    K.create();
+                    var editor = K.editor({
+                        allowFileManager : true,
+                        uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=bargain'
+                        //sdl:false
+                    });
+                    K('#uparea1').click(function() {
+                        editor.loadPlugin('image', function() {
+                            editor.plugin.imageDialog({
+                                imageUrl : K('#image_1').val(),
+                                clickFn : function(url, title, width, height, border, align) {
+                                    $('#image1').css('background-image','url('+url+')').css('background-size','220px 160px');
+                                    K('#image_1').val(url);
+                                   // K('#getImgUrl').val(url);
+                                    editor.hideDialog();
+                                }
+                            });
+                        });
+                    });
+					K('#uparea2').click(function() {
+                        editor.loadPlugin('image', function() {
+                            editor.plugin.imageDialog({
+                                imageUrl : K('#image_2').val(),
+                                clickFn : function(url, title, width, height, border, align) {
+                                    $('#image2').css('background-image','url('+url+')').css('background-size','220px 160px');
+                                    K('#image_2').val(url);
+                                    // K('#getImgUrl').val(url);
+                                    editor.hideDialog();
+                                }
+                            });
+                        });
+                    });
+                });
+                $("#checkNewsTitle").click(function(){
+                    if($('#title').val()==''){
+                        popup.error('标题不能为空！');
+                        return false;
+                    }
+                    $.getJSON("__URL__/checkProductTitle", { title:$("#title").val(),id:"{$info.id}"}, function(json){
+                        $("#checkNewsTitle").css("color",json.status==1?"#0f0":"#f00").html(json.info);
+                    });
+                });
+                $(".submit").click(function(){
+                    if($('#title').val()==''){
+                        popup.error('标题不能为空！');
+                        return false;
+                    }
+                    content.sync();
+					bargain_info.sync();
+					bargain_rule.sync();
+                    commonAjaxSubmit("{:U(Siteinfo/edit_bargain)}");
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

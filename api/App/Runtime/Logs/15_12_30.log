@@ -1,0 +1,434 @@
+[ 2015-12-30T00:01:12+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001124s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001452s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001740s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001601s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000528s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000275s ]
+
+[ 2015-12-30T00:56:41+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001093s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001422s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000974s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001206s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001533s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001652s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.007367s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000306s ]
+
+[ 2015-12-30T00:57:52+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001172s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001502s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001637s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001663s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000373s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000268s ]
+
+[ 2015-12-30T01:25:12+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001050s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001378s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001635s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001389s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000411s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000267s ]
+
+[ 2015-12-30T01:25:58+08:00 ] 115.201.86.108 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000960s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001285s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002016s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.002049s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2015123054555110',1451409958,10,'文化路607号','陈恩华','15355688333',988,988,0,1,'2015-12-30 03:25:51','') [ RunTime:0.005430s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (559,38,1,300,'烤牛排',1127,'2015-12-30 01:12:58') [ RunTime:0.003421s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (561,38,1,88,'烤翅',1043,'2015-12-30 01:12:58') [ RunTime:0.002814s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (552,38,1,600,'烧烤产品8人套餐',1025,'2015-12-30 01:12:58') [ RunTime:0.012417s ]
+
+[ 2015-12-30T01:26:24+08:00 ] 115.201.86.108 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000946s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001276s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001833s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.001307s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2015123048501029',1451409984,10,'文化路607号','陈恩华','15355688333',1000,1000,0,1,'2015-12-30 03:26:22','') [ RunTime:0.006845s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (550,39,1,1000,'烧烤产品20人套餐',1098,'2015-12-30 01:12:24') [ RunTime:0.002527s ]
+
+[ 2015-12-30T01:41:58+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001045s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001419s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001545s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000744s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000258s ]
+
+[ 2015-12-30T01:46:57+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001407s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001604s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001430s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000388s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000264s ]
+
+[ 2015-12-30T02:00:19+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000936s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001277s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001606s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001310s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000400s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000301s ]
+
+[ 2015-12-30T02:00:30+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000940s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001295s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001238s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000399s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000251s ]
+
+[ 2015-12-30T02:04:50+08:00 ] 115.201.86.108 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001088s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001458s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001833s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.001291s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2015123050975349',1451412290,10,'文化路607号','陈恩华','15355688333',1820,1820,0,1,'2015-12-30 04:07:37','') [ RunTime:0.007601s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (553,40,1,800,'烧烤产品12人套餐',1023,'2015-12-30 02:12:50') [ RunTime:0.002719s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (550,40,1,1000,'烧烤产品20人套餐',1098,'2015-12-30 02:12:50') [ RunTime:0.002742s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (569,40,1,20,'蒜末',1068,'2015-12-30 02:12:50') [ RunTime:0.003663s ]
+
+[ 2015-12-30T02:05:18+08:00 ] 115.201.86.108 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001049s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001373s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001801s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.001233s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2015123010152554',1451412318,10,'文化路607号','陈恩华','15355688333',1000,1000,0,1,'2015-12-30 04:08:04','') [ RunTime:0.014032s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (550,41,1,1000,'烧烤产品20人套餐',1098,'2015-12-30 02:12:18') [ RunTime:0.004370s ]
+
+[ 2015-12-30T02:41:28+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000916s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001279s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001890s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001727s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000493s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000330s ]
+
+[ 2015-12-30T11:54:51+08:00 ] 117.174.26.89 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001047s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001385s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001691s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002166s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '18382307095' ) AND ( `password` = '123456' ) LIMIT 1   [ RunTime:0.000421s ]
+
+[ 2015-12-30T11:54:51+08:00 ] 117.174.26.89 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001080s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001406s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001663s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '18382307095' ) AND ( `password` = '123456' ) LIMIT 1   [ RunTime:0.000600s ]
+
+[ 2015-12-30T11:55:27+08:00 ] 117.174.26.89 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000950s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001263s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002255s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '18382307095' ) AND ( `password` = '1234567' ) LIMIT 1   [ RunTime:0.000473s ]
+SQL: UPDATE `pa_user` SET `logintime`='2015-12-30 11:55:27' WHERE ( `id` = 1 ) [ RunTime:0.007048s ]
+
+[ 2015-12-30T12:18:54+08:00 ] 117.174.26.84 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001010s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001355s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002752s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.001813s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (4,'2015123010155101',1451449134,9,'还好还好哈哈','黄杨侣','18382307095',5915,5915,0,1,'2015-12-30 14:19:37','') [ RunTime:0.014402s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (552,42,1,600,'烧烤产品8人套餐',1025,'2015-12-30 12:12:54') [ RunTime:0.002920s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (554,42,1,1000,'烧烤产品15人套餐',1104,'2015-12-30 12:12:54') [ RunTime:0.004087s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (550,42,4,1000,'烧烤产品20人套餐',1098,'2015-12-30 12:12:54') [ RunTime:0.003154s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (555,42,1,200,'蒜烤生蚝',1027,'2015-12-30 12:12:54') [ RunTime:0.004325s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (562,42,1,100,'烤猪蹄',1048,'2015-12-30 12:12:54') [ RunTime:0.004309s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (566,42,1,5,'烤韭菜',1060,'2015-12-30 12:12:54') [ RunTime:0.004425s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (570,42,1,10,'料酒',1072,'2015-12-30 12:12:54') [ RunTime:0.005006s ]
+
+[ 2015-12-30T12:41:52+08:00 ] 117.174.26.89 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001322s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001780s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001820s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.001301s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (1,'2015123048481005',1451450512,1,'石人正街29号','黄杨侣2','18382307095',30,30,0,1,'2015-12-30 14:41:42','') [ RunTime:0.008484s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (567,43,1,10,'胡椒粉',1065,'2015-12-30 12:12:52') [ RunTime:0.004064s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (576,43,1,20,'面包',1083,'2015-12-30 12:12:52') [ RunTime:0.002899s ]
+
+[ 2015-12-30T18:10:39+08:00 ] 223.87.34.175 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001330s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001750s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002450s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.001736s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (1,'2015123010257555',1451470239,1,'石人正街29号','黄杨侣2','18382307095',220,220,0,1,'2015-12-30 20:10:33','') [ RunTime:0.006956s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (555,44,1,200,'蒜烤生蚝',1027,'2015-12-30 18:12:39') [ RunTime:0.003107s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (569,44,1,20,'蒜末',1068,'2015-12-30 18:12:39') [ RunTime:0.002872s ]
+
+[ 2015-12-30T18:32:09+08:00 ] 223.87.34.175 /api/api.php/client/getUserInfo/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000967s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001298s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001805s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001679s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000475s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000278s ]
+
+[ 2015-12-30T18:32:17+08:00 ] 223.87.34.175 /api/api.php/client/getOrderlist/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000942s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001257s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002270s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_order` WHERE ( `userid` = 1 ) ORDER BY orderdate desc  [ RunTime:0.000833s ]
+
+[ 2015-12-30T18:36:33+08:00 ] 223.87.34.175 /api/api.php/client/getOrderlist/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001060s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001366s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002035s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_order` WHERE ( `userid` = 1 ) ORDER BY orderdate desc  [ RunTime:0.000647s ]
+
+[ 2015-12-30T18:36:43+08:00 ] 223.87.34.175 /api/api.php/client/getUserInfo/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000987s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001330s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001566s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001300s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000414s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000298s ]
+
+[ 2015-12-30T18:36:45+08:00 ] 223.87.34.175 /api/api.php/client/getOrderlist/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000963s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001268s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001860s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_order` WHERE ( `userid` = 1 ) ORDER BY orderdate desc  [ RunTime:0.000641s ]
+
+[ 2015-12-30T18:39:37+08:00 ] 223.87.34.175 /api/api.php/client/getOrderlist/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000969s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001303s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001942s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_order` WHERE ( `userid` = 1 ) ORDER BY orderdate desc  [ RunTime:0.000761s ]
+
+[ 2015-12-30T18:41:23+08:00 ] 223.87.34.175 /api/api.php/client/getOrderlist/userid/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000993s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001326s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.001884s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_order` WHERE ( `userid` = 1 ) ORDER BY orderdate desc  [ RunTime:0.000630s ]
+
+[ 2015-12-30T21:08:03+08:00 ] 115.201.86.108 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001041s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001349s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001219s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002074s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.001697s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000442s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\tcbb88.com\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000275s ]
+

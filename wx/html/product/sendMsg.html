@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>发表产品留言</title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="/wx/css/mui.min.css">
+        <!--盈舟代码-->
+        <link rel="stylesheet" href="/wx/css/app.css">
+		<style>
+				.ui-notice{top: 0;z-index: -1;}
+				.ui-dialog{margin: 0!important;padding: 0!important;  background: rgba(0,0,0,.65);opacity: 0.8;}
+	
+			.ui-page-login,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			.mui-content{height: 100%;}
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			.mui-input-group label {
+				width: 22%;
+			}
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			.mui-btn {
+				padding: 10px;
+			}
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+
+			.mui-bar-nav a{color: #fff;}
+			.mui-bar-nav a:active {
+			  color: #fff;
+			}
+			.mui-title{color: #fff;}
+		</style>
+
+	</head>
+
+	<body>
+<header class="mui-bar mui-bar-nav">
+  <a id="fanhusy" href="/wx/index.html" class="sdlogo"><img src="/wx/css/shangbiao.png"></a>
+  <a id="soush" href="/wx/html/product/search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+  <!-- h1 class="mui-title">当前栏目</h1 -->
+</header>
+
+		<div class="mui-content">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label>昵称:</label>
+					<input id='nickname' type="text" class="mui-input-clear mui-input" placeholder="请输入昵称">
+				</div>
+				<div class="mui-input-row">
+					<label>电话:</label>
+					<input id='phone' type="text" class="mui-input-clear mui-input" placeholder="请输入电话号码">
+				</div>
+				<div class="mui-input-row">
+					<label>邮件:</label>
+					<input id='email' type="text" class="mui-input-clear mui-input" placeholder="请输入邮件地址">
+				</div>
+				<div class="mui-input-row" style="margin: 10px 5px;">
+					<textarea id="content" rows="5" placeholder="输入留言内容"></textarea>
+				</div>
+			</form>
+			<div class="mui-content-padded">
+				<button id='submit' class="mui-btn mui-btn-block mui-btn-primary">提交</button>
+			</div>
+			
+		</div>
+		<div style="display:none;" class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>数据提交中...</p></div></div>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" id="ddlsy" href="/wx/index.html">
+        <span class="mui-icon iconfont">&#xe63b;</span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="regiser" href="/wx/html/product/categary.html">
+        <span class="mui-icon iconfont">&#xe6ad;</span>
+        <span class="mui-tab-label">烧烤商城</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxxm" href="/wx/html/news/categary.html">
+        <span class="mui-icon iconfont">&#xe6de;</span>
+        <span class="mui-tab-label">烧烤教室</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxjj" href="/wx/pxjj.html">
+        <span class="mui-icon iconfont">&#xe6e2;</span>
+        <span class="mui-tab-label">加盟我们</span>
+    </a>
+    <a class="mui-tab-item" id="sdlxwm" href="/wx/lxwm.html">
+        <span class="mui-icon iconfont">&#xe613;</span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js" ></script>
+		<script>
+			$(function(){
+				$("#back").on("tap",function(){
+					history.back();
+				});
+				$("#submit").on("tap",function(){
+					sendMsg();
+				});
+				$("#regiser").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#ddlsy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+				$("#sdpxxm").on("tap",function(){
+					window.location.href="/wx/pxxm.html";
+				})
+				$("#sdpxjj").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#sdlxwm").on("tap",function(){
+					window.location.href="/wx/lxwm.html";
+				})
+				$("#soush").on("tap",function(){
+					window.location.href="/wx/html/product/search.html";
+				})
+				$("#fanhusy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+				$("#nickname").val(localStorage.getItem("username"));
+			});
+			
+			function sendMsg(){	
+				var id=GetQueryString("id");
+				var username=localStorage.getItem("username");
+				var phone=$("#phone").val();
+				var email=$("#email").val();
+				var content=$("#content").val();
+				var user=JSON.parse(localStorage.getItem("wx_user"));
+				var headimgurl=user.headimgurl;
+				if(username==""){
+					mui.toast("请输入昵称!");
+					return;
+				}
+				if(phone==""){
+					mui.toast("请输入电话号码，方便联系!");
+					return;
+				}
+				if(email==""){
+					
+					mui.toast("请输入邮件地址，方便联系!");
+					return;
+				}
+				if(content==""){
+					mui.toast("请输入留言内容!");
+					return;
+				}
+				$(".ui-dialog").show();
+				var flag=false;
+				var url=serverUrl+"/sendMsg?headimgurl="+headimgurl+"&username="+username+"&email="+email+"&mobile="+phone+"&content="+content+"&productid="+id+"&callback?";
+				$.getJSON(url,function(data){
+					setTimeout(function(){$(".ui-dialog").hide();flag=true;mui.toast("发表成功!");},1000);
+					
+				});
+				setTimeout(function(){
+					$(".ui-dialog").hide();
+					if(!flag){
+						mui.toast("发表成功!");
+					}
+				},5000);
+			}
+		</script>
+	</body>
+
+</html>

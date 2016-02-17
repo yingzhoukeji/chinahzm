@@ -1,0 +1,697 @@
+﻿<!doctype html>
+<html lang="en" ng-app="app">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<title>海之梦集团</title>
+		<link rel="stylesheet" href="css/onsenui.css">
+		<link rel="stylesheet" href="css/onsen-css-components-sunshine-theme.css">
+		<link rel="stylesheet" href="css/app.css" />
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-sanitize.min.js"></script>
+		<script src="js/angular-cache.min.js"></script>
+		<script src="js/onsenui.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/app.js"></script>
+
+        <script src="cordova.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+		<script>
+			var user='{$user}';
+			localStorage.setItem("wx_user",user);
+		</script>
+		<script>
+			var u = navigator.userAgent, app = navigator.appVersion;
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);//ios终端
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+			if(isiOS){
+				document.write('<style>.navigation-bar{padding-top: 20px;height: 64px;}</style>');
+				document.write('<style>ons-toolbar ~ .page__content{top:64px;}</style>');
+				document.write('<style>#map{top:20px;}#map iframe{border:none;}</style>');
+			}
+			if(isAndroid){
+				document.write('<style>.navigation-bar__title{position: absolute;left:40%;}</style>');
+				//document.write('<style>ons-toolbar.navigation-bar.navigation-bar--android{  float: none;text-align: none;width: auto;min-width: 10px;}</style>')
+			}
+		</script><script>
+var JPushUtil = function() { };
+ 
+JPushUtil.prototype.SetAlias = function(name, successCallback, failureCallback ) {
+    return cordova.exec(successCallback, failureCallback,  'JPushUtilPlugin', 'setAlias', [name]);
+};
+ 
+if(!window.plugins) {
+    window.plugins = {};
+}
+
+if (!window.plugins.JPushUtil) {
+    window.plugins.JPushUtil = new JPushUtil();
+}
+</script>
+	</head>
+
+	<body ng-controller="AppController">
+
+		<ons-navigator var="myNavigator">
+			<ons-page>
+				<ons-sliding-menu menu-page="menu.html" main-page="dibu.html" side="left" var="menu" type="reveal" max-slide-distance="260px" swipeable="true">
+				</ons-sliding-menu>
+			</ons-page>
+		</ons-navigator>
+
+		<ons-template id="dibu.html">
+			<ons-page>
+				<ons-tabbar>
+					<ons-tab label="动态" icon="iconfont fa-indent" page="home.html" active="true"></ons-tab>
+					<ons-tab label="产品" icon="iconfont fa-th" page="product"></ons-tab>
+					<ons-tab label="新闻" icon="iconfont fa-list-alt" page="news"></ons-tab>
+					<ons-tab label="地图" icon="iconfont fa-map-marker" page="map"></ons-tab>
+					<ons-tab label="大森" icon="iconfont fa-home" page="about"></ons-tab>
+				</ons-tabbar>
+			</ons-page>
+		</ons-template>
+
+		<ons-template id="menu.html">
+			<ons-page modifier="menu-page" ng-controller="menuController" style="background:rgba(0,138,69,1.00) !important;">
+				<ons-list class="menu-list">
+					<ons-list-item class="menu-item" ng-click="menu.setMainPage('dibu.html', {closeMenu: true})" style="background:#008a45 !important;border-bottom: 1px solid #007b3e;">
+						<img style="width: 100%;" src="images/logo1.png">
+					</ons-list-item>
+					<ons-list-item class="menu-item" ng-click="openMap()" style="font-size: 14px; border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important">
+						<ons-icon icon="fa-hospital-o"></ons-icon> 海之梦集团</ons-list-item>
+					<ons-list-item class="menu-item" style="border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important">
+						<ons-icon icon="ion-earth"></ons-icon> 中国 浙江 台州</ons-list-item>
+					<ons-list-item class="menu-item" style="border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important">
+						<ons-icon icon="ion-android-phone-portrait"></ons-icon> 400-926-0070</ons-list-item>
+				</ons-list>
+
+				<br>
+
+				<ons-list class="bottom-menu-list">
+					<!-- 案例 -->
+					<ons-list-item class="bottom-menu-item lanlamuda" style="border-bottom: 1px solid #007b3e !important; background:url(1-1.png) no-repeat center right rgba(0,138,69,1.00) !important; color:rgba(255,255,255,1.00) !important">走进大森</ons-list-item>
+					<ons-list-item class="bottom-menu-item" ng-repeat="item in zjds" ng-click="gopageDetail($index,0)" style="border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important; font-size:12px;">{{item.page_name}}</ons-list-item>
+					<ons-list-item class="bottom-menu-item lanlamuda" style="border-bottom: 1px solid #007b3e !important; background:url(1-1.png) no-repeat center right rgba(0,138,69,1.00) !important; color:rgba(255,255,255,1.00) !important">服务中心</ons-list-item>
+					<ons-list-item class="bottom-menu-item" ng-repeat="item in fwzx" ng-click="gopageDetail($index,1)" style="border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important; font-size:12px;">{{item.page_name}}</ons-list-item>
+					<ons-list-item class="bottom-menu-item lanlamuda" style="border-bottom: 1px solid #007b3e !important; background:url(1-1.png) no-repeat center right rgba(0,138,69,1.00) !important; color:rgba(255,255,255,1.00) !important">人力资源</ons-list-item>
+					<ons-list-item class="bottom-menu-item" ng-repeat="item in rlzy" ng-click="gopageDetail($index,2)" style="border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important; font-size:12px;">{{item.page_name}}</ons-list-item>
+					<ons-list-item class="bottom-menu-item lanlamuda" style="border-bottom: 1px solid #007b3e !important; background:url(1-1.png) no-repeat center right rgba(0,138,69,1.00) !important; color:rgba(255,255,255,1.00) !important">联系我们</ons-list-item>
+					<ons-list-item class="bottom-menu-item" ng-repeat="item in lxwm" ng-click="gopageDetail($index,3)" style="border-bottom: 1px solid #007b3e !important; background:rgba(0,138,69,1.00) !important;color:rgba(255,255,255,1.00) !important; font-size:12px;">{{item.page_name}}</ons-list-item>
+					<!-- 案例结束 -->
+				</ons-list>
+			</ons-page>
+		</ons-template>
+
+		<ons-template id="pageDetail">
+			<ons-page class="product" ng-controller="pageDetailController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">{{data.page_name}}</div>
+				</ons-toolbar>
+				<div class="ljshdf" id="pageContent" ng-bind-html="content"></div>
+			</ons-page>
+		</ons-template>
+
+		<!--首页------------->
+		<ons-template id="home.html">
+			<ons-page modifier="shop-details" ng-controller="homeController">
+				<div class="card" style="background-image: url(images/daseng.jpg)">
+					<div class="card-name"><img src="images/logo.png"></div>
+					<div class="card-desc"><img src="images/1-1.png"></div>
+				</div>
+				<div class="rating">
+					<div class="rating-num">
+						www.chinahzm.cn
+					</div>
+				</div>
+
+				<ons-list id="homebar" style="border-top: none">
+					<ons-list-item style="line-height: 1; padding: 0;">
+						<ons-row class="action">
+
+							<ons-col class="action-col" ng-click="goRegister()">
+								<div class="action-icon">
+									<ons-icon icon="iconfont iconfont icon-tianjiadianhuaqia"></ons-icon>
+								</div>
+								<div class="action-label">注册</div>
+							</ons-col>
+							<ons-col class="action-col" ng-click="gologinView()">
+								<div class="action-icon">
+									<ons-icon icon="iconfont iconfont icon-my"></ons-icon>
+								</div>
+								<div class="action-label" id="id_username">{{logininfo}}</div>
+							</ons-col>
+
+							<ons-col class="action-col" ng-click="ngOpenProductSearch()">
+								<div class="action-icon">
+									<ons-icon icon="iconfont iconfont icon-search"></ons-icon>
+								</div>
+								<div class="action-label">搜索</div>
+							</ons-col>
+
+							<ons-col class="action-col" ng-click="logout()">
+								<div class="action-icon">
+									<ons-icon icon="iconfont iconfont icon-jinzhitishi"></ons-icon>
+								</div>
+								<div class="action-label">登出</div>
+							</ons-col>
+
+						</ons-row>
+					</ons-list-item>
+				</ons-list>
+
+				<ons-list style="margin-top: 12px;">
+					<ons-list-header class="lshhdiw">推荐缝纫机</ons-list-header>
+                    <div class="cptipiao">
+                      <dl ng-repeat="item in randProducts" ng-click="ngproductDetail($index)">
+                        <dt><img src="{{picUrl}}{{item.savepath}}"> <samp>{{item.psize}}</samp></dt>
+                        <dd>{{item.title}}</dd>
+                      </dl>
+                      
+                    </div>
+         
+
+					<ons-list>
+						<ons-list-header class="lshhdiw">实时新闻</ons-list-header>
+
+						<ons-list-item modifier="chevron" ng-repeat="item1 in randnews" ng-click="ngNewsDetail($index)" style="font-size:12px;overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;">{{item1.title}}</ons-list-item>
+
+					</ons-list>
+
+					<ons-list>
+						<ons-list-header class="lshhdiw">联系大森</ons-list-header>
+						<ons-list-item modifier="chevron" ng-click="openMap()">
+							<div class="prop-desc">
+								<ons-icon icon="fa-globe"></ons-icon>　 滨海工业园区B区海丰路2229号</div>
+						</ons-list-item>
+
+						<ons-list-item modifier="chevron">
+							<div class="prop-desc">
+								<ons-icon icon="fa-fax"></ons-icon>　 <a href="tel:0576-88027625">0576-88027625</a>
+							</div>
+						</ons-list-item>
+
+						<ons-list-item modifier="chevron">
+							<div class="prop-desc">
+								<ons-icon icon="fa-envelope-o"></ons-icon>　 <a href="mailto:info@chinadoso.com">info@chinadoso.com</a>
+							</div>
+						</ons-list-item>
+
+						<ons-list-item modifier="chevron" ng-click="qrcode.show()">
+							<div class="prop-desc">
+								<ons-icon icon="fa-comments"></ons-icon>　微信订阅号</div>
+						</ons-list-item>
+					</ons-list>
+
+			</ons-page>
+		</ons-template>
+		<!--首页------------->
+		<!--产品列表------------->
+		<ons-template id="product">
+			<ons-page class="product" ng-controller="productController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" style="vertical-align: -4px; font-size: 28px;"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">产品分类</div>
+					<div class="right">
+						<ons-toolbar-button ng-click="ngOpenProductSearch()">
+							<ons-icon icon="ion-search"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+				</ons-toolbar>
+                
+                <div class="cplbiajs">
+                  <dl ng-repeat="item in pCategary" ng-click="ngProductList($index)">
+                    <dt><img src="images/{{item.cid}}.jpg"></dt>
+                    <dd>{{item.name}}</dd>
+                  </dl>
+                
+                </div>
+                
+                
+				
+			</ons-page>
+		</ons-template>
+		<!--产品列表-->
+		<ons-template id="productlist">
+			<ons-page class="productlist" ng-controller="productListController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">{{cname}}</div>
+					<div class="right">
+						<ons-toolbar-button ng-click="ngOpenProductSearch()">
+							<ons-icon icon="ion-search"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+				</ons-toolbar>
+                
+                
+<div class="cptipiao">
+  <dl ng-repeat="item in productlist" ng-click="ngproductDetail($index)">
+    <dt><img src="{{picUrl}}{{item.savepath}}"> <samp>{{item.psize}}</samp></dt>
+    <dd>{{item.title}}</dd>
+  </dl>
+</div>
+                    
+               
+			</ons-page>
+		</ons-template>
+		<!--产品搜索-->
+		<ons-template id="productSearch">
+			<ons-page class="productlist" ng-controller="productSearchController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">产品搜索</div>
+				</ons-toolbar>
+				<div class="navigation-bar" style=" background:rgba(0,0,0,1.00) !important; margin:0 0 10px 0;">
+					<div class="navigation-bar__center">
+
+						<input type="search" class="search-input" style="width: 96%; margin: 6px auto 6px auto;" placeholder="Search" ng-model="query">
+
+					</div>
+				</div>
+                
+<div class="cptipiao">
+  <dl ng-repeat="item in productlist | filter:query" ng-click="ngproductDetail($index)">
+    <dt><img src="{{picUrl}}{{item.savepath}}"> <samp>{{item.psize}}</samp></dt>
+    <dd>{{item.title}}</dd>
+  </dl>
+</div>
+
+			</ons-page>
+		</ons-template>
+		<!-- ※※  产品详情 ※※  -->
+		<ons-template id="productDetail">
+			<ons-page ng-controller="productDetailController">
+
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">产品详情</div>
+					<div class="right">
+						<ons-toolbar-button ng-click="ngOpenProductSearch()">
+							<ons-icon icon="ion-search"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+				</ons-toolbar>
+
+				<ons-carousel swipeable overscrollable style="height: 50%; width: 100%" initial-index="2" item-width="100%">
+					<ons-carousel-cover>
+						<div style="text-align: center; position: absolute; left: 0px; width: 100%; bottom: 10px; color: #009d4f;">{{product.title}}</div>
+					</ons-carousel-cover>
+					<ons-carousel-item>
+						<img style="width:100%; height:auto !important;" src="{{picUrl}}{{product.savepath}}" class="avator">
+					</ons-carousel-item>
+				</ons-carousel>
+
+				<ons-list modifier="inset" style="margin-top: 10px">
+					<ons-list-item class="item">
+						<ons-row>
+							<ons-col width="60px">
+								<div class="item-thum">
+									<img style="width: 100%;height: 100%; -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius:5px;" src="images/logo1.jpg">
+								</div>
+							</ons-col>
+							<ons-col>
+								<header>
+									<span class="item-title">海之梦</span>
+									<a href="tel:400-110-1000" target="_blank"><span class="item-label"> <ons-icon icon="fa-fax"></ons-icon> 联系我们</span></a>
+								</header>
+								<p class="item-desc">型号：{{product.psize}}</p>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+
+					<ons-list-item modifier="chevron" ng-click="sendMsg()">
+						<ons-icon icon="ion-ios-chatboxes" fixed-width="true" style="color: #ccc"></ons-icon>
+						给我们留言
+					</ons-list-item>
+				</ons-list>
+				<ons-list style="margin-top: 10px; border-top:#ddd 1px solid">
+					<ons-list-item class="item">
+						<header class="hdilshw">
+							<span class="item-title">参数描述</span>
+						</header>
+						<p class="item-desc">
+							<div class="nrjsd">{{product.summary}}</div>
+						</p>
+					</ons-list-item>
+				</ons-list>
+				<ons-list style="margin-top: 10px; border-top:#ddd 1px solid">
+
+					<ons-list-item class="item">
+						<header class="hdilshw">
+							<span class="item-title">详情描述</span>
+						</header>
+						<p class="item-desc">
+							<div ng-bind-html="content" class="productDetail"></div>
+						</p>
+					</ons-list-item>
+				</ons-list>
+				<ons-list style="margin-top: 10px; border-top:#ddd 1px solid">
+
+					<ons-list-item class="item">
+						<header class="hdilshw">
+							<span class="item-title">留言列表</span>
+						</header>
+					</ons-list-item>
+
+					<ons-list-item class="timeline-li" modifier="tappable" ng-repeat="item in msgs">
+						<ons-row>
+							<ons-col width="50px">
+								<img ng-src="images/msg.png" class="timeline-image">
+							</ons-col>
+
+							<ons-col>
+								<div class="timeline-date"></div>
+								<div class="timline-from">
+									<span class="timeline-name">{{item.username}}</span>
+									<span class="timeline-id"></span>
+								</div>
+
+								<div class="timeline-message">
+									{{item.content}}
+								</div>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+
+				</ons-list>
+			</ons-page>
+		</ons-template>
+		<!--产品列表-->
+		<ons-template id="map">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" style="vertical-align: -4px; font-size: 28px;"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">地图</div>
+				</ons-toolbar>
+
+				<iframe style="width: 100%;height: 100%; margin:0px; padding:0px; border:none;" src="html/map.html"></iframe>
+
+			</ons-page>
+		</ons-template>
+		<!--新闻分类-->
+		<ons-template id="news">
+			<ons-page class="news" ng-controller="newsController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" style="vertical-align: -4px; font-size: 28px;"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">新闻动态</div>
+				</ons-toolbar>
+
+				<ons-list>
+
+					<ons-list-item modifier="chevron" ng-repeat="item in pCategary" ng-click="ngNewsList($index)">{{item.name}}</ons-list-item>
+
+				</ons-list>
+
+			</ons-page>
+		</ons-template>
+		<!--新闻列表-->
+
+		<ons-template id="newslist">
+			<ons-page class="newslist" ng-controller="newslistController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">{{cname}}</div>
+				</ons-toolbar>
+				<ons-list>
+					<ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in newslist" ng-click="ngNewsDetail($index)">
+						{{item.title}}
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-template>
+		<!-- ※※  新闻内容  ※※  -->
+		<ons-template id="newsDetail">
+			<ons-page ng-controller="newsDetailController">
+
+				<ons-toolbar>
+					<div class="left">
+						<div class="left">
+							<ons-back-button>返回</ons-back-button>
+						</div>
+					</div>
+					<div class="center">新闻正文</div>
+				</ons-toolbar>
+
+				<div style="padding:10px;">
+					<h1 class="nrbiaoti">{{news.title}}</h1>
+					<div class="nrfenxiang">
+						<span class="nrxiang"><ons-icon icon="fa fa-share-alt"></ons-icon> 分享</span>浏览次数 {{news.click}}
+					</div>
+					<div class="nrzhengwen" ng-bind-html="content"></div>
+				</div>
+
+			</ons-page>
+		</ons-template>
+		<ons-template id="sendMsg">
+			<ons-page ng-controller="sendMsgController">
+				<ons-toolbar>
+					<div class="left">
+						<div class="left">
+							<ons-back-button>返回</ons-back-button>
+						</div>
+					</div>
+					<div class="center">留言</div>
+				</ons-toolbar>
+
+				<ons-list modifier="inset" style="margin-top: 10px">
+					<ons-list-item class="to-wrapper">
+						<input type="text" class="text-input text-input--transparent" ng-model="username" placeholder="输入姓名" style="width: 100%">
+					</ons-list-item>
+					<ons-list-item>
+						<input type="text" class="text-input text-input--transparent" ng-model="phone" placeholder="输入电话号码" style="width: 100%">
+					</ons-list-item>
+					<ons-list-item>
+						<input type="email" ng-model="email" placeholder="输入邮件地址" class="text-input text-input--transparent" style="width: 100%">
+					</ons-list-item>
+					<ons-list-item>
+						<textarea class="textarea textarea--transparent" ng-model="content" placeholder="输入留言内容" style="width: 100%; height: 100px;"></textarea>
+					</ons-list-item>
+
+					<ons-list-item modifier="chevron">
+						<ons-icon icon="fa-tag" style="opacity:0.2"></ons-icon>
+					</ons-list-item>
+
+				</ons-list>
+
+				<div style="padding: 10px 9px">
+					<ons-button modifier="large" class="login-button" ng-click="submit()">提交留言</ons-button>
+				</div>
+
+			</ons-page>
+		</ons-template>
+		<ons-template id="about">
+			<ons-page ng-controller="aboutController">
+				<ons-toolbar>
+
+					<div class="center">大森</div>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" style="vertical-align: -4px; font-size: 28px;"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+				</ons-toolbar>
+
+				<div class="profile-card" style="background-image:url(images/daseng1.jpg);background-repeat:no-repeat;background-size:cover; ">
+
+					<img src="images/logo1.jpg" class="profile-image">
+					<div class="profile-name" style="color:rgba(6,67,11,1.00); text-shadow:#fff 0 2px 0; font-weight:900;">海之梦集团</div>
+					<div class="profile-id">免费咨询</div>
+					<div class="profile-desc">400-926-0070</div>
+
+				</div>
+
+				<ons-list>
+					<ons-list-item>
+						<ons-row>
+							<ons-col class="info-col">
+								<div class="info-num">软件版本</div>
+								<div class="info-unit">1.1.0</div>
+							</ons-col>
+							<ons-col class="info-col">
+								<div class="info-num">软件名称</div>
+								<div class="info-unit">海之梦</div>
+							</ons-col>
+							<ons-col class="info-col">
+								<div class="info-num">免费咨询</div>
+								<div class="info-unit"><a href="tel:400-926-0070">400-926-0070</a>
+								</div>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+				</ons-list>
+
+				<ons-list modifier="inset" style="margin-top: 10px">
+					<ons-list-header>联系我们</ons-list-header>
+
+					<ons-list-item modifier="chevron">
+						<div class="prop-desc">
+							<ons-icon icon="iconfont iconfont icon-caller"></ons-icon>
+							<a href="tel:0576-88027625">0576-88027625</a>
+						</div>
+					</ons-list-item>
+
+					<ons-list-item modifier="chevron">
+						<div class="prop-desc">
+							<ons-icon icon="fa-fax"></ons-icon>
+							0576-88027625
+						</div>
+					</ons-list-item>
+
+					<ons-list-item modifier="chevron">
+						<div class="prop-desc">
+							<ons-icon icon="fa-envelope-o"></ons-icon>
+							info@chinadoso.com
+						</div>
+					</ons-list-item>
+
+					<ons-list-item modifier="chevron">
+						<div class="prop-desc">
+							<ons-icon icon="iconfont iconfont icon-browser"></ons-icon>
+							www.chinahzm.cn
+						</div>
+					</ons-list-item>
+
+					<ons-list-item modifier="chevron" ng-click="openMap()">
+						<div class="prop-desc">
+							<ons-icon icon="fa-map-marker"></ons-icon>
+							浙江 台州 椒江区 滨海工业园区 B区 海丰路2229号
+						</div>
+					</ons-list-item>
+
+					<ons-list-header>设置</ons-list-header>
+					<ons-list-item modifier="chevron" ng-click="clearCache()">
+						<div class="prop-desc">
+							<ons-icon icon="iconfont iconfont icon-sitting"></ons-icon>
+							清除缓存
+						</div>
+					</ons-list-item>
+				</ons-list>
+
+				<br>
+
+			</ons-page>
+
+		</ons-template>
+		<!--注册页面-->
+		<ons-template id="regist">
+			<ons-page ng-controller="registController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">用户注册</div>
+
+				</ons-toolbar>
+
+				<div class="formarea">
+
+					<div class="form-row">
+						<input type="text" ng-model="username" placeholder="输入用户名" class="text-input--underbar width-full" value="">
+					</div>
+
+					<div class="form-row">
+						<input type="password" ng-model="password" placeholder="输入密码" class="text-input--underbar width-half" value="">
+						<input type="password" ng-model="rpassword" placeholder="再次输入密码" class="text-input--underbar width-half" style="border-width-left: 1px">
+					</div>
+
+					<div class="form-row">
+						<input type="email" ng-model="email" placeholder="输入邮箱" class="text-input--underbar width-full" value="">
+					</div>
+					<div class="form-row">
+						<input type="text" ng-model="phone" placeholder="输入电话" class="text-input--underbar width-full" value="">
+					</div>
+					<div class="lucent">
+						<p class="note">请详细输入您的信息！</p>
+					</div>
+
+					<div class="vspc form-row">
+						<ons-button modifier="large--cta" ng-click="regist()">注册</ons-button>
+					</div>
+				</div>
+
+			</ons-page>
+
+		</ons-template>
+		<ons-template id="loginView">
+			<ons-page ng-controller="loginController">
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">用户登录</div>
+
+				</ons-toolbar>
+
+				<div class="login-form">
+					<input type="text" ng-model="username" class="text-input--underbar" placeholder="输入用户名" value="">
+					<input type="password" ng-model="password" class="text-input--underbar" placeholder="输入密码" value="">
+
+					<br>
+					<br>
+					<ons-button modifier="large" class="login-button" ng-click="submit()">登录</ons-button>
+
+				</div>
+
+			</ons-page>
+
+		</ons-template>
+		<ons-modal var="modal">
+			<ons-icon icon="ion-load-c" spin="true"></ons-icon>
+			数据加载中...
+		</ons-modal>
+		<!--订阅号-->
+		<ons-modal var="qrcode" ng-click="qrcode.hide()">
+			<img src="http://qrapi.cli.im/qr?data=http%3A%2F%2F192.168.0.108%3A81%2Fmks_app%2F&level=H&transparent=0&blockpixel=12&marginblock=1&logourl=&size=260&kid=cliim&key=dd98c5ab99a55cafb8e4e118c803e02a" />
+		</ons-modal>
+		<div ons-loading-placeholder="start.html">
+			应用加载中....
+		</div>
+		<ons-template id="start.html">
+			<div>欢迎使用</div>
+		</ons-template>
+		<!--产品列表-->
+		<ons-template id="baidumap">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-back-button>返回</ons-back-button>
+					</div>
+					<div class="center">地图</div>
+				</ons-toolbar>
+				<div id="map">
+					<iframe style="width: 100%;height: 100%; margin:0px; padding:0px; border:none;" src="html/map.html"></iframe>
+				</div>
+			</ons-page>
+		</ons-template>
+	</body>
+
+</html>

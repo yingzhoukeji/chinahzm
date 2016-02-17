@@ -1,0 +1,6 @@
+[2015-10-07 10:51:24][debug] begin notify
+[2015-10-07 12:47:20][debug] begin notify
+[2015-10-07 12:47:20][debug] query:{"appid":"wx7851b75090b42312","attach":"\u5927\u68ee\u6d3b\u52a8","bank_type":"ABC_DEBIT","cash_fee":"50000","fee_type":"CNY","is_subscribe":"N","mch_id":"1270609201","nonce_str":"pTORZcJmRZ17LdVQ","openid":"oXU1ruHYguoQ04hk3ywf8bnaYwLQ","out_trade_no":"127060920120151007124705","result_code":"SUCCESS","return_code":"SUCCESS","return_msg":"OK","sign":"068603581A3B6CA642F8FCAE192286B6","time_end":"20151007124718","total_fee":"50000","trade_state":"SUCCESS","trade_type":"JSAPI","transaction_id":"1000920255201510071116909642"}
+[2015-10-07 12:47:20][debug] call back test:订单查询成功
+[2015-10-07 12:47:20][debug] {"appid":"wx7851b75090b42312","attach":"\u5927\u68ee\u6d3b\u52a8","bank_type":"ABC_DEBIT","cash_fee":"50000","fee_type":"CNY","is_subscribe":"N","mch_id":"1270609201","nonce_str":"goix3c438oi625cw3bvhpdfwmt03mywj","openid":"oXU1ruHYguoQ04hk3ywf8bnaYwLQ","out_trade_no":"127060920120151007124705","result_code":"SUCCESS","return_code":"SUCCESS","sign":"30D026B2A1722F34FF65F228984DB63A","time_end":"20151007124719","total_fee":"50000","trade_type":"JSAPI","transaction_id":"1000920255201510071116909642"}
+[2015-10-07 12:47:20][debug] oXU1ruHYguoQ04hk3ywf8bnaYwLQ-->入库成功

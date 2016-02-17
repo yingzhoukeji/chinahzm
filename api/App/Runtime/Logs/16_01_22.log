@@ -1,0 +1,261 @@
+[ 2016-01-22T11:35:39+08:00 ] 183.148.165.19 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001525s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001935s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001619s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002274s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '15355688333' ) AND ( `password` = '321110' ) LIMIT 1   [ RunTime:0.001398s ]
+
+[ 2016-01-22T11:35:48+08:00 ] 183.148.165.19 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001428s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002818s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001717s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '15355688333' ) AND ( `password` = '123456' ) LIMIT 1   [ RunTime:0.001405s ]
+
+[ 2016-01-22T13:50:20+08:00 ] 183.148.165.19 /api/api.php/client/tcbb_register
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001605s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002111s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002213s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001928s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '15355688333' ) LIMIT 1   [ RunTime:0.001020s ]
+
+[ 2016-01-22T13:50:33+08:00 ] 183.148.165.19 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001135s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001517s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001296s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001703s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '15355688333' ) AND ( `password` = '321110' ) LIMIT 1   [ RunTime:0.001002s ]
+
+[ 2016-01-22T13:50:41+08:00 ] 183.148.165.19 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001226s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001603s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001653s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '15355688333' ) AND ( `password` = '123456' ) LIMIT 1   [ RunTime:0.000906s ]
+
+[ 2016-01-22T13:50:49+08:00 ] 183.148.165.19 /api/api.php/client/tcbb_login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001130s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001513s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001317s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001863s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_user` WHERE ( `telephone` = '15355688333' ) AND ( `password` = '321110bbaa' ) LIMIT 1   [ RunTime:0.001293s ]
+SQL: UPDATE `pa_user` SET `logintime`='2016-01-22 13:50:49' WHERE ( `id` = 5 ) [ RunTime:0.028771s ]
+
+[ 2016-01-22T13:56:36+08:00 ] 183.148.165.19 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001397s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001782s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001484s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002124s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.002091s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2016012252100505',1453442196,10,'文化路607号','陈恩华','15355688333',3888,3888,0,1,'2016-01-22 16:00:12','') [ RunTime:0.054159s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (585,56,1,3888,'海之梦海鲜礼盒',1374,'2016-01-22 13:01:36') [ RunTime:0.002993s ]
+
+[ 2016-01-22T13:57:10+08:00 ] 183.148.165.19 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001439s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001822s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002120s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002072s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.002062s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2016012254101985',1453442230,10,'文化路607号','陈恩华','15355688333',3888,3888,0,1,'2016-01-22 16:00:51','') [ RunTime:0.007192s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (585,57,1,3888,'海之梦海鲜礼盒',1374,'2016-01-22 13:01:10') [ RunTime:0.004134s ]
+
+[ 2016-01-22T14:02:49+08:00 ] 183.148.165.19 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001817s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002333s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002069s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002595s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.002159s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2016012257555450',1453442569,10,'文化路607号','陈恩华','15355688333',3888,3888,0,1,'2016-01-22 16:06:29','') [ RunTime:0.010167s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (585,58,1,3888,'海之梦海鲜礼盒',1374,'2016-01-22 14:01:49') [ RunTime:0.004259s ]
+
+[ 2016-01-22T14:03:30+08:00 ] 183.148.165.19 /api/api.php/client/doorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001151s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001541s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001335s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002356s ]
+SQL: SHOW COLUMNS FROM `pa_shopcart` [ RunTime:0.002302s ]
+SQL: INSERT INTO `pa_order` (`userid`,`code`,`orderdate`,`shipaddrid`,`shipaddr`,`receiver`,`telephone`,`goodsfee`,`totalfee`,`freight`,`paytype`,`sendtime`,`remark`) VALUES (5,'2016012250981015',1453442610,10,'文化路607号','陈恩华','15355688333',3888,3888,0,1,'2016-01-22 16:07:10','') [ RunTime:0.014524s ]
+SQL: INSERT INTO `pa_shopcart` (`goodsid`,`orderid`,`num`,`price`,`title`,`imgid`,`createtime`) VALUES (585,59,1,3888,'海之梦海鲜礼盒',1374,'2016-01-22 14:01:30') [ RunTime:0.007515s ]
+
+[ 2016-01-22T14:04:20+08:00 ] 183.148.165.19 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001297s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001699s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001350s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001718s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.003483s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.002173s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000543s ]
+
+[ 2016-01-22T14:04:22+08:00 ] 183.148.165.19 /api/api.php/client/getOrderlist/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001117s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001497s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_order` [ RunTime:0.002180s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_order` WHERE ( `userid` = 5 ) ORDER BY orderdate desc  [ RunTime:0.001332s ]
+
+[ 2016-01-22T14:05:36+08:00 ] 183.148.165.19 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001322s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001896s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002465s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001733s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.002270s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.001073s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000339s ]
+
+[ 2016-01-22T14:05:39+08:00 ] 183.148.165.19 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001197s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001713s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001399s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002813s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.002819s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.001200s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000324s ]
+
+[ 2016-01-22T14:05:44+08:00 ] 183.148.165.19 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001299s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001683s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001655s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.002376s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.002372s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.001202s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000483s ]
+
+[ 2016-01-22T14:05:48+08:00 ] 183.148.165.19 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001199s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001727s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001844s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.002003s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.001077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000339s ]
+
+[ 2016-01-22T14:05:51+08:00 ] 183.148.165.19 /api/api.php/client/getUserInfo/userid/5
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001254s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001635s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Common\common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `pa_user` [ RunTime:0.001733s ]
+SQL: SHOW COLUMNS FROM `pa_shipaddr` [ RunTime:0.002026s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT * FROM `pa_shipaddr` WHERE ( `userid` = 5 ) LIMIT 1   [ RunTime:0.000992s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\wamp\www\chinahzm.cn\api\ThinkPHP\Lib\Core\Db.class.php 第 568 行.
+SQL: SELECT `telephone` FROM `pa_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000390s ]
+

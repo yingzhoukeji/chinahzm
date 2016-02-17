@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加编辑友情链接-网站设置-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='网站设置 > 添加编辑友情链接';
+    </php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">添加编辑友情链接</div>
+                </div>
+                <form action="{:U('Siteinfo/add_link')}" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+
+                        <tr>
+                            <th width="120">链接名称：</th>
+                            <td><input name="info[title]" type="text" class="input" size="40" value="{$info.title}" /> </td>
+                        </tr>
+                        <tr>
+                            <th>打开窗口：</th>
+                            <td><select name="info[target]" style="min-width: 80px;">
+                                <option value="1" <if condition="$info['target'] eq '1'">selected</if>>当前窗口</option>
+                                <option value="2" <if condition="$info['target'] eq '2'">selected</if>>新窗口</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>状态：</th>
+                            <td><select name="info[display]" style="min-width: 80px;">
+                                <option value="1" <if condition="$info['display'] eq '1'">selected</if>>显示</option>
+                                <option value="0" <if condition="$info['display'] eq '2'">selected</if>>隐藏</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>显示排序：</th>
+                            <td><input class="input" name="info[sort]" type="text" size="20" value="{$info.sort}" /> </td>
+                        </tr>
+                        <tr>
+                            <th>链接：</th>
+                            <td><input class="input" name="info[link]" type="text" size="40" value="{$info.link}" /> 请加上http://</td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="id" value="{$info.id}"/>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(function(){
+        $(".submit").click(function(){
+            commonAjaxSubmit();
+        });
+    });
+</script>
+</body>
+</html>

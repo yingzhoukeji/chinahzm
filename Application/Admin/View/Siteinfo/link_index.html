@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>友情链接管理-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='友情链接管理 >友情链接列表';
+    </php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap">
+    <include file="Common:head" />
+    <div class="mainBody">
+        <include file="Common:left" />
+        <div id="Right">
+            <div class="Item hr">
+                <div class="current" style="max-width: 100px; float: left;">友情链接列表</div>
+                <div style="width: 100px;float: right;"><button type="button" class="btn" onclick="window.location.href='{:U('Siteinfo/add_link')}'">添加</button></div>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>标题</td>
+                    <td width="400">链接</td>
+                    <td>状态</td>
+                    <td width="150">操作</td>
+                </tr>
+                </thead>
+                <volist name="list" id="vo">
+                    <tr align="center" id="{$vo.id}">
+                        <td align="left">{$vo.id}</td>
+                        <td>{$vo.title}</td>
+                        <td>{$vo.link}</td>
+                        <td><if condition="$vo['display'] eq 1">显示<else />隐藏</if></td>
+                        <td>[ <a href="__URL__/add_link?id={$vo.id}">编辑 </a> ] [ <a link="{:U('Siteinfo/dellink/',array('id'=>$vo['id']))}" href="javascript:void(0)" name="{$vo.title}" class="del">删除 </a> ]</td>
+                    </tr>
+                </volist>
+                <tr><td colspan="6" align="right">{$page}</td></td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(function(){
+        $(".del").click(function(){
+            var delLink=$(this).attr("link"),$this = $(this);
+            popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
+                if(action == 'ok'){
+                    delByLink(delLink,$this);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>登录中.....</title>
+</head>
+<body>
+	<script>
+		  if(localStorage.getItem("islogin")&&localStorage.getItem("islogin")==1){
+			  window.location.href="index.html";
+		  }else{
+		  	 window.location.href="login.php";
+		  }
+	</script>
+</body>
+</html>

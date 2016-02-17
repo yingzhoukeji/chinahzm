@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html style="background:#fff !important">
+
+	<head>
+		<meta charset="utf-8">
+		<title>商品列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="/wx/css/mui.min.css">
+        <!--盈舟代码-->
+        <link rel="stylesheet" href="/wx/css/app.css">
+
+		<script src="../../js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	</head>
+	<body>
+<header class="mui-bar mui-bar-nav">
+  <a id="fanhusy" href="/wx/index.html" class="sdlogo"><img src="/wx/css/shangbiao.png"></a>
+  <a id="soush" href="/wx/html/product/search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+  <!-- h1 class="mui-title">当前栏目</h1 -->
+</header>
+
+<div class="mui-content">
+
+    <div class="aluyrisd" id="list">
+           <div class="liaotik">
+               <div class="tubiaos"><img src="images/tx.jpg"></div>
+               <div class="huiysh">
+                  <b>234523</b>
+                  <p class="guuwzy">价格：<b>42.00</b> 元</p>
+                  
+                    <div class="cheguwu">
+                        <div class="gyuwuz"><button class="mui-btn" href="/wx/guwuche.html">加入购物车</button></div>
+                        <div class="gyuwuz"><button class="mui-btn" href="/wx/likegomei.html">立刻购买</button></div>
+                    </div>
+               </div>
+           </div>
+    </div>
+    
+</div>
+        
+        
+		<!--path菜单-->
+	    <div id="pathmenu" class="menu_button fixed display_none" style="z-index: 0; line-height: 2.5em; display: block;"><span>菜单</span></div>
+	    <div class="menu_button fixed display_none" id="home"><i class="mui-icon mui-icon-home"></i>
+	
+	        <div class="menu_text"><span>主页</span></div>
+	    </div>
+	    <div id="tel" class="menu_button fixed display_none"><i class="mui-icon mui-icon-phone"></i>
+	        <div class="menu_text"><span>联系</span></div>
+	    </div>
+	    <div class="menu_button fixed display_none" id="map"><i class="mui-icon mui-icon-location"></i>
+	
+	        <div class="menu_text"><span>导航</span></div>
+	    </div>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" id="ddlsy" href="/wx/index.html">
+        <span class="mui-icon iconfont">&#xe63b;</span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="regiser" href="/wx/html/product/categary.html">
+        <span class="mui-icon iconfont">&#xe6ad;</span>
+        <span class="mui-tab-label">烧烤商城</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxxm" href="/wx/html/news/categary.html">
+        <span class="mui-icon iconfont">&#xe6de;</span>
+        <span class="mui-tab-label">烧烤教室</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxjj" href="/wx/pxjj.html">
+        <span class="mui-icon iconfont">&#xe6e2;</span>
+        <span class="mui-tab-label">加盟我们</span>
+    </a>
+    <a class="mui-tab-item" id="sdlxwm" href="/wx/lxwm.html">
+        <span class="mui-icon iconfont">&#xe613;</span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+	    <div class="pathModel"></div>
+		
+        <div class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>
+	</body>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/zepto.min.js"></script>
+	<script src="../../js/mui.lazyload.js"></script>
+	<script src="../../js/mui.lazyload.img.js"></script>
+	<script src="../../js/path.js"></script>
+	<script>
+		$(function(){
+			getCategary();
+			initWeixin();
+			$("#home").on("tap",function(){
+				window.location.href=indexUrl;
+			});	
+			$("#tel").on("tap",function(){
+				window.location.href="tel:13906588899";
+			});	
+			$("#map").on("tap",function(){
+				openMap();
+			});
+				$("#regiser").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#ddlsy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+				$("#sdpxxm").on("tap",function(){
+					window.location.href="/wx/pxxm.html";
+				})
+				$("#sdpxjj").on("tap",function(){
+					window.location.href="/wx/html/product/categary.html";
+				})
+				$("#sdlxwm").on("tap",function(){
+					window.location.href="/wx/lxwm.html";
+				})
+				$("#soush").on("tap",function(){
+					window.location.href="/wx/html/product/search.html";
+				})
+				$("#fanhusy").on("tap",function(){
+					window.location.href="/wx/index.html";
+				})
+		});
+		
+		function getCategary(){
+			var cid=GetQueryString("id");
+			var url=serverUrl+"/product?lang="+lang+"&cid="+cid+"&callback=?";
+			$.getJSON(url,function(json){
+				$(".ui-dialog").hide();
+				console.log(json);
+				var html='';
+				for(var i=0;i<json.length;i++){
+html+='<div class="liaotik">';
+html+='<div class="tubiaos" data-id="'+json[i].id+'"><img src="'+picUrl+json[i].savepath+'"></div>';
+html+='<div class="huiysh">';
+html+='<b>'+json[i].title+'</b>';
+html+='<p class="guuwzy">价格：<b>42.00</b> 元</p>';
+html+='<div class="cheguwu">';
+html+='<div class="gyuwuz"><button class="mui-btn" href="/wx/guwuche.html">加入购物车</button></div>';
+html+='<div class="gyuwuz"><button class="mui-btn" href="/wx/likegomei.html">立刻购买</button></div>';
+html+='</div></div></div>';
+				}
+				$("#list").html(html);
+				mui(document).imageLazyload({
+					placeholder: '../../images/60x60.gif'
+				});
+				$("#list").find("li").each(function(){
+					$(this).on("tap",function(){
+						window.location.href="detail.html?id="+$(this).data("id")+"&from=0";
+					});
+				});
+			});
+		}
+
+	</script>
+</html>

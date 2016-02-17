@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>安全设置-系统设置-{$site.SITE_INFO.name}</title>
+    <php>$addCss="";</php>
+    <php>$addJs="";</php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">安全设置</div>
+                </div>
+                <form action="" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <tr>
+                            <th width="120">后台登陆标示：</th>
+                            <td><input name="admin_marked" type="text" class="input" size="40" value="{$site.TOKEN.admin_marked}" /> 后台登陆COOKIE标示，在COOKIE里已MD5加密该值存储登陆信息</td>
+                        </tr>
+                        <tr>
+                            <th>后台登陆有效期：</th>
+                            <td><input class="input" name="admin_timeout" type="text" size="40" value="{$site.TOKEN.admin_timeout}" /> 登陆后如未操作时间超过该设定值时就自动退出系统，单位为秒，最小值为100</td>
+                        </tr>
+                        <tr>
+                            <th>前台登陆标示：</th>
+                            <td><input class="input" name="member_marked" type="text" size="40" value="{$site.TOKEN.member_marked}" /> </td>
+                        </tr>
+                        <tr>
+                            <th>前台登陆有效期：</th>
+                            <td><input class="input" name="member_timeout" type="text" size="40" value="{$site.TOKEN.member_timeout}" /></td>
+                        </tr>
+                        <tr>
+                            <th>留言板功能：</th>
+                            <td><label style="margin-right: 10px;"><input type="radio" name="mess_on" <if condition="$site['TOKEN']['mess_on'] eq 1">checked</if> value="1">开启</label><label><input type="radio"  <if condition="$site['TOKEN']['mess_on'] eq 0">checked</if>  name="mess_on" value="0">关闭</label></td>
+                        </tr>
+                        <tr>
+                            <th>伪静态：</th>
+                            <td><label style="margin-right: 10px;"><input type="radio" name="false_static" <if condition="$site['TOKEN']['false_static'] eq 2">checked</if> value="2">开启</label><label><input type="radio"  <if condition="$site['TOKEN']['false_static'] eq 1">checked</if>  name="false_static" value="1">关闭</label>
+                                <a href="{:U('Webinfo/gethtaccess')}" target="_blank" style="margin-left: 15px;">生成.htaccess</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>伪静态后缀：</th>
+                            <td><input class="input" name="URL_HTML_SUFFIX" type="text" size="30" value="{$site.TOKEN.URL_HTML_SUFFIX}" /> 如：html|shtml|xml</td>
+                        </tr>
+                        <tr>
+                            <th>禁止访问后缀：</th>
+                            <td><input class="input" name="URL_DENY_SUFFIX" type="text" size="30" value="{$site.TOKEN.URL_DENY_SUFFIX}" /> 如：pdf|ico|png|gif|jpg</td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(".submit").click(function(){
+        commonAjaxSubmit();
+    });
+</script>
+</body>
+</html>

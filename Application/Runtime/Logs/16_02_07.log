@@ -1,0 +1,1508 @@
+[ 2016-02-07T18:55:15+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003476s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002722s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002143s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.003094s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000589s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000442s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002345s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000480s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000430s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000656s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002658s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000557s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000605s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000936s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000427s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000413s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000505s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000401s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000403s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000930s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000612s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000676s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000663s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000428s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000488s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000628s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000494s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000492s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000409s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000422s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000406s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000889s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001703s ]
+
+[ 2016-02-07T18:55:37+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003580s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002485s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.001893s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.001641s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.001038s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.001205s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.001729s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000885s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000637s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002926s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001022s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000410s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000363s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000464s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000389s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000437s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000391s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000391s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000401s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000377s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.001648s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000521s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000424s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000370s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000389s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.001109s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000427s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000409s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000448s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000370s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000367s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000362s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.128373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.128722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2016-02-07T18:55:51+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002972s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002503s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.001937s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002248s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000436s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002049s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000412s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000383s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000680s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002686s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000567s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000421s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000358s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000418s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000413s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000562s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000445s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000383s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000372s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000375s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000566s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000425s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000449s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000430s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000416s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000458s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000389s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000428s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000622s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000670s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000434s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000607s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000614s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000458s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000913s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001255s ]
+
+[ 2016-02-07T18:56:27+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003791s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002501s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002693s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002067s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000591s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000671s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002117s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000541s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000356s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000689s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001086s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002521s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000498s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000627s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000535s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000481s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000451s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000401s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000373s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000518s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000411s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000453s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000377s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000363s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000639s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000460s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000462s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000418s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000417s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000417s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000420s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000401s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000452s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000370s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000383s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000391s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000940s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2016-02-07T18:57:20+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002904s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002379s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.001959s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002059s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000446s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002076s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000375s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000381s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000657s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002272s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000491s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000385s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000478s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000357s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000475s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000436s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000391s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000446s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000385s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000369s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000393s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000375s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000377s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000430s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000379s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000373s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000375s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000447s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000372s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000405s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000385s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000364s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.125042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001343s ]
+
+[ 2016-02-07T18:57:52+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003434s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002636s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002268s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002272s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000517s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.008958s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000536s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000361s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000676s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.003633s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000713s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000555s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000389s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000346s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000501s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000458s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000368s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000444s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000450s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000373s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000361s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000390s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000358s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000435s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000371s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000980s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000614s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000398s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000395s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000429s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000376s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.001011s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000366s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000463s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000544s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.136612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001436s ]
+
+[ 2016-02-07T18:58:15+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003669s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002593s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002373s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002276s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000461s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000478s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002083s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000388s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000373s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000733s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002668s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000646s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000424s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000410s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000414s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000458s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000411s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000382s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000544s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000643s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000691s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000436s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000450s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000411s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000464s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000399s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000356s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000401s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000369s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.001432s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000374s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000443s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000567s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000535s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000367s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000418s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000947s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000443s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.137409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001599s ]
+
+[ 2016-02-07T18:58:52+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000955s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003916s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002634s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002121s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002075s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000479s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000429s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002056s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000410s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000663s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002871s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000614s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000433s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000625s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000397s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000504s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000416s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000478s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000424s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000626s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000375s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000430s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000604s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000758s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000687s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000964s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000509s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000415s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000404s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000576s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000425s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000404s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000393s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000459s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000377s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.136723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001449s ]
+
+[ 2016-02-07T18:59:27+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003341s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002618s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.003113s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.003154s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000559s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000436s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002106s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000395s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000399s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000643s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001108s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002505s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000499s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000556s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000444s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000438s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000422s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000377s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000464s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000529s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000442s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000357s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000396s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000970s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000693s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000411s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000428s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000385s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000407s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000415s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000501s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000408s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000466s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000363s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000682s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001417s ]
+
+[ 2016-02-07T19:00:38+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003618s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002908s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.003121s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.004174s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000532s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000447s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002607s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000508s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000433s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000650s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001226s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002689s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000532s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000399s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000422s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000359s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000372s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000408s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000475s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000390s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000368s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000435s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000372s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000695s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000421s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000452s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000380s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000393s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000379s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000417s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000408s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000359s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000372s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000390s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2016-02-07T19:01:31+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000996s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003325s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002507s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002033s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002237s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000597s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002116s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000394s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000521s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000665s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001030s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.003266s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000754s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000413s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000453s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000722s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000464s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000629s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000510s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000689s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000572s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000407s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000554s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000519s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000406s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000608s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000429s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000444s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000403s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.001121s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000456s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000403s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000446s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000419s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000460s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000412s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000397s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000365s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.141709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005862s ]
+
+[ 2016-02-07T19:01:56+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003071s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002451s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002837s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.001794s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.001053s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000474s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002224s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.001146s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000552s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000973s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001507s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.003168s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001079s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000485s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000458s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000363s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000390s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000498s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000595s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000725s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000441s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000403s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000473s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000405s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000404s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000706s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000413s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000415s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000440s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000418s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000421s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000437s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000447s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.001005s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000427s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000367s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000639s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000707s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001749s ]
+
+[ 2016-02-07T19:02:13+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004970s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002498s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.001960s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002262s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000486s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000459s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002186s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000407s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000381s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000733s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002662s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000626s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000675s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000715s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000520s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000423s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000466s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000670s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000855s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000480s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000463s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000578s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000471s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000747s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000680s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000605s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000741s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000417s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000404s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000400s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000330s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000428s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000395s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000393s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000362s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000424s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001254s ]
+
+[ 2016-02-07T19:03:49+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005748s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002937s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002078s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.003721s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.000705s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000631s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002355s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000447s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000387s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000655s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001020s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.002601s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000657s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000542s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000519s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000411s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000417s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000411s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000453s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000409s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000426s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000391s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000409s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000455s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000379s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000412s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000439s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000415s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000389s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000395s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000441s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000867s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001270s ]
+
+[ 2016-02-07T19:04:15+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003453s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002093s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002286s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.002175s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.001415s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000663s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.002138s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000996s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000385s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000686s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.003155s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001079s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000407s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000417s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000372s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000405s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000501s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000465s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000465s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000389s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000370s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000380s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000462s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000385s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000371s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000368s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000362s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000498s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000460s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000463s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000343s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000365s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000404s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000378s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2016-02-07T19:04:44+08:00 ] 60.188.175.145 /index.php/product/read/id/585
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003631s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.002178s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' C:\wamp\www\chinahzm.cn\Application\Home\Controller\ProductController.class.php 第 64 行.
+SQL: SELECT * FROM `pa_category` WHERE ( `type` = 'p' )  [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `pa_message` [ RunTime:0.001761s ]
+SQL: SELECT * FROM `pa_message` WHERE ( `display` = 1 ) AND ( `productid` = 585 )  [ RunTime:0.001008s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `id` = 585 ) LIMIT 1   [ RunTime:0.000429s ]
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.001579s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` IN ('1478','1479','1480') )  [ RunTime:0.000899s ]
+SQL: UPDATE `pa_product` SET `click`=click+1 WHERE ( `id` = 585 ) [ RunTime:0.000358s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000691s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.003050s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000975s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000690s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000816s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000449s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000570s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000369s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000421s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000399s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000396s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000363s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000388s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000357s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000416s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000414s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000392s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000369s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000954s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000407s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000379s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000398s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000363s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000366s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000402s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000915s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001280s ]
+
+[ 2016-02-07T23:43:02+08:00 ] 66.249.73.192 /index.php/news/read/id/88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000097s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002662s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.031624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035564s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\chinahzm.cn\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `pa_product` [ RunTime:0.021991s ]
+SQL: SELECT * FROM `pa_product` WHERE ( `status` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `is_recommend` = 1 ) ORDER BY rand()  [ RunTime:0.014664s ]
+SQL: SHOW COLUMNS FROM `pa_news` [ RunTime:0.007596s ]
+SQL: SELECT * FROM `pa_news` WHERE ( `id` = 88 ) LIMIT 1   [ RunTime:0.017129s ]
+SQL: SHOW COLUMNS FROM `pa_category` [ RunTime:0.011646s ]
+SQL: SHOW COLUMNS FROM `pa_news` [ RunTime:0.002143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pa_news` WHERE ( `cid` = 9 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.044036s ]
+SQL: Select rowNo from (Select id,(@rowNum:=@rowNum+1) as rowNo From pa_news as a,(Select (@rowNum :=0) ) b where a.cid='9' and a.status=1 Order by a.id Desc) as biao where id='88' [ RunTime:0.032333s ]
+NOTIC: [8] Use of undefined constant rowNo - assumed 'rowNo' C:\wamp\www\chinahzm.cn\Application\Home\Controller\NewsController.class.php 第 87 行.
+SQL: Select id from (Select id,(@rowNum:=@rowNum+1) as rowNo From pa_news as a,(Select (@rowNum :=0) ) b where a.cid='9' and a.status=1 Order by a.id Desc) as biao where rowNo='2' [ RunTime:0.000954s ]
+SQL: Select id from (Select id,(@rowNum:=@rowNum+1) as rowNo From pa_news as a,(Select (@rowNum :=0) ) b where a.cid='9' and a.status=1 Order by a.id Desc) as biao where rowNo='4' [ RunTime:0.000549s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\chinahzm.cn\Application\Home\Controller\NewsController.class.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\chinahzm.cn\Application\Home\Controller\NewsController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: page C:\wamp\www\chinahzm.cn\Application\Home\Controller\NewsController.class.php 第 99 行.
+SQL: SELECT `name` FROM `pa_category` WHERE ( `cid` = 9 ) LIMIT 1   [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `pa_admin` [ RunTime:0.037789s ]
+SQL: SELECT `nickname` FROM `pa_admin` WHERE ( `aid` = 1 ) LIMIT 1   [ RunTime:0.000978s ]
+SQL: UPDATE `pa_news` SET `click`=click+1 WHERE ( `id` = 88 ) [ RunTime:0.000410s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\chinahzm.cn\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\chinahzm.cn\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000894s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001636s ]
+SQL: SHOW COLUMNS FROM `pa_nav` [ RunTime:0.046335s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.209794s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000503s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000452s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000376s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000430s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000418s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000407s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000609s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000420s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000368s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000968s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000507s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000591s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000802s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000559s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000742s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000689s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000437s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `pa_images` [ RunTime:0.034221s ]
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1417 ) LIMIT 1   [ RunTime:0.036707s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1478 ) LIMIT 1   [ RunTime:0.021364s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1381 ) LIMIT 1   [ RunTime:0.002068s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1380 ) LIMIT 1   [ RunTime:0.000599s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1388 ) LIMIT 1   [ RunTime:0.000767s ]
+NOTIC: [8] Undefined index: m C:\wamp\www\chinahzm.cn\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `pa_images` WHERE ( `id` = 1420 ) LIMIT 1   [ RunTime:0.000638s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( lang='zh-cn'  AND type='middle' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000560s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=1 ) ORDER BY sort DESC  [ RunTime:0.000409s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=10 ) ORDER BY sort DESC  [ RunTime:0.000466s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=19 ) ORDER BY sort DESC  [ RunTime:0.000412s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=23 ) ORDER BY sort DESC  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=30 ) ORDER BY sort DESC  [ RunTime:0.000395s ]
+SQL: SELECT * FROM `pa_nav` WHERE ( parent_id=36 ) ORDER BY sort DESC  [ RunTime:0.000368s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.683879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.684405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005402s ]
+

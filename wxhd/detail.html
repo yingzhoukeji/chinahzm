@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>贪吃宝贝积分分享活动内容</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="/weidian/css/mui.min.css">
+		<link rel="stylesheet" href="/weidian/css/app.css" />
+		<script src="js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<style>
+		/*加载*/
+		.ui-notice{top: 0;z-index: -1;}
+		.ui-dialog{margin: 0!important;padding: 0!important;  background: rgba(0,0,0,.65);opacity: 0.8;display:none;}
+		.ui-dialog-notice{background:transparent}
+		.ui-dialog-notice .ui-dialog-cnt{width:130px;height:110px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-pack:center;-webkit-box-align:center;text-align:center;background:rgba(0,0,0,.65);border-radius:6px;color:#fff}
+		.ui-dialog.show{display:-webkit-box;display:box}
+		.ui-loading-bright{width:37px;height:37px;display:block;background-image:url(http://i.gtimg.cn/vipstyle/frozenui/1.2.0/img/loading_sprite_white.png?_bid=306);-webkit-background-size:auto 37px}
+		.ui-loading-bright{-webkit-animation:rotate2 1s steps(12) infinite}
+		.ui-icon-refresh.loading{-webkit-animation:rotate3 1s infinite linear}
+		@-webkit-keyframes rotate{
+		from{background-position:0 0}
+		to{background-position:-240px 0}
+		}
+		@-webkit-keyframes rotate2{
+		from{background-position:0 0}
+		to{background-position:-444px 0}
+		}
+		@-webkit-keyframes rotate3{
+		0%{-webkit-transform:rotate(0)}
+		100%{-webkit-transform:rotate(360deg)}
+		}
+		
+/*分享*/
+#mcover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 20000;
+}
+#mcover img {
+  position: fixed;
+  right: 18px;
+  top: 5px;
+  width: 260px!important;
+  height: 180px!important;
+  z-index: 20001;
+}
+
+/*积分提示*/
+
+.limit-panel{
+	position:fixed;
+	left:20px;
+	right:20px;
+	top:35%;
+	height:180px;
+	z-index:20000;
+	background: rgba(0, 0, 0, 0.7);
+	display:none;
+	color:#fff;
+	padding:20px;
+	border-radius:6px;
+}
+.limit-item{
+				margin-top:10px;
+				font-size:16px;
+			}
+/*图片*/
+.product-img{ padding:0px; margin:0px; overflow:hidden; width:100%; height:250px; position:relative;}
+.product-img img{ padding:0px; margin:0px; overflow:hidden; width:100%; height:auto;}
+.product-img .biaoti{ padding:0px; margin:0px; overflow:hidden; width:100%; height:30px;position:absolute; z-indent:2; left:0; bottom:0; color:#FFF;text-shadow:#000 0 1px 0; text-align:center; background:rgba(0,0,0,1.00);-moz-opacity:0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;}
+.product-img .biaoti span{text-shadow:#000 0 1px 0; line-height:30px; font-size:10px;}
+/*会员信息*/	
+.huiyss{ padding:0px; margin:0px; overflow:hidden; width:100%; background:#FFF;}
+.huiyss .jhsw{ padding:10px 0; margin:0px; overflow:hidden; width:60%; float:left;}
+.huiyss .hsjw{ padding:0px; margin:0px; overflow:hidden; width:20%; float:left; text-align:center}
+.huiyss .hsjw img{width: 80%; margin:10px 10%;}
+.huiyss .jhsw b{}
+.huiyss .jhsw p{padding:5px 0 0 0;margin:0px; overflow:hidden; }
+.huiyss .hsjw span{ padding:0;  margin:20px 0 0 0; overflow:hidden; font-size:36px; line-height:60px; color:#17CBFE}
+/*说明*/
+.hbuabsd{ padding:10px; margin:10px 0 0 0; overflow:hidden; width:100%; background:#FFF;}
+.hbuabsd h1{ padding:0 0 0 10px; margin:0px; overflow:hidden;  border-left:#17CBFE 3px solid; font-size:14px;}
+.hbuabsd #summary{padding:10px 0 0 0; margin:0px; overflow:hidden; font-size:12px;}
+.hbuabsd #content{padding:10px 0 50px 0; margin:0px; overflow:hidden; font-size:12px;}
+.hbuabsd #endtime{padding:10px 0 0 0; margin:0px; overflow:hidden; font-size:12px; color:#17CBFE}
+
+		</style>
+	</head>
+	<body>	
+		<div class="mui-content mui-scroll">
+			<div class="product-img">
+				<img id="img">
+                <div class="biaoti"><span id="title"></span></div>
+			</div>
+            
+			<div class="huiyss">
+               <div class="hsjw"><img id="headimgurl" src="images/tx.jpg"></div>
+               <div class="jhsw">
+                 <b id="nickname">陈恩华</b><br>
+                 <p id='srcoe'>积分：0</p>
+                 </div>
+               <div class="hsjw"><span onclick='$("#mcover").css("display","block");' class="iconfont">&#xe630;</span></div>
+            </div>
+            
+       <div class="hbuabsd">
+          <h1>活动简介</h1>
+          <div id='endtime'></div>
+          <div id="summary"></div>
+       </div>
+       <div class="hbuabsd">
+          <h1>活动简介</h1>
+          <div id="content"></div>
+       </div>
+
+			
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="list.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">积分活动</span>
+			</a>
+			<a class="mui-tab-item" onclick='$("#mcover").css("display","block");'>
+				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-tab-label">我要分享</span>
+			</a>
+			<a class="mui-tab-item" id="tel" href="tel:">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">电话联系</span>
+			</a>
+			<a class="mui-tab-item" id="tel" href="userlist.html">
+				<span class="mui-icon mui-icon-bars"></span>
+				<span class="mui-tab-label">积分排行</span>
+			</a>
+			<a class="mui-tab-item" onclick="openlimit()">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">积分换礼品</span>
+			</a>
+		</nav>
+        
+		<div class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>
+        
+		<div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display: none;">
+            <img src="images/guide.png">
+        </div>
+        
+		<div class="limit-panel">
+			<div class="limit-item">兑换礼品所需最低积分:<span id="limit">10000</span></div>
+			<div class="limit-item">你的当前积分:<span id="curr">5000</span></div>
+			<div class="limit-item" id="poor"></div>
+		</div>
+        
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script>
+			var hdObj=null;
+			var currsrcoe=0;
+			var limitsrcoe=0;
+		 	$(function(){
+				var query=GetQueryString("id");
+				var id=query.substring(0,1);
+				var mfrom=query.substring(1,query.length);
+				localStorage.setItem("hdid",id);
+				localStorage.setItem("from",mfrom);
+				if(localStorage.getItem("wx_user")){
+					//$("#content").append(localStorage.getItem("wx_user"));
+					var user=JSON.parse(localStorage.getItem("wx_user"));
+					var nickname=user.nickname;
+					var headimgurl=user.headimgurl;
+					$("#nickname").text(nickname);
+					if(headimgurl!=""){
+						// $("#headimgurl").attr("style",'background-image:url('+headimgurl+')');
+						$("#headimgurl").attr("src",headimgurl);
+					}
+					getDetail(id);
+					var getscoreUrl=wxhdUrl+"/getscore?openid="+user.openid+"&callback=?";
+					$.getJSON(getscoreUrl,function(json){
+						$("#srcoe").text("积分："+json.srcoe);
+						currsrcoe=parseInt(json.srcoe);
+					});
+					return;
+				}else{
+					
+						window.location.href="login.php";
+					return;
+					//window.location.href="login.php";
+				}
+		 		
+				
+		 	});
+			function getDetail(id){
+				var url=wxhdUrl+"/detail?id="+id+"&callback=?";
+				$.getJSON(url,function(json){
+					console.log(json);
+					$(".ui-dialog").hide();
+					hdObj=json;
+					setTimeout(function(){
+						initWeixin();
+					},2000);
+					
+					
+					$("#img").attr("src",picUrl+json.image);
+					$("#summary").html(json.summary);
+					var content=json.content.replaceAll("&lt;","<");
+					content=content.replaceAll("&gt;",">")
+					$("#content").append(content);
+					$("#tel").attr("href","tel:"+json.phone);
+					$("title").text(json.title);
+					$("#title").text(json.title);
+					limitsrcoe=parseInt(json.limit);
+					var date=new Date();
+					date.setTime(json.endtime * 1000);
+					var timestr = date.format("yyyy-MM-dd");
+					$("#endtime").text("结束日期："+timestr)
+				});
+			}
+			function openlimit(){
+				$("#limit").text(limitsrcoe);
+				$("#curr").text(currsrcoe);
+				var poor=limitsrcoe-currsrcoe;
+				if(poor>0){
+					$("#poor").text("你还差"+poor+"就可以领奖品了，加油！当你积分够了的时候，自动会出现领取按钮！");
+				}else{
+					$("#poor").html("你的积分已经达到兑换最低积分，快去领奖品吧！<button type='button' class='mui-btn' onclick='apply()'>去领取</button>");
+				}
+				$(".limit-panel").toggle();
+			}
+			function apply(){
+				window.location.href="apply.html";
+			}
+		</script>
+        
+        <div style="display:none"><script src="http://s11.cnzz.com/stat.php?id=1257365777&web_id=1257365777" language="JavaScript"></script></div>
+
+	</body>
+</html>

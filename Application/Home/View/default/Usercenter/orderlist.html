@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/UserCenter/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/UserCenter/css/main.css"/>
+    <script src="/img/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/img/layer/layer.js" charset="utf-8"></script>
+    <style type="text/css">
+    	.topbar-wrap{position: fixed;top: 0;left: 0;right: 0;}
+    	.sidebar-content{position: fixed;top: 50px;left: 0;width: 189px;}
+    	td{text-align:center;}
+    	th{text-align:center!improtant}
+    </style>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a href="{:U('Index/index')}" class="on">首页</a></li>
+                
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="#">{$Think.session.telephone}</a></li>
+                <li><a href="{:U('Usercenter/user_edit')}">修改密码</a></li>
+                <li><a href="{:U('Member/logout')}">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Usercenter/orderlist')}"><i class="icon-font">&#xe008;</i>我的订单</a></li>
+                        <li><a href="{:U('Usercenter/myaddr')}"><i class="icon-font">&#xe006;</i>收货地址</a></li>
+                    </ul>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">作品管理</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+               
+            </div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+               
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            
+                            <th style="text-align: center;">订单编号</th>
+                            <th style="text-align: center;">下单时间</th>
+                            <th style="text-align: center;">订单总金额</th>
+                            <th style="text-align: center;">收货地址</th>
+                            <th style="text-align: center;">订单状态</th>
+                            <th style="text-align: center;">配送业务员</th>
+                            <th style="text-align: center;">业务员电话号码</th>
+                             <th style="text-align: center;">交易操作</th>
+                             <th style="text-align: center;">买到的宝贝</th>
+                            <th style="text-align: center;">操作</th>
+                           
+                        </tr>
+                        <volist name="list" id="vo">
+                        	<tr>
+								 <td>{$vo.code}</td>
+								 <td>{$vo.orderdate|date='Y-m-d H:m:s',###} </td>
+								 <td>￥{$vo.totalfee}</td>
+								 <td>{$vo.shipaddr}</td>
+								 <td>
+								 	<if condition="$vo['stutas'] eq 0">审核中
+								 	  <elseif condition="$name eq 1"/>已确认
+								 	  <elseif condition="$name eq 2"/>备货中
+								 	   <elseif condition="$name eq 3"/>已发货
+								    	<else /> 已完成
+								    </if>
+								 </td>
+								 <td>
+								 	<if condition="$vo['distributioner'] neq null">{$vo.distributioner}
+								 	  
+								    	<else />正在分配
+								    </if>
+								 </td>
+								  <td>
+								 	<if condition="$vo['distributioner_phone'] neq null">{$vo.distributioner_phone}
+								 	  
+								    	<else />暂无
+								    </if>
+								 </td>
+								 <td>
+								 	<if condition="$vo['transaction_id'] neq null">{$vo['transaction_id']}
+									    <else /><a href="{:U('Order/qrcode')}/id/{$vo.id}">未支付，去支付</a>
+									 </if>
+								 </td>
+								 <td>[<a href='javascript:open_mycarts("{$vo.code}","{$vo.id}")'>查看</a>]</td>
+								<td>[<a href='javascript:del("{$vo.id}")'>删除</a>]</td>
+                             </tr>
+						 </volist>
+                    </table>
+                   <div class="list-page">{$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+<script>
+	function del(id){
+		layer.confirm('是否删除该订单？', {
+		    btn: ['是','否'] 
+		}, function(){
+			var url="{:U('Usercenter/del_order')}?id="+id;
+			var loading = layer.load();
+		   $.getJSON(url,function(json){
+			   layer.close(loading); 
+			   layer.msg(json.msg);
+			   if(json.status==1){
+				   window.location.reload();
+			   } else if (json.status == 2) {
+		            layer.confirm('未登录，是否登录？', {
+		                btn: ['是', '否'] //按钮
+		              },
+		              function() {
+		                window.location.href = "<php>echo U('Member/index').'?goto='.urlencode(get_url());</php>";
+		              },
+		              function() {
+
+		  			});
+		        }
+		   });
+		}, function(){
+		    
+		});
+	}
+	function search(){
+		var title=$("#title").val();
+		window.location.href="{:U('Index/bargainlist')}?title="+title;
+	}
+	var mylayer=null;
+    function open_mycarts(code,id){
+    	mylayer=layer.open({
+    	    type: 2,
+    	    title: '订单'+code,
+    	    shadeClose: true,
+    	    shade: 0.8,
+    	    area: ['800px', '80%'],
+    	    content: "{:U('Usercenter/mycarts')}/id/"+id //iframe的url
+    	}); 
+    }
+    
+</script>
+</html>

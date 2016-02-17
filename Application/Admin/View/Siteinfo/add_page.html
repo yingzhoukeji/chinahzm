@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>添加、编辑单页-后台管理-{$site.SITE_INFO.name}</title>
+    <php>
+        $addCss="";
+        $addJs="";
+        $currentNav ='单页管理 > 添加编辑单页';
+    </php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap">
+    <include file="Common:head" />
+    <div class="mainBody">
+        <include file="Common:left" />
+        <div id="Right">
+            <div class="Item hr">
+                <div class="current">添加编辑单页</div>
+            </div>
+            <form>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+
+                    <php>if($site['SITE_INFO']['LANG_SWITCH_ON']=='1'){</php>
+                    <tr>
+                        <th>语言选择：</th>
+                        <td>
+                            <select name="info[lang]">
+<option value="zh-cn" <if condition="$info['lang'] eq 'zh-cn'">selected</if> >简体中文</option>
+                                        <option value="en-us" <if condition="$info['lang'] eq 'en-us'">selected</if> >English</option>
+										<option value="ru" <if condition="$info['lang'] eq 'ru'">selected</if> >RU</option>
+										<option value="spain" <if condition="$info['lang'] eq 'spain'">selected</if> >SPAIN</option>
+                                </volist>
+                            </select></td>
+                    </tr>
+                    <php>}</php>
+
+                    <tr>
+                        <th width="100">单页标题：</th>
+                        <td><input id="title" type="text" class="input" size="60" name="info[page_name]" value="{$info.page_name}"/> <a href="javascript:void(0)" id="checkPageTitle">检测是否重复</a></td>
+                    </tr>
+                    <tr>
+                        <th width="100">别名(字母)：</th>
+                        <td><input id="unique_id" type="text" class="input" size="60" name="info[unique_id]" value="{$info.unique_id}"/> <a href="javascript:void(0)" id="checkPageUnique">检测是否重复</a></td>
+                    </tr>
+
+                    <tr>
+                        <th width="100">单页状态：</th>
+                        <td><label><input type="radio" name="info[display]" value="1" <if condition="$info.display eq 1"> checked="checked"</if> />显示状态</label>
+                            &nbsp;<label><input type="radio" name="info[display]" value="0" <if condition="$info.display eq 0"> checked="checked"</if> /> 隐藏状态</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>单页级别：</th>
+                        <td>
+                            <select name="info[parent_id]">
+                                <option value="0">顶级</option>
+                                <volist name="pagelist" id="vo">
+                                    <if condition="$vo[id] eq $info[parent_id]">
+                                        <option value="{$vo.id}" selected="selected">{$vo.fullname}</option>
+                                        <else/>
+                                        <option value="{$vo.id}">{$vo.fullname}</option>
+                                    </if>
+                                </volist>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th>关键词：</th>
+                        <td><input type="text" class="input" size="60" name="info[keywords]" value="{$info.keywords}"/> 多关键词间用半角逗号（,）分开，可用于做文章关联阅读条件</td>
+                    </tr>
+                    <tr>
+                        <th>描述：</th>
+                        <td><textarea class="input" style="height: 60px; width: 600px;" name="info[description]">{$info.description}</textarea> 用于SEO的description</td>
+                    </tr>
+                    <tr>
+                        <th>内容：</th>
+                        <td><textarea id="content" class="" style="height: 300px; width: 80%;" name="info[content]">{$info['content']}</textarea></td>
+                    </tr>
+                </table>
+                <input type="hidden" name="info[id]" value="{$info.id}" />
+            </form>
+            <div class="commonBtnArea" >
+                <button class="btn submit">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<js href="--PUBLIC--/kindeditor/kindeditor.js,--PUBLIC--/kindeditor/lang/zh_CN.js"/>
+<script type="text/javascript">
+    $(function(){
+
+        var  content ;
+        KindEditor.ready(function(K) {
+            content = K.create('#content',{
+                allowFileManager : true,
+                uploadJson:'--PUBLIC--/kindeditor/php/upload_json.php?dirname=page'
+            });
+        });
+
+        $("#checkPageTitle").click(function(){
+            if($('#title').val()==''){
+                popup.error('标题不能为空！');
+                return false;
+            }
+            $.getJSON("__URL__/checkPageTitle", { title:$("#title").val(),id:"{$info.id}"}, function(json){
+                $("#checkPageTitle").css("color",json.status==1?"#0f0":"#f00").html(json.info);
+            });
+        });
+        $("#checkPageUnique").click(function(){
+            if($('#unique_id').val()==''){
+                popup.error('别名不能为空！');
+                return false;
+            }
+            $.getJSON("__URL__/checkPageUnique", { title:$("#unique_id").val(),id:"{$info.id}"}, function(json){
+                $("#checkPageUnique").css("color",json.status==1?"#0f0":"#f00").html(json.info);
+            });
+        });
+        $(".submit").click(function(){
+            content.sync();
+            commonAjaxSubmit();
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

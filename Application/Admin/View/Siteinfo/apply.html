@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>微信活动礼品申请管理-{$site.SITE_INFO.name}</title>
+        <php>
+            $addCss="";
+            $addJs="";
+            $currentNav ='>微信活动礼品申请管理 > 申请列表';
+        </php>
+        <include file="Common:intoHead" />
+		<style>
+			.qrcode{
+				  /*width: 100%;
+				  height: 100%;
+				  position: fixed;
+				  top: 0;
+				  left: 0;
+				  background: #000;
+				  opacity: .6;
+				  -webkit-transform: translate3d(0,0,0);
+				  z-index: 20;*/
+				  display:none;
+				
+			}
+			.qrcontent{
+				  position: fixed;
+				  top: 35%;
+				  left: 0;
+				  right:0;
+				  height:200px;
+				  text-align:center;
+				  z-index: 100;
+				  
+			}
+			.btn_qrcode{
+				background:#417EB7;
+				padding:5px;
+				border-radius: 3px;
+				color: #fff;
+			}
+		</style>
+    </head>
+    <body>
+        <div class="wrap">
+            <include file="Common:head" />
+            <div class="mainBody">
+                <include file="Common:left" />
+                <div id="Right">
+                    <div class="Item hr">
+                        <div class="current">活动列表</div>
+                    </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>活动名称</td>
+                                <td>申请人</td>
+                                <td>状态</td>
+								<td>申请人剩余积分</td>
+								<td>联系人地址</td>
+								<td>联系电话</td>
+								<td>申请日期</td>
+                                <td>操作</td>
+                               
+                            </tr>
+                        </thead>
+                        <volist name="applys" id="vo">
+                            <tr align="center" id="{$vo.id}">
+								<td>{$vo.id}</td>
+								 <td>{$vo.title}</td>
+                                <td align="left">{$vo.nickname}</td>
+								<td>{$vo.mstatus}</td>
+                                <td>{$vo.srcoe}</td>
+								<td>{$vo.adress}</td>
+								<td>{$vo.phone}</td>
+								<td>{$vo.createtime|date="Y-m-d H:i:s",###}</td>
+                                <td> [ <a link="{:U('Siteinfo/sureapply/',array('id'=>$vo['id']))}" href="javascript:void(0)" name="{$vo.nickname}" class="del">同意申请 </a> ]</td>
+								
+                            </tr>
+                        </volist>
+                        <tr><td colspan="6" align="right">{$page}</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+		<div class="qrcode">
+			<div class="qrcontent">
+				<img id="qrcode" src="http://qr.liantu.com/api.php?text=">
+			</div>
+			
+		</div>
+        <include file="Common:foot" />
+        <script type="text/javascript">
+            $(function(){
+                $(".del").click(function(){
+                    var delLink=$(this).attr("link");
+                    $this = $(this);
+                    popup.confirm('你真的要同意【<b>'+$(this).attr("name")+'</b>】的申请吗?','温馨提示',function(action){
+                        if(action == 'ok'){
+                            delByLink(delLink,$this);
+                            setTimeout(function(){
+								window.location.reload();
+							},1000);
+                        }
+                    });
+                    return false;
+                });
+				$(".qrcode").click(function(){
+					$(".qrcode").hide();
+				});
+            });
+            function changeAttr(id,v){
+                $.get('{:U("News/changeAttr")}?id='+id,function(data){
+                    if(data.status==1){
+                        $(v).html(data.info);
+                    }
+                });
+            }
+            function changeStatus(id,v){
+                $.get('{:U("News/changeStatus")}?id='+id,function(data){
+                    if(data.status==1){
+                        $(v).html(data.info);
+                    }
+                });
+            }
+			function getQrcode(id){
+				var url="{$QRCODE_URL}{$WX_SITE}?id="+id+"0";
+				$("#qrcode").attr("src",url);
+				$(".qrcode").toggle();
+			}
+        </script>
+    </body>
+</html>

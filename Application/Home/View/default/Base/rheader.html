@@ -1,0 +1,75 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8" />
+    <title>{$webtitle}-{$site.name}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{$site.description},{$info['description']}" />
+    <meta name="keywords" content="{$site.keyword},{$info['keywords']}" />
+    <meta name="author" content="cony" />
+    <!-- CSS -->
+    <link href="__CSS__/style.css" rel="stylesheet" type="text/css" />
+    <!-- END CSS -->
+    <!-- JAVASCRIPT -->
+    <script src="__PUBLIC__/Js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="__JS__/script.js"></script>
+    <script type="text/javascript" src="__JS__/superfish.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.modernizr.min.js"></script>
+    <!-- END JAVASCRIPT -->
+</head>
+<body>
+<div class="header"><!-- HEADER -->
+    <div class="container_16" style="padding-top: 6px;">
+        <div class="grid_10">
+            <ul class="filter group">
+                <li><a href="javascript:" onClick="jscript:window.external.AddFavorite(document.location.href,document.title);">收藏本页</a></li>
+                <nav posstion="top" order="sort DESC">
+                    <li>
+                        <a href="{$link}" class="grey">{$nav_name}</a>
+                    </li>
+                </nav>
+            </ul>
+        </div>
+        <div class="grid_6" style="text-align: right;">
+                <php>if(C('SITE_INFO.LANG_SWITCH_ON')){</php>
+                    [<a href="__CONTROLLER__?l=zh-cn" style='cursor:pointer;' title='简体中文'>简体中文</a>]
+                    [<a href="__CONTROLLER__?l=en-us" style='cursor:pointer;' title='English'>English</a>]
+					[<a href="__CONTROLLER__?l=ru" style='cursor:pointer;' title='русский '>русский </a>]
+					[<a href="__CONTROLLER__?l=spain" style='cursor:pointer;' title='El español'>El español</a>]
+                  <!--  [<a href="{:U('Member/index')}" style='cursor:pointer;' title='login'>{$Think.lang.T_LOGIN}</a>]
+                    [<a href="{:U('Member/index')}#toregister" style='cursor:pointer;' title='signIn'>{$Think.lang.T_SIGN}</a>]-->
+                <php>}</php>
+        </div>
+    </div>
+    <div class="container_12">
+        <div class="grid_3">
+
+            <div class="logo"><!-- LOGO -->
+                <a href="__APP__"><img src="__IMG__/logo.png" alt="" /></a>
+            </div>
+        </div><!-- END LOGO -->
+
+        <div class="grid_9"><!-- MENU -->
+            <ul class="sf-menu">
+                <li>
+                    <a href="__APP__"><span class="uppercase">{$Think.lang.T_HOME}</span></a>
+                </li>
+                <nav posstion="middle" order="sort DESC">
+                    <li>
+                    <a href="{$link}"><span class="uppercase">{$nav_name}</span></a>
+                        <notempty name="child">
+                            <ul>
+                                <volist name="child" id="nc">
+                                <li>
+                                    <a href="{$nc.link}">{$nc.nav_name}</a>
+                                </li>
+                                </volist>
+                            </ul>
+                        </notempty>
+                    </li>
+                </nav>
+            </ul>
+        </div><!-- END MENU -->
+    </div>
+</div><!-- END HEADER -->

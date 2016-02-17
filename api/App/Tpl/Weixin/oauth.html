@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>登录中.....</title>
+  <script src="__PUBLIC__/app/js/zepto.min.js"></script>
+</head>
+<body>
+	<script>
+		var serverUrl="http://www.chinahzm.cn/jyst/api.php/Index";
+		var user='{$user}';
+		
+		localStorage.setItem("wx_user",user);
+		localStorage.setItem("islogin",1);
+		var userObj=JSON.parse(user);
+		var check_url=serverUrl+"/checkOpenId?openid="+userObj.openid+"&callback=?";
+		
+
+		$.getJSON(check_url,function(json){
+			
+			if(json.status==0){
+				var addwx_url=serverUrl+"/synuser?openid="+userObj.openid+"&province="+userObj.province+"&city="+userObj.city+"&nickname="+userObj.nickname+"&callback=?";
+				$.getJSON(addwx_url,function(data){
+					if(data.status==1){
+						
+						localStorage.setItem("uid",data.msg);
+						localStorage.setItem("username",userObj.nickname);
+						localStorage.setItem("email","");
+						localStorage.setItem("phone","");
+						window.location.href="{:U('Weixin/app')}";
+					}
+					
+				});
+			}else{
+				
+				var data=json.data;
+				localStorage.setItem("uid",data.uid);
+				localStorage.setItem("username",data.nickname);
+				localStorage.setItem("email","");
+				localStorage.setItem("phone","");
+				window.location.href="{:U('Weixin/app')}";
+			}
+		});
+	</script>
+</body>
+</html>

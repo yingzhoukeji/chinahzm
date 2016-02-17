@@ -1,0 +1,91 @@
+<include file="Base:header" />
+<div class="body">
+  <article class="destination destination--short-header">
+    <header class="destination__header content-fill"> <img data-src="/documents/trip-finder.jpg" data-image="/documents/trip-finder.jpg" data-image-dimensions="1440x305" data-image-focal-point="0.5,0.5" alt="trip-finder.jpg" >
+      <div class="destination__meta">
+		<p></p>
+        <p><strong>{$name}</strong><em>Delicious first, health based{$where.cid}</em></p>
+      </div>
+    </header>
+    <div class="subnav">
+      <ul>
+		<foreach name='list1' item='vo'>
+			<if condition="$vo['cid'] eq $where['cid']"> <li class="subnav__item  subnav__item--active"> <a href="/index.php/Product/index/cid/{$vo.cid}"> <span class="iconfont cid{$vo.cid}"></span> <span>{$vo.name}</span> </a> </li> 
+			<else /> <li class="subnav__item "> <a href="/index.php/Product/index/cid/{$vo.cid}"> <span class="iconfont cid{$vo.cid}"></span> <span>{$vo.name}</span> </a> </li> 
+			</if>		
+		</foreach>    
+      </ul>
+    </div>
+    <main id="content" class="content destination__content" role="main" data-content-field="main-content">
+	<div class="row sqs-row">
+	
+      <div class="productz">
+      <section class="destination-grid">	  	  
+	  <volist name="list" id="vo">
+        <div class="pdlb"> 		  
+		   <a href="{:U('product/read',array('id'=>$vo['id']))}"><img src="{:get_default_img($vo['image_id'])}"></a>
+		   <div class="mxftx">
+			  <span>
+				{$vo.title}
+			  </span>
+			  <span>
+				<a href="{:U('product/read',array('id'=>$vo['id']))}"> 购买</a>
+			  </span>
+		   </div>            
+		</div>
+	  </volist>        
+      </section>
+	  <div class="mxfpage"> {$page} </div>	  
+	  </div>
+	  
+	  <div class="producty">		
+		<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_59211">
+		  <div class="sqs-block-content">
+			<div class="image-block-outer-wrapper layout-caption-below ">
+			  <div class="mxfdyyb">
+				<p><span>商城帮助</span><span><a href="/index.php/page/index/name/lpqsm">礼品券说明</a></span></p>
+				<a href="/index.php/page/index/name/lpqsm"><img src="/documents/lpqsm.jpg"></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_52999">
+		  <div class="sqs-block-content">
+			<div class="image-block-outer-wrapper layout-caption-below ">
+			  <div class="mxfdyyb">
+				<p><span>推荐新闻</span><span><a href="/index.php/news/index/cid/9">更多</a></span></p>
+				<volist name="newslist" id="vo">
+				<a href="{:U('news/read',array('id'=>$vo['id']))}">
+					<div class="tjxw"> 		  
+					   <img src="{:get_default_img($vo['image_id'])}">
+					   <div class="tjxwwz">
+						   <p>{:cutStr($vo['title'],10,0)}</p>
+						   <p>{:date('Y-m-d',$info['published'])}</p> 
+					   </div>
+					</div>
+				</a>
+				</volist>  
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1417562976890_63193">
+		  <div class="sqs-block-content">
+			<div class="image-block-outer-wrapper layout-caption-below ">
+			  <div class="mxfdyyb contact">
+				<p><img class="lxfs" src="/documents/contact.jpg"></p>
+				<p>电话：0576-89166065</p>
+				<p>手机：13706572779</p>
+				<p>Q Q：1939862</p>
+				<p>邮箱：1939862@qq.com</p>
+				<p>地址：浙江省台州市黄岩江口工业食品开发园区内</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+		
+	</div>
+    </main>
+  </article>
+<include file="Base:footer" />

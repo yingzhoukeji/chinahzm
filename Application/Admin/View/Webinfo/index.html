@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>站点配置-系统设置-{$site.SITE_INFO.name}</title>
+    <php>$addCss="";</php>
+    <php>$addJs="";</php>
+    <include file="Common:intoHead" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">站点配置</div>
+                </div>
+                <form action="" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <tr>
+                            <th width="120">站点名称：</th>
+                            <td><input name="name" type="text" class="input" size="40" value="{$site.SITE_INFO.name}" /></td>
+                        </tr>
+                        <tr>
+                            <th width="120">站点地址：</th>
+                            <td><input name="url" type="text" class="input" size="40" value="{$site.SITE_INFO.url}" /></td>
+                        </tr>
+                        <tr>
+                            <th width="120">网站版本：</th>
+                            <td><input name="version" type="text" class="input" size="40" value="{$site.SITE_INFO.version}" /></td>
+                        </tr>
+                        <tr>
+                            <th>ICP备案：</th>
+                            <td><input class="input" name="icp" type="text" size="40" value="{$site.SITE_INFO.icp}" /></td>
+                        </tr>
+                        <tr>
+                            <th>客服邮箱：</th>
+                            <td><input class="input" name="service" type="text" size="40" value="{$site.SITE_INFO.service}" /></td>
+                        </tr>
+                        <tr>
+                            <th>客服电话：</th>
+                            <td><input class="input" name="tel" type="text" size="40" value="{$site.SITE_INFO.tel}" /></td>
+                        </tr>
+                        <tr>
+                            <th>传真号码：</th>
+                            <td><input class="input" name="fax" type="text" size="40" value="{$site.SITE_INFO.fax}" /></td>
+                        </tr>
+                        <tr>
+                            <th>QQ号码：</th>
+                            <td><input class="input" name="qq" type="text" size="40" value="{$site.SITE_INFO.qq}" /></td>
+                        </tr>
+                        <tr>
+                            <th>公司地址：</th>
+                            <td><input class="input" name="address" type="text" size="40" value="{$site.SITE_INFO.address}" /></td>
+                        </tr>
+                        <tr>
+                            <th>邮政编码：</th>
+                            <td><input class="input" name="postcode" type="text" size="40" value="{$site.SITE_INFO.postcode}" /></td>
+                        </tr>
+                        <tr>
+                            <th>网站关键字：</th>
+                            <td><input class="input" name="keyword" type="text" size="40" value="{$site.SITE_INFO.keyword}" /></td>
+                        </tr>
+                        <tr>
+                            <th>开启多语言：</th>
+                            <td><label style="margin-right: 10px;"><input type="radio" name="LANG_SWITCH_ON" <if condition="$site['SITE_INFO']['LANG_SWITCH_ON'] eq 1">checked</if> value="1">开启</label><label><input type="radio"  <if condition="$site['SITE_INFO']['LANG_SWITCH_ON'] eq 0">checked</if>  name="LANG_SWITCH_ON" value="0">关闭</label></td>
+                        </tr>
+                        <tr>
+                            <th>网站公告：</th>
+                            <td><textarea name="notice" cols="80" rows="3">{$site.SITE_INFO.notice}</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>网站简介：</th>
+                            <td><textarea name="description" cols="80" rows="3">{$site.SITE_INFO.description}</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>统计代码：</th>
+                            <td><textarea name="tongji" cols="80" rows="3">{$site.SITE_INFO.tongji}</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>分享代码：</th>
+                            <td><textarea name="fenxiang" cols="80" rows="3">{$site.SITE_INFO.fenxiang}</textarea></td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(".submit").click(function(){
+        commonAjaxSubmit();
+    });
+</script>
+</body>
+</html>

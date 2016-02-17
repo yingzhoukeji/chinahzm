@@ -1,0 +1,335 @@
+﻿/* 图标 */
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+/**/
+
+.tupiaosj{width:100%;}
+
+
+/*头部样式*/
+.mui-bar-nav{ background:#F70303;}
+.mui-bar-nav a {color:#FFF;}
+
+/*头部栏目名称*/
+.mui-bar-nav .mui-title {color:#FFF;}
+
+/* 商标 */
+.mui-bar-nav .sdlogo {
+	overflow:hidden;
+	height:35px !important;
+	margin:5px 0 0 0 !important;
+	float:left;
+	width:113px;
+}
+.mui-bar-nav .sdlogo img {
+	width:100%;
+}
+/* 底部样式 */
+.mui-bar-tab{
+	background:#000;
+	}
+.mui-bar-tab .mui-tab-item.mui-active {
+    color: #EC1B23;
+}
+
+/* 单页内容 */
+.mui-content-padded{
+	padding:0 0 50px 0;
+}
+.mui-content-padded img{
+	width:100% !important;
+}
+.mui-content-padded table{
+	width:100% !important;
+}
+.mui-content-padded a{
+	color:#EC1B23;
+}
+/* 新闻内容 */
+.content{
+	padding:0 10px 50px 10px;
+}
+.content img{
+	width:100% !important;
+}
+.content table{
+	width:100% !important;
+}
+.content a{
+	color:#EC1B23;
+}
+/* 联系我们 */
+.menu_button {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    height: 2.7em;
+    width: 2.7em;
+    background-color: #EC1B23;
+    -webkit-border-radius: 1.35em;
+    opacity: .9;
+    color: #fff;
+    z-index: 120;
+    text-align: center;
+}
+.menu_button>span{
+    color: #fff;
+}
+.menu_button img {
+    position: relative;
+    margin-top: .3em;
+    height: .92em;
+}
+.menu_text {
+    position: relative;
+    margin-top: -.2em;
+    width: 100%;
+    height: .8em;
+    line-height: .8em;
+}
+.menu_text span {
+    font-size: .67em;
+    color: #fff;
+}
+.fixed {
+    position: fixed !important;
+}
+.display_none {
+    display: none;
+}
+.pathModel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .2;
+    -webkit-transform: translate3d(0,0,0);
+    z-index: 20;
+    display: none;
+}
+.menu_button .mui-icon{font-size: 16px;}
+.menu_text{font-size: 12px;}
+
+/* 分享 */
+#mcover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	z-index: 20000;
+}
+#mcover img {
+	position: fixed;
+	right: 18px;
+	top: 5px;
+	width: 260px!important;
+	height: 180px!important;
+	z-index: 20001;
+}
+/* 加载 */
+.ui-notice{top: 0;z-index: -1; height:100%;}
+.ui-dialog{margin: 0 !important;padding: 0 !important;  background: rgba(0,0,0,.65); opacity: 0.8;}
+/* 新闻内容 */
+.mui-content .title{ text-align:center; line-height:20px; font-size:14px; font-weight:bold; padding:10px 0 0 5px; background:#D9D9D9; color:#EC1B23; margin: 0 0 10px 0; }
+
+/* 产品内容 */
+.cpimg{margin:0 0 20px 0 ; padding:5px; overflow:hidden; background:#FFF;}
+.cpimg img{margin:0px ; padding:0px 0px 10px 0; width:100%; overflow:hidden;}
+.cpimg p{margin:0px ; padding:5px 0; overflow:hidden;}
+.cpimg p span{line-height:30px; font-size:18px; font-weight:bold; color:#000000}
+.cpimg p i{line-height:12px; font-size:18px; font-weight:bold; color:#000000}
+.cpimg p b{line-height:12px; font-size:24px; font-weight:bold; color:#EC1B23}
+
+
+.nrjshd{margin:10px 0 0 0 ; padding:5px; overflow:hidden; background:#FFF;}
+.nrjshd samp{ border-left:#EC1B23 3px solid; padding:0 0 0 10px ; color:#BFBFBF}
+.nrjshd .canshu{padding:0px;}
+
+.luyraisd{margin:10px 0 60px 0  !important; padding:10px !important; overflow:hidden; background:#FFF; clear:both;}
+.luyraisd dl{margin:10px 0 !important; padding:0 !important; width:100% !important; overflow:hidden; border-bottom:#D5D5D5 1px solid; clear:both;}
+.luyraisd dt{overflow:hidden; font-weight:bold; width:100% !important; line-height:40px;}
+.luyraisd dt img{width:20px; height:20px; margin:0 10px 0 0}
+.luyraisd dd{verflow:hidden; color:#747474; width:100% !important;}
+
+
+
+
+/*首页图标列表*/
+
+.mainmenu {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+body .mainmenu {
+	margin: 8px 4px 0px 8px;
+	display: block;
+	overflow: hidden;
+	
+}
+body .mainmenu li {
+	float: left;
+	width: 25%;
+}
+body .mainmenu li a {
+	display: block;
+	text-align: center;
+	margin: 0px 4px 4px 0px;
+	overflow: hidden;
+	background-color: #fff;
+	color: #51545a;
+}
+body .mainmenu li a img {
+	margin: 5px auto 0px;
+	width: 60%;
+}
+body .mainmenu li a p {
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	line-height: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+body .mainmenu li:nth-child(1) {
+	width: 75%;
+}
+body .mainmenu li:nth-child(1) img {
+	width: 100%;
+	margin: 0px;
+	background-color: #333;
+}
+body .mainmenu li:nth-child(1) p {
+	display: none;
+}
+body .mainmenu li:nth-child(2) a {
+	background-color: #333;
+	color: #FFF
+}
+body .mainmenu li:nth-child(3) a {
+	background-color: #444;
+	color: #FFF
+}
+body .mainmenu li:nth-child(4) a {
+	background-color: #555;
+	color: #FFF
+}
+body .mainmenu li:nth-child(5) a,
+body .mainmenu li:nth-child(6) a,
+body .mainmenu li:nth-child(7) a,
+body .mainmenu li:nth-child(8) a {
+	border: 1px solid #E0E0E0;
+	padding-bottom: 7px;
+	background-color: #666;
+	color: #FFF
+}
+body .mainmenu li:nth-child(n+9) {
+	width: 50%;
+}
+body .mainmenu li:nth-child(n+9) img {
+	width: 100%;
+	margin: 0px;
+}
+body .mainmenu li:nth-child(n+9) p {
+	line-height: 25px;
+	background-color: #fff;
+}
+
+/*首页轮播*/
+.swiper-slide img{height: 180px;}
+.swiper-pagination-bullet-active{background: #fff!important;}
+
+
+/*地图*/
+.map {
+	display: none;
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 50px;
+	z-index: 1000;
+}
+.map iframe {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*首页头像*/
+.user-info {
+  text-align: left;
+  padding: 20px 10px 10px;
+  text-indent: 6px;
+}
+.user-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/*首页栏目*/
+#mcover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 200000;
+}
+
+#mcover img {
+  position: fixed;
+  right: 18px;
+  top: 5px;
+  width: 260px!important;
+  height: 180px!important;
+  z-index: 200001;
+}
+.mui-group-list-group{background:#666666; color:#fff}
+
+/* 列表购物车 */
+.aluyrisd{margin:0 0 60px 0; padding:0px 0px 10px 0; width:100%; clear:both; overflow:hidden; background:#FFF;}
+.aluyrisd .liaotik{margin:10px 1%; padding:0px 0px 10px 0; width:100%; clear:both; overflow:hidden; border-bottom:#DFDFDF 1px solid;}
+.aluyrisd .tubiaos{margin:0; padding:0px; width:30%; overflow:hidden; float:left}
+.aluyrisd .tubiaos img{margin:0; padding:0px; width:100%; overflow:hidden; }
+.aluyrisd .huiysh{margin:0 0 0 5%; padding:0px; width:65%; overflow:hidden; float:left}
+.aluyrisd .huiysh b{ font-size:16px; font-weight:bold;}
+.aluyrisd .huiysh p{margin:0 !important; padding:10px 0 0 0 !important; clear:both; color:#5B5B5B;}
+.aluyrisd .huiysh p b{font-size:24px;}
+
+.cheguwu{margin:20px 0 0 0; padding:0px; width:100%; clear:both; overflow:hidden;}
+.cheguwu .gyuwuz{margin:0; padding:0px; width: 50%; overflow:hidden; float:left}
+.aluyrisd .huiysh .guuwzy{margin:0; padding:0px; overflow:hidden; color:#ED8535;}
+
+/* 购物车 */
+.guwuche{margin:0 0 20px 0; padding:0px; width:100%; clear:both; overflow:hidden; text-align:center;}
+.guwuche .guwuzy{margin:0; padding:0px; width: 50%; overflow:hidden; text-align:center; float:left}
+/* 留言 */
+.luyraisd .liaotik{margin:0 0 10px 0; padding:0px 0px 10px 0; width:100%; clear:both; overflow:hidden; border-bottom:#D7D7D7 1px solid;}
+.luyraisd .tubiaos{margin:0; padding:0px; width:20%; overflow:hidden; float:left}
+.luyraisd .tubiaos img{margin:0; padding:0px; width:100%; overflow:hidden; }
+.luyraisd .huiysh{margin:0 0 0 5%; padding:0px; width:75%; overflow:hidden; float:left}
+.luyraisd .huiysh b{ font-size:16px; font-weight:bold;}
+.luyraisd .huiysh p{margin:10px 0 0 0; padding:0px; clear:both; color:#5B5B5B;}

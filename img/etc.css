@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+.event {padding:4.4% 0 0;border-top:1px solid #333333;border-bottom:1px solid #333333;width:100%;}
+.event li {overflow:hidden;margin:0 0 4.1%;width:100%;}
+.event li dl {float:right;width:47.8%;}
+.event li dl:first-child {float:left;}
+.event li dt {margin:1.3% 0 0.7%;}
+.event li dt.thumb {margin:0;}
+.event li dt a {color:#333333;font-weight:bold;}
+.event li dt strong {color:#008ad6;}
+.event li dd {overflow:hidden;}
+.event li dl strong.finish {color:#333333;}
+.event li dl dd p:first-child {margin-bottom:0.5%;}
+.event li dl dd .buttonIn {float:right;margin:-29px 0 0;}
+
+/* 약관 */
+.agreementIndex {}
+
+.agreementList {overflow:hidden;margin:10px 0 27px;padding:0 0 18px;_height:1%;border-bottom:1px solid #333333;}
+.agreementList ol {float:left;width:50%;}
+.agreementList ol li {line-height:2em;}
+.agreementList ol em {display:block;float:left;text-align:right;padding-right:8px;}
+.agreementList ol a {color:#008ad6;font-weight:bold;letter-spacing:-1px;}
+.agreementList .block {float:left;width:33.333%;}
+.agreementList dl {margin:18px 0 0;}
+.agreementList dl:first-child {margin:0;}
+.agreementList dl dt {padding:0 0 10px;}
+.agreementList dl dt a {color:#008ad6;font-weight:bold;}
+.agreementList dl dd {padding:0 0 5px;}
+.agreementList span {display:block;margin:18px 0 0;}
+.agreementList span a {color:#008ad6;font-weight:bold;}
+
+.agreement h3 {margin:24px 0 0;padding:0;font-size:16px;font-weight:bold;}
+.agreement h3:first-child {margin:-3px 0 0;padding:0;border:0;}
+.agreement .legalDetail p {margin:13px 0 0;}
+
+.privacyDetail {overflow:hidden;border-bottom:1px solid #e1e1e1;}
+.privacyDetail li {margin:14px 0 0;}
+.privacyDetail li p:first-child {margin:10px 0 8px;}
+.privacyDetail li p {margin:8px 0 0 19px;}
+.privacyDetail p:first-child {margin:14px 0 0;}
+.privacyDetail p {margin:8px 0 0;}
+.privacyDetail .depth2 {margin:8px 0 0 19px;}
+.privacyDetail .depth2 li {margin:5px 0 0;padding:0 0 0 12px;text-indent:-12px;}
+.privacyDetail .depth2 li p {margin:0 0 0 13px;padding:0 0 0 12px;text-indent:-12px;}
+.privacyDetail .depth2 li > ul {}
+.privacyDetail table {margin:10px 0 0;width:100%;}
+.privacyDetail table th, .privacyDetail table td {padding:5px 5px 6px;border:1px solid #d9d9d9;text-align:center;}
+.privacyDetail table th {border-bottom:0;}
+.privacyDetail .ancher {float:right;padding:15px 15px;background:url('bg_ico.gif') -60px -251px no-repeat;color:#333333;font-size:10px;font-weight:bold;}
+
+.emailDetail p {margin:13px 0 0;color:#999999;}
+
+.agree h3 {margin:-1px 0 0;padding:24px 0 0;border-top:1px solid #999999;}
+.agree .privacyDetail h4 {margin:16px 0 0;font-weight:bold;}
+.agree .privacyDetail li {padding-left:16px;text-indent:-16px;}
+.agree .privacyDetail .depth2 {margin-left:0;}
+.agree .privacyDetail .depth2 li > ul {margin-left:5px;}
+
+.term {margin:0 0 15px;text-align:right;}
+.term select {height:26px;}
+.term .buttonIn {min-width:30px;}
+
+.sitemap {overflow:hidden;margin:0 0 4.2%;}
+.sitemap .section {float:left;margin-left:4%;border-style:solid;border-color:#008ad6 #9b9b9b #9b9b9b #cacaca;border-width:2px 1px 1px;background:#ffffff;width:16%;box-sizing:border-box;-moz-box-sizing:border-box;}
+.sitemap .section:first-child {margin-left:0;}
+.sitemap .section h3 {padding:10px 11.5% 11px;border-bottom:1px solid #cacaca;}
+.sitemap .section h3 a {color:#000000;font-size:18px;font-weight:bold;}
+.sitemap .section ul {padding:8px 11.5% 12px;}
+.sitemap .section ul li {padding:6px 0;}
+.sitemap .section ul li a {color:#333333;font-size:16px;}
+
+
+/* IE 9/10 -----------------------------------------------*/
+@media screen and (min-width:0\0) {
+	.notice {line-height:1.185em;}
+}
+
+/* IE 8 */
+@media \0screen {
+	.notice {line-height:1.285em;}
+}
+
+/* tablet -----------------------------------------------*/
+@media only screen and (min-width:768px) and (max-width:1024px){
+	.event li dl.finish dd .buttonIn {float:none;margin:3px 0 0;}
+}
+
+/* mobile -----------------------------------------------*/
+@media only screen and (max-width:767px){
+	.mblock {margin:3px 0 0;}
+	.mblock .hits {margin-left:5px;}
+
+	h3 .ess {display:block;position:relative;top:5px;}
+
+	.event li {margin:0;}
+	.event li dl {float:none;margin:0 0 4.1%;width:100%;}
+	.event li dl.finish dd .buttonIn {float:none;margin:3px 0 0;}
+
+	.tblType.type2 dt {width:100%;}
+	.tblType.type2 dd.line {border-color:#e6e6e6;}
+
+	.agreementList ol, .agreementList .block {float:none;width:100%;}
+
+	.sitemap {margin:0;}
+	.sitemap .section {float:none;margin:0 0 3%;width:100%;}
+	.sitemap .section h3, .sitemap .section ul {padding-left:30px;}
+}

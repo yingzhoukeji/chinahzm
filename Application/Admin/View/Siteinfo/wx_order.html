@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>微信活动管理-{$site.SITE_INFO.name}</title>
+        <php>
+            $addCss="";
+            $addJs="";
+            $currentNav ='微信活动管理 > 砍价报名列表';
+        </php>
+        <include file="Common:intoHead" />
+		<style>
+			.qrcode{
+				  /*width: 100%;
+				  height: 100%;
+				  position: fixed;
+				  top: 0;
+				  left: 0;
+				  background: #000;
+				  opacity: .6;
+				  -webkit-transform: translate3d(0,0,0);
+				  z-index: 20;*/
+				  display:none;
+				
+			}
+			.qrcontent{
+				  position: fixed;
+				  top: 35%;
+				  left: 0;
+				  right:0;
+				  height:200px;
+				  text-align:center;
+				  z-index: 100;
+				  
+			}
+			.btn_qrcode{
+				background:#417EB7;
+				padding:5px;
+				border-radius: 3px;
+				color: #fff;
+			}
+		</style>
+    </head>
+    <body>
+        <div class="wrap">
+            <include file="Common:head" />
+            <div class="mainBody">
+                <include file="Common:left" />
+                <div id="Right">
+                    <div class="Item hr">
+                        <div class="current">砍价报名列表</div>
+						<div style="width: 100px;float: right;"><button type="button" class="btn" onclick="window.location.href='{:U('Siteinfo/add_bargain')}'">添加</button></div>
+                    </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>标题</td>
+                                <td>参与者</td>
+                                <td>电话号码</td>
+							    <td>公司</td>
+								<td>是否支付</td>
+								<td>微信支付订单号</td>
+								<td>商户订单号</td>
+								<td>砍后价格</td>
+								<td>支付定金</td>
+							    <td>订购时间</td>
+                                <td>操作</td>
+                               
+                            </tr>
+                        </thead>
+                        <volist name="list" id="vo">
+                            <tr align="center" id="{$vo.id}">
+								<td>{$vo.id}</td>
+                                <td>{$vo.bargain_title}</td>
+                                <td>{$vo.name}</td>
+                                <td>{$vo.phone}</td>
+								<td>{$vo.company}</td>
+								<if condition="$vo.ispay eq 1"> <td >已支付</td>
+								 <else /> <td >未支付</td>
+								 </if>
+								<if condition="($vo.transaction_id eq null) OR ($vo.transaction_id eq '') OR ($vo.transaction_id eq 'null')"> <td>暂无</td>
+								 <else /> <td >{$vo.transaction_id}</td>
+								 </if>
+								<if condition="($vo.out_trade_no eq null) OR ($vo.out_trade_no eq '') OR ($vo.out_trade_no eq 'null')"> <td>暂无</td>
+								 <else /> <td >{$vo.out_trade_no}</td>
+								 </if>
+								<if condition="($vo.currprice eq null) OR ($vo.currprice eq '') OR ($vo.currprice eq 'null')"> <td>暂无</td>
+								 <else /> <td >{$vo.currprice}</td>
+								 </if>
+								 <td >{$vo.final_fee}</td>
+								<td>{$vo.createtime}</td>
+                                <td> [ <a link="{:U('Siteinfo/del_order/',array('id'=>$vo['id']))}" href="javascript:void(0)" name="{$vo.title}" class="del">删除 </a> ]</td>
+                        </volist>
+                        <tr><td colspan="6" align="right">{$page}</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+		<div class="qrcode">
+			<div class="qrcontent">
+				<img id="qrcode" src="http://qr.liantu.com/api.php?text=">
+			</div>
+			
+		</div>
+        <include file="Common:foot" />
+        <script type="text/javascript">
+            $(function(){
+                $(".del").click(function(){
+                    var delLink=$(this).attr("link");
+                    $this = $(this);
+                    popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
+                        if(action == 'ok'){
+                            delByLink(delLink,$this);
+                            //top.window.location.href=delLink;
+                        }
+                    });
+                    return false;
+                });
+				$(".qrcode").click(function(){
+					$(".qrcode").hide();
+				});
+            });
+            function changeAttr(id,v){
+                $.get('{:U("News/changeAttr")}?id='+id,function(data){
+                    if(data.status==1){
+                        $(v).html(data.info);
+                    }
+                });
+            }
+            function changeStatus(id,v){
+                $.get('{:U("News/changeStatus")}?id='+id,function(data){
+                    if(data.status==1){
+                        $(v).html(data.info);
+                    }
+                });
+            }
+			function getQrcode(id){
+				var url="{$QRCODE_URL}{$WX_SITE}?id="+id+"0";
+				$("#qrcode").attr("src",url);
+				$(".qrcode").toggle();
+			}
+        </script>
+    </body>
+</html>

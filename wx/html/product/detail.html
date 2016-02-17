@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>海之梦产品内容</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="/wx/css/mui.min.css">
+        <!--盈舟代码-->
+        <link rel="stylesheet" href="/wx/css/app.css">
+		<script src="../../js/weixin.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	</head>
+	<body>
+<div class="mui-content">   
+<div class="cpimg">
+ <img id="img">
+ <p><span id="title"></span></p>
+ <p>参考价格： <b id="price"></b> 元</p>
+ <p>商品类别： <i id="psize"></i></p>
+</div>
+
+<div class="guwuche">
+<div class="guwuzy">
+<button class="mui-btn mui-btn-negative" href="/wx/likegomei.html"  id="lkgm">立刻购买 <span class="iconfont">&#xe672;</span></button></div>
+<div class="guwuzy">
+<button class="mui-btn mui-btn-negative" href="/wx/guwuche.html" id="jrgwc">加入购物车 <span class="iconfont">&#xe64c;</span></button>
+</div></div>
+
+<ul class="mui-table-view mui-grid-view mui-grid-9" style="background: #FFFFFF">
+<li class="mui-table-view-cell mui-media  mui-col-xs-3">
+    <a href="/wx/html/news/list.html?id=2" id="pkjq">
+        <span class="mui-icon iconfont">&#xe6d7;</span>
+        <div class="mui-media-body">
+          烹烤技巧
+        </div>
+    </a>
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-3">
+    <a href="/wx/html/pages/detail.html?id=21" id="yssm">
+        <span class="mui-icon iconfont">&#xe642;</span>
+        <div class="mui-media-body">
+           运送说明
+        </div>
+    </a>
+</li>
+<li class="mui-table-view-cell mui-media  mui-col-xs-3">
+    <a id="sendmsg">
+        <span class="mui-icon iconfont">&#xe6d0;</span>
+        <div class="mui-media-body">
+          在线留言
+        </div>
+    </a>
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-3">
+    <a href="/wx/lqwm.html" id="lwsm">
+        <span class="mui-icon iconfont">&#xe61f;</span>
+        <div class="mui-media-body">
+           联系我们
+        </div>
+    </a>
+</li>
+</ul>
+
+
+<!-- ul class="mui-table-view mui-table-view-chevron">
+  <li class="mui-table-view-cell mui-media">
+	 <a class="mui-navigate-right">类别：</a>
+  </li>
+  <li class="mui-table-view-cell mui-media">
+	 <a class="mui-navigate-right">区域：</a>
+  </li>
+</ul -->
+
+<div class="nrjshd">
+   <samp>商品描述</samp>
+   <div class="canshu"></div>
+</div>
+
+<div class="nrjshd">
+   <samp>商品详情</samp>
+   <div class="content"></div>
+</div>
+
+<div class="luyraisd" id="msglist">
+
+</div>
+
+
+
+		<!--path菜单-->
+	    <div id="pathmenu" class="menu_button fixed display_none" style="z-index: 0; line-height: 2.5em; display: block;"><span>菜单</span></div>
+	    <div class="menu_button fixed display_none" id="home"><i class="mui-icon mui-icon-home"></i>
+	
+	        <div class="menu_text"><span>主页</span></div>
+	    </div>
+	    <div id="tel" class="menu_button fixed display_none"><i class="mui-icon mui-icon-phone"></i>
+	        <div class="menu_text"><span>联系</span></div>
+	    </div>
+	    <div class="menu_button fixed display_none" id="map"><i class="mui-icon mui-icon-location"></i>
+	
+	        <div class="menu_text"><span>导航</span></div>
+	    </div>
+	   
+       
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" id="ddlsy" href="/wx/index.html">
+        <span class="mui-icon iconfont">&#xe63b;</span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="regiser" href="/wx/html/product/categary.html">
+        <span class="mui-icon iconfont">&#xe6ad;</span>
+        <span class="mui-tab-label">烧烤商城</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxxm" href="/wx/html/news/categary.html">
+        <span class="mui-icon iconfont">&#xe6de;</span>
+        <span class="mui-tab-label">烧烤教室</span>
+    </a>
+    <a class="mui-tab-item" id="sdpxjj" href="/wx/pxjj.html">
+        <span class="mui-icon iconfont">&#xe6e2;</span>
+        <span class="mui-tab-label">加盟我们</span>
+    </a>
+    <a class="mui-tab-item" id="sdlxwm" href="/wx/lxwm.html">
+        <span class="mui-icon iconfont">&#xe613;</span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+	    <div class="pathModel"></div>
+		<div class="ui-dialog ui-dialog-notice show"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>
+		
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js" ></script>
+		<script src="../../js/path.js"></script>
+		<script>
+		 	$(function(){
+		 		var id=GetQueryString("id");
+		 		getProduct(id);
+				getmsg(id);
+				initWeixin();
+		 		$("#home").on("tap",function(){
+		 			
+					window.location.href=indexUrl;
+				});	
+				$("#tel").on("tap",function(){
+					window.location.href="tel:057680258777";
+			});	
+			$("#map").on("tap",function(){
+				openMap();
+			});
+			
+		$("#regiser").on("tap",function(){
+			window.location.href="/wx/html/product/categary.html";
+		});
+		$("#ddlsy").on("tap",function(){
+			window.location.href="/wx/index.html";
+		});
+		$("#sdpxxm").on("tap",function(){
+			window.location.href="/wx/html/news/categary.html";
+		});
+		$("#sdpxjj").on("tap",function(){
+			window.location.href="/wx/pxjj.html";
+		});
+		$("#sdlxwm").on("tap",function(){
+			window.location.href="/wx/lxwm.html";
+		});
+		$("#soush").on("tap",function(){
+			window.location.href="/wx/html/product/search.html";
+		});
+		$("#fanhusy").on("tap",function(){
+			window.location.href="/wx/index.html";
+		});
+		$("#lkgm").on("tap",function(){
+			window.location.href="/wx/likegomei.html";
+		});
+		$("#jrgwc").on("tap",function(){
+			window.location.href="/wx/guwuche.html";
+		});
+		$("#pkjq").on("tap",function(){
+			window.location.href="/wx/html/news/list.html?id=2";
+		});
+		$("#yssm").on("tap",function(){
+			window.location.href="/wx/html/pages/detail.html?id=21";
+		});
+		$("#lwsm").on("tap",function(){
+			window.location.href="/wx/lqwm.html";
+		});
+
+
+				$("#sendmsg").on("tap",function(){
+					window.location.href="sendMsg.html?id="+id;
+				});
+		 	});
+			function getProduct(id){
+				var url=serverUrl+"/productDetail?id="+id+"&callback=?";
+				$.getJSON(url,function(json){
+					$(".ui-dialog").hide();
+					console.log(json);
+					var title=json.title;
+					var savepath=json.savepath;
+					var summary=json.summary;
+					var content=json.content;
+					var cid=json.cid;
+					$("#img").attr("src",picUrl+savepath);
+					$(".mui-title").text(title);
+					$("#title").text(title);
+					$("title").text("海之梦-"+title);
+					$(".canshu").text(summary);
+					$(".content").html(content);
+					$(".content").find("img").each(function(){
+						$(this).attr("src",picUrl+$(this).attr("src"));
+						$(this).show();
+					});
+					$("#back").on("click",function(){
+						var from=GetQueryString("from");
+						if(from=="0"){
+							window.location.href="list.html?id="+cid;
+						}else{
+							window.location.href="search.html";
+						}
+			 			
+			 		});
+				});
+			}
+			function getmsg(id){
+				var url=serverUrl+"/getmsg?productid="+id+"&callback=?";
+				$.getJSON(url,function(json){
+					
+					for(var i=0;i<json.length;i++){
+						var msg=json[i];
+						var username=msg.username;
+						var headimgurl=msg.headimgurl;
+						if(headimgurl==""){
+							headimgurl="../../images/tx.jpg";
+						}
+						var content=msg.content;
+						var html='';
+   html+='<div class="liaotik">';
+       html+='<div class="tubiaos"><img src="'+headimgurl+'"></div>';
+       html+='<div class="huiysh">';
+          html+='<b>'+username+'</b>';
+          html+='<p>'+content+'</p>';
+       html+='</div>';
+   html+='</div>';
+						$("#msglist").append(html);
+					}
+				});
+			}
+		</script><div style=" display:none;"><script src="http://s11.cnzz.com/stat.php?id=1257365777&web_id=1257365777" language="JavaScript"></script></div>
+	</body>
+</html>

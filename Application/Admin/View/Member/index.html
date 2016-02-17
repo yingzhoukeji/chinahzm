@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>网站注册会员管理-后台管理首页-{$site.SITE_INFO.name}</title>
+        <php>
+            $addCss="";
+            $addJs="";
+            $currentNav ='网站注册会员管理 > 会员列表';
+        </php>
+        <include file="Common:intoHead" />
+    </head>
+    <body>
+        <div class="wrap">
+            <include file="Common:head" />
+            <div class="mainBody">
+                <include file="Common:left" />
+                <div id="Right">
+                    <div class="Item hr">
+                        <div class="current">网站注册会员管理</div>
+                        <div style="width: 100px;float: right;"><button type="button" class="btn" onclick="window.location.href='{:U('Member/edit')}'">添加会员</button></div>
+                    </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                        <thead>
+                        <tr>
+                            <td>UID</td>
+                            <td>登录邮箱</td>
+                            <td>昵称</td>
+                            <td>手机号码</td>
+                            <td>性别</td>
+                            <td>登录IP</td>
+                            <td width="150">操作</td>
+                        </tr>
+                        </thead>
+                        <volist name="list" id="vo">
+                            <tr align="center" id="{$vo.id}">
+                                <td align="left">{$vo.uid}</td>
+                                <td>{$vo.email}</td>
+                                <td>{$vo.nickname}</td>
+                                <td>{$vo.mobile}</td>
+                                <td><if condition="$vo['sex'] eq 0">女<else />男</if></td>
+                                <td>{$vo.login_ip}</td>
+                                <td>[ <a href="__URL__/edit?uid={$vo.uid}">编辑 </a> ] [ <a link="{:U('Member/del/',array('uid'=>$vo['uid']))}" href="javascript:void(0)" name="{$vo.nickname}" class="del">删除 </a> ]</td>
+                            </tr>
+                        </volist>
+                        <tr><td colspan="7" align="right">{$page}</td></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <include file="Common:foot" />
+        <script type="text/javascript">
+            $(function(){
+                $(".del").click(function(){
+                    var delLink=$(this).attr("link");
+                    popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
+                        if(action == 'ok'){
+                            top.window.location.href=delLink;
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

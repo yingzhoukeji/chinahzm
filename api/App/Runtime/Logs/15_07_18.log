@@ -1,0 +1,494 @@
+[ 2015-07-18T09:37:07+08:00 ] ERR: (ThinkException) 非法操作:shopadmin
+[ 2015-07-18T09:38:09+08:00 ] ERR: (ThinkException) 非法操作:feed-proxy
+[ 2015-07-18T09:39:00+08:00 ] ERR: (ThinkException) 非法操作:bbx
+[ 2015-07-18T09:39:01+08:00 ] ERR: (ThinkException) 非法操作:tools
+[ 2015-07-18T09:39:04+08:00 ] ERR: (ThinkException) 非法操作:yanfang
+[ 2015-07-18T09:39:06+08:00 ] 121.42.0.19 /dsapi/api.php/Index/.DS_Store
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000521s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+
+[ 2015-07-18T09:39:09+08:00 ] ERR: (ThinkException) 非法操作:db
+[ 2015-07-18T09:39:10+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T09:39:13+08:00 ] ERR: (ThinkException) 非法操作:logs
+[ 2015-07-18T09:39:15+08:00 ] ERR: (ThinkException) 非法操作:log
+[ 2015-07-18T09:39:28+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T09:39:29+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?debug=browser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000479s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000562s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+
+[ 2015-07-18T09:39:49+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?redirect%3A%25%7Bnew+java.lang.String%28%27http%3A%2F%2Fxxxxxxxxxxxxx%27%29%7D
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000538s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+
+[ 2015-07-18T09:39:54+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T09:40:06+08:00 ] ERR: (ThinkException) 非法操作:upload
+[ 2015-07-18T09:40:07+08:00 ] ERR: (ThinkException) 非法操作:uploads
+[ 2015-07-18T09:40:09+08:00 ] 121.42.0.19 /dsapi/api.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000537s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000619s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+
+[ 2015-07-18T09:40:10+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T09:40:13+08:00 ] ERR: (ThinkException) 非法操作:upfile
+[ 2015-07-18T09:40:14+08:00 ] ERR: (ThinkException) 非法操作:upfiles
+[ 2015-07-18T09:40:17+08:00 ] ERR: (ThinkException) 非法操作:uploadfile
+[ 2015-07-18T09:40:18+08:00 ] ERR: (ThinkException) 非法操作:uploadfiles
+[ 2015-07-18T09:40:19+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T09:40:20+08:00 ] ERR: (ThinkException) 非法操作:data
+[ 2015-07-18T09:40:22+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T09:42:04+08:00 ] ERR: (ThinkException) 非法操作:phpinfo
+[ 2015-07-18T09:42:07+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.php
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000473s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+
+[ 2015-07-18T09:42:08+08:00 ] ERR: (ThinkException) 非法操作:php
+[ 2015-07-18T09:42:09+08:00 ] ERR: (ThinkException) 非法操作:info
+[ 2015-07-18T09:42:10+08:00 ] ERR: (ThinkException) 非法操作:test
+[ 2015-07-18T09:42:11+08:00 ] ERR: (ThinkException) 非法操作:a
+[ 2015-07-18T09:42:12+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T09:42:14+08:00 ] ERR: (ThinkException) 非法操作:u
+[ 2015-07-18T09:42:15+08:00 ] ERR: (ThinkException) 非法操作:tz
+[ 2015-07-18T09:51:36+08:00 ] 121.42.0.19 /dsapi/api.php/Index/0.zip
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001133s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001222s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+
+[ 2015-07-18T09:51:37+08:00 ] 121.42.0.19 /dsapi/api.php/Index/0.rar
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000746s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000842s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+
+[ 2015-07-18T09:51:38+08:00 ] ERR: (ThinkException) 非法操作:0.tar
+[ 2015-07-18T09:51:39+08:00 ] 121.42.0.19 /dsapi/api.php/Index/0.tgz
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000610s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000695s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+
+[ 2015-07-18T09:51:40+08:00 ] 121.42.0.19 /dsapi/api.php/Index/0.7z
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000617s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000700s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+
+[ 2015-07-18T09:51:41+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T09:51:42+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T09:51:45+08:00 ] ERR: (ThinkException) 非法操作:1.tar
+[ 2015-07-18T09:51:46+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T09:51:48+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T09:51:49+08:00 ] ERR: (ThinkException) 非法操作:www
+[ 2015-07-18T09:51:52+08:00 ] ERR: (ThinkException) 非法操作:www
+[ 2015-07-18T09:51:54+08:00 ] ERR: (ThinkException) 非法操作:www.tar
+[ 2015-07-18T09:51:57+08:00 ] ERR: (ThinkException) 非法操作:www
+[ 2015-07-18T09:51:58+08:00 ] ERR: (ThinkException) 非法操作:www
+[ 2015-07-18T09:51:59+08:00 ] ERR: (ThinkException) 非法操作:wwwroot
+[ 2015-07-18T09:52:02+08:00 ] ERR: (ThinkException) 非法操作:wwwroot
+[ 2015-07-18T09:52:04+08:00 ] ERR: (ThinkException) 非法操作:wwwroot.tar
+[ 2015-07-18T09:52:07+08:00 ] ERR: (ThinkException) 非法操作:wwwroot
+[ 2015-07-18T09:52:10+08:00 ] ERR: (ThinkException) 非法操作:wwwroot
+[ 2015-07-18T09:52:13+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T09:52:16+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T09:52:17+08:00 ] ERR: (ThinkException) 非法操作:backup.tar
+[ 2015-07-18T09:52:19+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T09:52:22+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T09:52:25+08:00 ] ERR: (ThinkException) 非法操作:build
+[ 2015-07-18T09:52:26+08:00 ] ERR: (ThinkException) 非法操作:build
+[ 2015-07-18T09:52:27+08:00 ] ERR: (ThinkException) 非法操作:build.tar
+[ 2015-07-18T09:52:28+08:00 ] ERR: (ThinkException) 非法操作:build
+[ 2015-07-18T09:52:31+08:00 ] ERR: (ThinkException) 非法操作:build
+[ 2015-07-18T09:52:32+08:00 ] ERR: (ThinkException) 非法操作:html
+[ 2015-07-18T09:52:35+08:00 ] ERR: (ThinkException) 非法操作:html
+[ 2015-07-18T09:52:36+08:00 ] ERR: (ThinkException) 非法操作:html.tar
+[ 2015-07-18T09:52:37+08:00 ] ERR: (ThinkException) 非法操作:html
+[ 2015-07-18T09:52:38+08:00 ] ERR: (ThinkException) 非法操作:html
+[ 2015-07-18T09:52:39+08:00 ] ERR: (ThinkException) 非法操作:home
+[ 2015-07-18T09:52:40+08:00 ] ERR: (ThinkException) 非法操作:home
+[ 2015-07-18T09:52:43+08:00 ] ERR: (ThinkException) 非法操作:home.tar
+[ 2015-07-18T09:52:46+08:00 ] ERR: (ThinkException) 非法操作:home
+[ 2015-07-18T09:52:49+08:00 ] ERR: (ThinkException) 非法操作:home
+[ 2015-07-18T09:52:50+08:00 ] ERR: (ThinkException) 非法操作:root
+[ 2015-07-18T09:52:53+08:00 ] ERR: (ThinkException) 非法操作:root
+[ 2015-07-18T09:52:56+08:00 ] ERR: (ThinkException) 非法操作:root.tar
+[ 2015-07-18T09:52:57+08:00 ] ERR: (ThinkException) 非法操作:root
+[ 2015-07-18T09:52:59+08:00 ] ERR: (ThinkException) 非法操作:root
+[ 2015-07-18T09:53:02+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T09:53:05+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T09:53:06+08:00 ] ERR: (ThinkException) 非法操作:config.tar
+[ 2015-07-18T09:53:09+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T09:53:11+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T09:53:14+08:00 ] ERR: (ThinkException) 非法操作:tmp
+[ 2015-07-18T09:53:15+08:00 ] ERR: (ThinkException) 非法操作:tmp
+[ 2015-07-18T09:53:18+08:00 ] ERR: (ThinkException) 非法操作:tmp.tar
+[ 2015-07-18T09:53:21+08:00 ] ERR: (ThinkException) 非法操作:tmp
+[ 2015-07-18T09:53:22+08:00 ] ERR: (ThinkException) 非法操作:tmp
+[ 2015-07-18T09:53:23+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2015-07-18T09:53:24+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2015-07-18T09:53:26+08:00 ] ERR: (ThinkException) 非法操作:temp.tar
+[ 2015-07-18T09:53:29+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2015-07-18T09:53:31+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2015-07-18T09:53:34+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T09:53:35+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T09:53:36+08:00 ] ERR: (ThinkException) 非法操作:web.tar
+[ 2015-07-18T09:53:39+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T09:53:40+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T09:53:41+08:00 ] ERR: (ThinkException) 非法操作:website
+[ 2015-07-18T09:53:42+08:00 ] ERR: (ThinkException) 非法操作:website
+[ 2015-07-18T09:53:43+08:00 ] ERR: (ThinkException) 非法操作:website.tar
+[ 2015-07-18T09:53:45+08:00 ] ERR: (ThinkException) 非法操作:website
+[ 2015-07-18T09:53:46+08:00 ] ERR: (ThinkException) 非法操作:website
+[ 2015-07-18T09:53:48+08:00 ] ERR: (ThinkException) 非法操作:site
+[ 2015-07-18T09:53:49+08:00 ] ERR: (ThinkException) 非法操作:site
+[ 2015-07-18T09:53:52+08:00 ] ERR: (ThinkException) 非法操作:site.tar
+[ 2015-07-18T09:53:55+08:00 ] ERR: (ThinkException) 非法操作:site
+[ 2015-07-18T09:53:56+08:00 ] ERR: (ThinkException) 非法操作:site
+[ 2015-07-18T09:53:59+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T09:54:02+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T09:54:04+08:00 ] ERR: (ThinkException) 非法操作:htdocs.tar
+[ 2015-07-18T09:54:07+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T09:54:10+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T09:54:13+08:00 ] ERR: (ThinkException) 非法操作:sql
+[ 2015-07-18T09:54:16+08:00 ] ERR: (ThinkException) 非法操作:sql
+[ 2015-07-18T09:54:19+08:00 ] ERR: (ThinkException) 非法操作:sql.tar
+[ 2015-07-18T09:54:20+08:00 ] ERR: (ThinkException) 非法操作:sql
+[ 2015-07-18T09:54:23+08:00 ] ERR: (ThinkException) 非法操作:sql
+[ 2015-07-18T09:54:26+08:00 ] ERR: (ThinkException) 非法操作:121.40.172.58
+[ 2015-07-18T09:54:27+08:00 ] ERR: (ThinkException) 非法操作:121.40.172.58
+[ 2015-07-18T09:54:28+08:00 ] ERR: (ThinkException) 非法操作:121.40.172.58.tar
+[ 2015-07-18T09:54:29+08:00 ] ERR: (ThinkException) 非法操作:121.40.172.58
+[ 2015-07-18T09:54:32+08:00 ] ERR: (ThinkException) 非法操作:121.40.172.58
+[ 2015-07-18T10:46:10+08:00 ] ERR: (ThinkException) 非法操作:shopadmin
+[ 2015-07-18T10:47:11+08:00 ] ERR: (ThinkException) 非法操作:feed-proxy
+[ 2015-07-18T10:48:12+08:00 ] ERR: (ThinkException) 非法操作:bbx
+[ 2015-07-18T10:49:21+08:00 ] ERR: (ThinkException) 非法操作:tools
+[ 2015-07-18T10:50:58+08:00 ] ERR: (ThinkException) 非法操作:yanfang
+[ 2015-07-18T10:52:00+08:00 ] 121.42.0.19 /dsapi/api.php/Index/.DS_Store
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000658s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000743s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2015-07-18T10:53:01+08:00 ] ERR: (ThinkException) 非法操作:db
+[ 2015-07-18T10:54:14+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T10:55:57+08:00 ] ERR: (ThinkException) 非法操作:logs
+[ 2015-07-18T10:57:07+08:00 ] ERR: (ThinkException) 非法操作:log
+[ 2015-07-18T10:57:45+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T10:57:47+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?debug=browser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000497s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000580s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+
+[ 2015-07-18T10:57:48+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?redirect%3A%25%7Bnew+java.lang.String%28%27http%3A%2F%2Fxxxxxxxxxxxxx%27%29%7D
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000538s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000624s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+
+[ 2015-07-18T10:57:51+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T10:57:54+08:00 ] ERR: (ThinkException) 非法操作:upload
+[ 2015-07-18T10:57:57+08:00 ] ERR: (ThinkException) 非法操作:uploads
+[ 2015-07-18T10:58:58+08:00 ] 121.42.0.19 /dsapi/api.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000652s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+
+[ 2015-07-18T10:59:59+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T11:01:00+08:00 ] ERR: (ThinkException) 非法操作:upfile
+[ 2015-07-18T11:02:01+08:00 ] ERR: (ThinkException) 非法操作:upfiles
+[ 2015-07-18T11:02:18+08:00 ] ERR: (ThinkException) 非法操作:uploadfiles
+[ 2015-07-18T11:02:19+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T11:02:21+08:00 ] ERR: (ThinkException) 非法操作:data
+[ 2015-07-18T11:02:23+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T11:02:34+08:00 ] ERR: (ThinkException) 非法操作:phpinfo
+[ 2015-07-18T11:02:37+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.php
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000489s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000576s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+
+[ 2015-07-18T11:02:38+08:00 ] ERR: (ThinkException) 非法操作:php
+[ 2015-07-18T11:02:41+08:00 ] ERR: (ThinkException) 非法操作:info
+[ 2015-07-18T11:02:44+08:00 ] ERR: (ThinkException) 非法操作:test
+[ 2015-07-18T11:02:47+08:00 ] ERR: (ThinkException) 非法操作:a
+[ 2015-07-18T11:02:50+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T11:02:51+08:00 ] ERR: (ThinkException) 非法操作:u
+[ 2015-07-18T11:02:52+08:00 ] ERR: (ThinkException) 非法操作:tz
+[ 2015-07-18T11:02:53+08:00 ] ERR: (ThinkException) 非法操作:adminer
+[ 2015-07-18T11:02:54+08:00 ] ERR: (ThinkException) 非法操作:bigdump
+[ 2015-07-18T11:02:57+08:00 ] ERR: (ThinkException) 非法操作:${@print(md5(this_is_a_test_string))}
+[ 2015-07-18T12:04:20+08:00 ] ERR: (ThinkException) 非法操作:shopadmin
+[ 2015-07-18T12:05:21+08:00 ] ERR: (ThinkException) 非法操作:feed-proxy
+[ 2015-07-18T12:05:32+08:00 ] ERR: (ThinkException) 非法操作:bbx
+[ 2015-07-18T12:05:33+08:00 ] ERR: (ThinkException) 非法操作:tools
+[ 2015-07-18T12:05:36+08:00 ] ERR: (ThinkException) 非法操作:yanfang
+[ 2015-07-18T12:05:39+08:00 ] 121.42.0.19 /dsapi/api.php/Index/.DS_Store
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000641s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+
+[ 2015-07-18T12:05:41+08:00 ] ERR: (ThinkException) 非法操作:db
+[ 2015-07-18T12:05:42+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T12:05:44+08:00 ] ERR: (ThinkException) 非法操作:logs
+[ 2015-07-18T12:05:47+08:00 ] ERR: (ThinkException) 非法操作:log
+[ 2015-07-18T12:05:52+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T12:05:53+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?debug=browser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000643s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000727s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+
+[ 2015-07-18T12:05:54+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?redirect%3A%25%7Bnew+java.lang.String%28%27http%3A%2F%2Fxxxxxxxxxxxxx%27%29%7D
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000724s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000818s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+
+[ 2015-07-18T12:05:59+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T12:06:01+08:00 ] ERR: (ThinkException) 非法操作:upload
+[ 2015-07-18T12:06:04+08:00 ] ERR: (ThinkException) 非法操作:uploads
+[ 2015-07-18T12:06:05+08:00 ] 121.42.0.19 /dsapi/api.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000705s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000786s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+
+[ 2015-07-18T12:06:07+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T12:06:08+08:00 ] ERR: (ThinkException) 非法操作:upfile
+[ 2015-07-18T12:06:10+08:00 ] ERR: (ThinkException) 非法操作:upfiles
+[ 2015-07-18T12:06:11+08:00 ] ERR: (ThinkException) 非法操作:uploadfile
+[ 2015-07-18T12:06:13+08:00 ] ERR: (ThinkException) 非法操作:uploadfiles
+[ 2015-07-18T12:06:16+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T12:06:17+08:00 ] ERR: (ThinkException) 非法操作:data
+[ 2015-07-18T12:06:20+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T12:06:29+08:00 ] ERR: (ThinkException) 非法操作:phpinfo
+[ 2015-07-18T12:06:32+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.php
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000656s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000750s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+
+[ 2015-07-18T12:06:34+08:00 ] ERR: (ThinkException) 非法操作:php
+[ 2015-07-18T12:06:37+08:00 ] ERR: (ThinkException) 非法操作:info
+[ 2015-07-18T12:06:38+08:00 ] ERR: (ThinkException) 非法操作:test
+[ 2015-07-18T12:06:39+08:00 ] ERR: (ThinkException) 非法操作:a
+[ 2015-07-18T12:06:42+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T12:06:43+08:00 ] ERR: (ThinkException) 非法操作:u
+[ 2015-07-18T12:06:44+08:00 ] ERR: (ThinkException) 非法操作:tz
+[ 2015-07-18T12:06:47+08:00 ] ERR: (ThinkException) 非法操作:adminer
+[ 2015-07-18T12:06:48+08:00 ] ERR: (ThinkException) 非法操作:bigdump
+[ 2015-07-18T12:06:51+08:00 ] ERR: (ThinkException) 非法操作:${@print(md5(this_is_a_test_string))}
+[ 2015-07-18T13:06:47+08:00 ] ERR: (ThinkException) 非法操作:shopadmin
+[ 2015-07-18T13:07:48+08:00 ] ERR: (ThinkException) 非法操作:feed-proxy
+[ 2015-07-18T13:08:18+08:00 ] ERR: (ThinkException) 非法操作:bbx
+[ 2015-07-18T13:09:19+08:00 ] ERR: (ThinkException) 非法操作:tools
+[ 2015-07-18T13:10:03+08:00 ] ERR: (ThinkException) 非法操作:yanfang
+[ 2015-07-18T13:10:04+08:00 ] 121.42.0.19 /dsapi/api.php/Index/.DS_Store
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000478s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000562s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+
+[ 2015-07-18T13:10:05+08:00 ] ERR: (ThinkException) 非法操作:db
+[ 2015-07-18T13:11:06+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T13:11:49+08:00 ] ERR: (ThinkException) 非法操作:logs
+[ 2015-07-18T13:12:50+08:00 ] ERR: (ThinkException) 非法操作:log
+[ 2015-07-18T13:14:17+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T13:14:43+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?debug=browser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000571s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000665s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+
+[ 2015-07-18T13:14:57+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T13:15:00+08:00 ] ERR: (ThinkException) 非法操作:upload
+[ 2015-07-18T13:15:01+08:00 ] ERR: (ThinkException) 非法操作:uploads
+[ 2015-07-18T13:15:04+08:00 ] 121.42.0.19 /dsapi/api.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000499s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+
+[ 2015-07-18T13:15:06+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T13:15:09+08:00 ] ERR: (ThinkException) 非法操作:upfile
+[ 2015-07-18T13:15:12+08:00 ] ERR: (ThinkException) 非法操作:upfiles
+[ 2015-07-18T13:16:13+08:00 ] ERR: (ThinkException) 非法操作:uploadfile
+[ 2015-07-18T13:17:35+08:00 ] ERR: (ThinkException) 非法操作:uploadfiles
+[ 2015-07-18T13:18:37+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T13:18:38+08:00 ] ERR: (ThinkException) 非法操作:data
+[ 2015-07-18T13:18:40+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T13:18:46+08:00 ] ERR: (ThinkException) 非法操作:phpinfo
+[ 2015-07-18T13:18:47+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.php
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000524s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000608s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+
+[ 2015-07-18T13:18:49+08:00 ] ERR: (ThinkException) 非法操作:php
+[ 2015-07-18T13:18:51+08:00 ] ERR: (ThinkException) 非法操作:info
+[ 2015-07-18T13:18:54+08:00 ] ERR: (ThinkException) 非法操作:test
+[ 2015-07-18T13:18:55+08:00 ] ERR: (ThinkException) 非法操作:a
+[ 2015-07-18T13:18:56+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T13:18:57+08:00 ] ERR: (ThinkException) 非法操作:u
+[ 2015-07-18T13:18:58+08:00 ] ERR: (ThinkException) 非法操作:tz
+[ 2015-07-18T13:18:59+08:00 ] ERR: (ThinkException) 非法操作:adminer
+[ 2015-07-18T13:19:00+08:00 ] ERR: (ThinkException) 非法操作:bigdump
+[ 2015-07-18T13:19:01+08:00 ] ERR: (ThinkException) 非法操作:${@print(md5(this_is_a_test_string))}
+[ 2015-07-18T13:38:54+08:00 ] ERR: (ThinkException) 非法操作:shopadmin
+[ 2015-07-18T13:38:55+08:00 ] ERR: (ThinkException) 非法操作:feed-proxy
+[ 2015-07-18T13:38:56+08:00 ] ERR: (ThinkException) 非法操作:bbx
+[ 2015-07-18T13:38:57+08:00 ] ERR: (ThinkException) 非法操作:tools
+[ 2015-07-18T13:38:59+08:00 ] ERR: (ThinkException) 非法操作:yanfang
+[ 2015-07-18T13:38:59+08:00 ] 121.42.0.19 /dsapi/api.php/Index/.DS_Store
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000693s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000773s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+
+[ 2015-07-18T13:39:00+08:00 ] ERR: (ThinkException) 非法操作:db
+[ 2015-07-18T13:39:01+08:00 ] ERR: (ThinkException) 非法操作:config
+[ 2015-07-18T13:39:03+08:00 ] ERR: (ThinkException) 非法操作:logs
+[ 2015-07-18T13:39:03+08:00 ] ERR: (ThinkException) 非法操作:log
+[ 2015-07-18T13:39:06+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T13:39:07+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?debug=browser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000631s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000715s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+
+[ 2015-07-18T13:39:08+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.action?redirect%3A%25%7Bnew+java.lang.String%28%27http%3A%2F%2Fxxxxxxxxxxxxx%27%29%7D
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000588s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000680s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+
+[ 2015-07-18T13:39:11+08:00 ] ERR: (ThinkException) 非法操作:admin
+[ 2015-07-18T13:39:12+08:00 ] ERR: (ThinkException) 非法操作:upload
+[ 2015-07-18T13:39:13+08:00 ] ERR: (ThinkException) 非法操作:uploads
+[ 2015-07-18T13:39:14+08:00 ] 121.42.0.19 /dsapi/api.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000551s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000632s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+
+[ 2015-07-18T13:39:15+08:00 ] ERR: (ThinkException) 非法操作:htdocs
+[ 2015-07-18T13:39:16+08:00 ] ERR: (ThinkException) 非法操作:upfile
+[ 2015-07-18T13:39:17+08:00 ] ERR: (ThinkException) 非法操作:upfiles
+[ 2015-07-18T13:39:18+08:00 ] ERR: (ThinkException) 非法操作:uploadfile
+[ 2015-07-18T13:39:19+08:00 ] ERR: (ThinkException) 非法操作:uploadfiles
+[ 2015-07-18T13:39:20+08:00 ] ERR: (ThinkException) 非法操作:web
+[ 2015-07-18T13:39:21+08:00 ] ERR: (ThinkException) 非法操作:data
+[ 2015-07-18T13:39:22+08:00 ] ERR: (ThinkException) 非法操作:backup
+[ 2015-07-18T13:39:29+08:00 ] ERR: (ThinkException) 非法操作:phpinfo
+[ 2015-07-18T13:39:30+08:00 ] 121.42.0.19 /dsapi/api.php/Index/index.php
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000628s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000709s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\web\dosochina.com\dsapi\ThinkPHP\Lib\Core\Dispatcher.class.php 第 120 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+
+[ 2015-07-18T13:39:31+08:00 ] ERR: (ThinkException) 非法操作:php
+[ 2015-07-18T13:39:32+08:00 ] ERR: (ThinkException) 非法操作:info
+[ 2015-07-18T13:40:45+08:00 ] ERR: (ThinkException) 非法操作:test
+[ 2015-07-18T13:41:46+08:00 ] ERR: (ThinkException) 非法操作:a
+[ 2015-07-18T13:41:49+08:00 ] ERR: (ThinkException) 非法操作:1
+[ 2015-07-18T13:41:50+08:00 ] ERR: (ThinkException) 非法操作:u
+[ 2015-07-18T13:41:51+08:00 ] ERR: (ThinkException) 非法操作:tz
+[ 2015-07-18T13:41:52+08:00 ] ERR: (ThinkException) 非法操作:adminer
+[ 2015-07-18T13:41:53+08:00 ] ERR: (ThinkException) 非法操作:bigdump
+[ 2015-07-18T13:41:54+08:00 ] ERR: (ThinkException) 非法操作:${@print(md5(this_is_a_test_string))}

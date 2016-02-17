@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>显示配置-系统设置-{$site.SITE_INFO.name}</title>
+    <php>$addCss="";</php>
+    <php>$addJs="";</php>
+    <include file="Common:intoHead" />
+    <css href="--PUBLIC--/kindeditor/themes/default/default.css" />
+</head>
+<body>
+<div class="wrap"> <include file="Common:head" />
+    <div class="mainBody"> <include file="Common:left" />
+        <div id="Right">
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">显示配置</div>
+                </div>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <tr>
+                            <th width="120">文章每页显示条数：</th>
+                            <td><input name="newslist" type="text" class="input" size="30" value="{$site.LISTNUM.newslist}" /></td>
+                        </tr>
+                        <tr>
+                            <th width="120">产品每页显示条数：</th>
+                            <td><input name="prolist" type="text" class="input" size="30" value="{$site.LISTNUM.prolist}" /></td>
+                        </tr>
+                        <tr>
+                            <th width="120">主题颜色：</th>
+                            <td><input id="color" class="input" name="tempcolor" size="20" value="{$site.LISTNUM.tempcolor}" /><input type="button" class="btn" id="colorpicker" value="打开取色器" /></td>
+                        </tr>
+                        <tr>
+                            <th width="120">选择主题：</th>
+                            <td><input  class="input" name="DEFAULT_THEME" size="20" value="{$site.LISTNUM.DEFAULT_THEME}" />默认模版：default</td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<js href="--PUBLIC--/kindeditor/kindeditor.js"/>
+<script>
+    KindEditor.ready(function(K) {
+        var colorpicker;
+        K('#colorpicker').bind('click', function(e) {
+            e.stopPropagation();
+            if (colorpicker) {
+                colorpicker.remove();
+                colorpicker = null;
+                return;
+            }
+            var colorpickerPos = K('#colorpicker').pos();
+            colorpicker = K.colorpicker({
+                x : colorpickerPos.x,
+                y : colorpickerPos.y + K('#colorpicker').height(),
+                z : 19811214,
+                selectedColor : 'default',
+                noColor : '无颜色',
+                click : function(color) {
+                    K('#color').val(color);
+                    colorpicker.remove();
+                    colorpicker = null;
+                }
+            });
+        });
+        K(document).click(function() {
+            if (colorpicker) {
+                colorpicker.remove();
+                colorpicker = null;
+            }
+        });
+    });
+</script>
+<div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(".submit").click(function(){
+        commonAjaxSubmit();
+    });
+</script>
+</body>
+</html>
